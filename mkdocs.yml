@@ -1,0 +1,20 @@
+site_name: Fraymakers API Docs  
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: true
+  - sane_lists
+docs_dir: "./docs/classes/"
+nav: 
+  - Classes: "index.md"
+plugins: 
+  - search:
+      min_search_length: 2
+      indexing: "full"
+theme:
+  name: material
+  features:
+    - toc.follow
+    - navigation.top
+    - toc.integrate
+
