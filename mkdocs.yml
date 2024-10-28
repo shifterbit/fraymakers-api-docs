@@ -8,8 +8,9 @@ docs_dir: "./docs/classes/"
 nav: 
   - Classes: "index.md"
 plugins: 
+  - offline
   - search:
-      min_search_length: 2
+      min_search_length: 3
       indexing: "full"
 theme:
   name: material
@@ -17,4 +18,20 @@ theme:
     - toc.follow
     - navigation.top
     - toc.integrate
+    - search.highlight
+    - search.suggest
+
+  palette: 
+      # Palette toggle for light mode
+      - scheme: default
+        toggle:
+          icon: material/brightness-7 
+          name: Switch to dark mode
+
+      # Palette toggle for dark mode
+      - scheme: slate
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+
 
