@@ -10,7 +10,6 @@ nav:
   - Classes: "index.md"
 plugins: 
   - offline
-  - projects
   - optimize
   - search:
       min_search_length: 3
