@@ -1,4 +1,5 @@
 site_name: Fraymakers API Docs  
+site_url: https://shifterbit.github.io/fraymakers-api-docs/
 markdown_extensions:
   - smarty
   - toc:
@@ -9,9 +10,12 @@ nav:
   - Classes: "index.md"
 plugins: 
   - offline
+  - projects
+  - optimize
   - search:
       min_search_length: 3
       indexing: "full"
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
 theme:
   name: material
   features:
@@ -20,6 +24,11 @@ theme:
     - toc.integrate
     - search.highlight
     - search.suggest
+    - navigation.instant
+    - navigation.instant.preview
+    - navigation.instant.progress
+    - navigation.instant.prefetch
+    - navigation.instant
 
   palette: 
       # Palette toggle for light mode
