@@ -31,8 +31,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.path
+    - navigation.pruning
     - navigation.expand
-    - toc.integrate
     - search.highlight
     - search.suggest
     - navigation.instant
