@@ -44,7 +44,6 @@ theme:
     - navigation.instant
 
   palette:
-    - primary: red
     # Palette toggle for light mode
     - scheme: default
       toggle:
