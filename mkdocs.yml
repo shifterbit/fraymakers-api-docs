@@ -26,7 +26,12 @@ theme:
     - content.code.copy
     - content.code.select
     - toc.follow
+    - toc.integrate
     - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
     - toc.integrate
     - search.highlight
     - search.suggest
