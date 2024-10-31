@@ -5,15 +5,12 @@ markdown_extensions:
   - toc:
       permalink: true
   - sane_lists
-docs_dir: "./docs/classes/"
-nav: 
-  - Classes: "index.md"
+docs_dir: "./docs"
 plugins: 
   - offline
   - search:
       min_search_length: 3
       indexing: "full"
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
 theme:
   name: material
   features:
