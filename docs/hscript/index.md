@@ -1,16 +1,14 @@
-# Hscript Documentation
+# A Brief Tour of Hscript
 
-## A Brief Tour of Hscript
-
-### Variable Declarations
+## Variable Declarations
 Variables are declared with the `var` keyword
 ```haxe
 var a; // Basic Variable Declaration
 var b: Int; // Variables can optionally have their types explicitly declared(This is good for autocomplete)
 var c: Int = 1; // Declared variable c with type Int and the initial value 1
 ```
-### Operators
-#### Unary
+## Operators
+### Unary
 
 
 | Operator | Operation           | Operand Type | Position           | Result Type |
@@ -31,8 +29,8 @@ var b = a++; // b is 1, a is 2
 var c = ++a; // c is 3, a is 3
 ```
 
-#### Binary
-##### Arithmetic operators
+### Binary
+#### Arithmetic operators
 
 | Operator | Operation      | Operand 1   | Operand 2   | Result type  |
 |----------|----------------|-------------|-------------|--------------|
@@ -52,7 +50,7 @@ var e = 20 % 9 // modulo, gives the reainder after division
 ```
 
 
-##### String concatenation operator
+#### String concatenation operator
 
 | Operator | Operation     | Operand 1 | Operand 2 | Result type |
 |----------|---------------|-----------|-----------|-------------|
@@ -63,14 +61,14 @@ var e = 20 % 9 // modulo, gives the reainder after division
 When performing any concatenation/addition involving strings, other values would be
 automatically be converted to a string.
 
-##### Logical Operators
+#### Logical Operators
 
 | Operator | Operation   | Operand 1 | Operand 2 | Result type |
 |----------|-------------|-----------|-----------|-------------|
 | `&&`     | logical and | `Bool`    | `Bool`    | `Bool`      |
 | `||`     | logical or  | `Bool`    | `Bool`    | `Bool`      |
 
-###### Short circuting
+##### Short circuting
 Logical Operators are evaluated from left to right, but only as far as necessary.
 For example
 ```haxe
@@ -80,7 +78,7 @@ var a = foo != null && foo.count == 1
 ```
 
 
-##### Compound assignment operators
+#### Compound assignment operators
 
 | Operator | Operation      | Operand 1   | Operand 2   | Result type |
 |----------|----------------|-------------|-------------|-------------|
@@ -95,7 +93,7 @@ var a = 5;
 a += 4; // same as a = a + 4
 ```
 
-##### Numeric comparison operators
+#### Numeric comparison operators
 
 | Operator | Operation             | Operand 1   | Operand 2   | Result type |
 |----------|-----------------------|-------------|-------------|-------------|
@@ -106,7 +104,7 @@ a += 4; // same as a = a + 4
 | `>;`     | greater than          | `Float/Int` | `Float/Int` | `Bool`      |
 | `>;=`    | greater than or equal | `Float/Int` | `Float/Int` | `Bool`      |
 
-##### String comparison operators
+#### String comparison operators
 
 | Operator | Operation                         | Operand 1 | Operand 2 | Result type |
 |----------|-----------------------------------|-----------|-----------|-------------|
@@ -127,7 +125,7 @@ var z = (a == "foo"); // true
 ```
 
 
-#### Ternary Operator
+### Ternary Operator
 
 | Operator | Operation | Operand 1 | Operand 2 | Operand 3 | Result type  |
 |----------|-----------|-----------|-----------|-----------|--------------|
@@ -138,25 +136,102 @@ NdOperand 2 and 3 must be the same type.
 The ternary conditional operator is a shorter form of [`if`](expression-if):
 
 ```haxe
-trace(true ? "Haxe" : "Neko"); // Haxe
-trace(1 == 2 ? 3 : 4); // 4
+true ? "Haxe" : "Neko"); // Haxe
+1 == 2 ? 3 : 4; // 4
 
 // equivalent to:
 
-trace(if (true) "Haxe" else "Neko"); // Haxe
-trace(if (1 == 2) 3 else 4); // 4
+if (true) "Haxe" else "Neko"; // Haxe
+if (1 == 2) 3 else 4; // 4
 ```
 
-### If Expressions
+## If Expressions
 
-### Blocks and Variable Scope
+```haxe
+if (condition) expression;
+```
+The condition expression must be of type `Bool`, else is also optional
+```haxe
+if (condition) expression else expression2;
+```
+
+Note that both expression1 and expression2 types must be the same
+
+```haxe
+if (condition1) expression1
+else if (condition2) expression2
+else expression3
+```
+
+## Blocks
+Blocks are also expressions, and also create scopes
+```haxe
+var a = 1;
+{
+	var b = 2;
+		{
+		var c = 2;
+		} // c goes out of scope
+} // b goes out of scope
+```
+
+## Switch
+```haxe
+switch expression {
+	case value1: body1;
+	case value2: body2;
+	default: default-expression
+}
+```
+## For
+
+```haxe
+var list = ["apple", "pear", "banana"];
+for (v in list) {
+  Engine.log(v);
+}
+// apple
+// pear
+// banana
+```
+
+```haxe
+for (i in 0...10) Engine.log(i); // 0 to 9
+```
+## While
+
+```haxe
+while (condition) expression;
+```
 
 
-### For
 
-### While
+## Functions
 
-### Switch
+```haxe
+function foo(arg1, arg2, arg3) {
+ return arg1 + arg2 - arg3;
+}
 
+// Functions can be defined at any scope, even in other functions 
+function doThing() {
+	var i = 0;
+	var add = function (num: Int) {
+		i += num;
+	}
+	// Also equivalent to
+	
+	function add(num: Int) {
+		i += num;
+	}
+} // add goes out of scope
 
-### Functions
+// We won't be discussing writing out function types here for now
+// This function takes an array and another function, running that function on each array item
+function forEach(arr: Array<Int>, fn) {
+	for (item in arr) {
+		var result = fn(item);
+		Engine.log(result);
+	}
+}
+```
