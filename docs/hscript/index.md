@@ -1,5 +1,3 @@
-# A Brief Tour of Hscript
-
 ## Variable Declarations
 Variables are declared with the `var` keyword
 ```haxe
