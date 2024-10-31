@@ -1,4 +1,4 @@
-site_name: Fraymakers API Docs  
+site_name: Fraymakers API Docs
 site_url: https://shifterbit.github.io/fraymakers-api-docs/
 markdown_extensions:
   - smarty
@@ -15,7 +15,8 @@ extra_javascript:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
 docs_dir: "./docs"
-plugins: 
+
+plugins:
   - offline
   - search:
       min_search_length: 3
@@ -42,17 +43,16 @@ theme:
     - navigation.instant.prefetch
     - navigation.instant
 
-  palette: 
-      # Palette toggle for light mode
-      - scheme: default
-        toggle:
-          icon: material/brightness-7 
-          name: Switch to dark mode
+  palette:
+    - primary: red
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
-      # Palette toggle for dark mode
-      - scheme: slate
-        toggle:
-          icon: material/brightness-4
-          name: Switch to light mode
-
-
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
