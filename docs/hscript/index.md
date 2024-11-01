@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Haxescript
+title: Haxescript Overview
 ---
 ## Variable Declarations
 Variables are declared with the `var` keyword
 ```haxe
+// var variable_name: VariableType  = expression; 
+// var variable_name  = expression;
 var a; // Basic Variable Declaration
 var b: Int; // Variables can optionally have their types explicitly declared(This is good for autocomplete)
 var c: Int = 1; // Declared variable c with type Int and the initial value 1
@@ -138,35 +140,63 @@ NdOperand 2 and 3 must be the same type.
 The ternary conditional operator is a shorter form of [`if`](expression-if):
 
 ```haxe
-true ? "Haxe" : "Neko"); // Haxe
-1 == 2 ? 3 : 4; // 4
+// Tenary Operators are also expressions
+
+var b = 1 == 2 ? 3 : 4; // 4
 
 // equivalent to:
-
-if (true) "Haxe" else "Neko"; // Haxe
-if (1 == 2) 3 else 4; // 4
+var b = if (1 == 2) 3 else 4; // 4
 ```
 
 ## If Expressions
 
 ```haxe
-if (condition) expression;
+// if (condition) expression;
+if (1 > 0) {
+	Engine.log("Obviously True");
+}
+
 ```
 The condition expression must be of type `Bool`, else is also optional
 ```haxe
-if (condition) expression else expression2;
+// if (condition) expression else expression2;
+if (a > b) {
+	Engine.log("a is larger");
+} else {
+	Engine.log("a is not  larger");
+}
 ```
 
 Note that both expression1 and expression2 types must be the same
 
 ```haxe
-if (condition1) expression1
-else if (condition2) expression2
-else expression3
+// if (condition1) expression1
+//else if (condition2) expression2
+// else expression3
+
+var a = 2;
+var b = 5;
+
+if (a > b) {
+	Engine.log("a is larger");
+} else if (b > a) {
+	Engine.log("b is larger");
+} else {
+	Engine.log("a and b are equal");
+}
+
+// Remember they are expressions!
+var larger = if (a > b) {
+	a;
+} else if (b > a){
+	b;
+} else {
+	a;
+};
 ```
 
 ## Blocks
-Blocks are also expressions, and also create scopes
+Blocks create scopes.
 ```haxe
 var a = 1;
 {
@@ -175,6 +205,19 @@ var a = 1;
 		var c = 2;
 		} // c goes out of scope
 } // b goes out of scope
+```
+
+
+Because blocks are expressions they can be used as values, the value the block returns would be the value of the first called return statement like so
+```
+var x = {
+	var a = 1;
+	var b = 4;
+	return a + b;
+}; // a and b are now out of scope since wer are outside the block
+
+Engine.log(x) // x is now 5
+
 ```
 
 ## Switch
@@ -200,10 +243,14 @@ for (v in list) {
 ```haxe
 for (i in 0...10) Engine.log(i); // 0 to 9
 ```
+
 ## While
 
 ```haxe
-while (condition) expression;
+// while (condition) {expression}
+var i = 0;
+while (i < 10) {
+};
 ```
 
 
@@ -211,16 +258,20 @@ while (condition) expression;
 ## Functions
 
 ```haxe
-function foo(arg1, arg2, arg3) {
+
+// Functoins can take multiple arguments
+// Function Arguments can also be optionally typed, this is good for autocompletion
+function foo(arg1: Int, arg2, arg3) {
  return arg1 + arg2 - arg3;
 }
 
 // Functions can be defined at any scope, even in other functions 
+//
 function doThing() {
 	var i = 0;
 	var add = function (num: Int) {
 		i += num;
-	}
+	};
 	// Also equivalent to
 	
 	function add(num: Int) {
