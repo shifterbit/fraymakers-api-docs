@@ -20,6 +20,7 @@ docs_dir: "./docs"
 plugins:
   - offline
   - social
+  - privacy
   - search:
       min_search_length: 3
       indexing: "full"
