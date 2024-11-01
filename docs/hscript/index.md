@@ -209,7 +209,7 @@ var a = 1;
 
 
 Because blocks are expressions they can be used as values, the value the block returns would be the value of the first called return statement like so
-```
+```haxe
 var x = {
 	var a = 1;
 	var b = 4;
@@ -267,7 +267,6 @@ while (i < 10) {
 ## Functions
 
 ```haxe
-
 // Functoins can take multiple arguments
 // Function Arguments can also be optionally typed, this is good for autocompletion
 function foo(arg1: Int, arg2, arg3) {
