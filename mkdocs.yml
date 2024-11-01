@@ -19,7 +19,8 @@ docs_dir: "./docs"
 
 plugins:
   - offline
-  - social
+  - social:
+      cache: false
   - privacy
   - search:
       min_search_length: 3
