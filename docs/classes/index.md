@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Index
+title: Classes
 ---
 
 See below for a list of all available classes available in the Fraymakers API.

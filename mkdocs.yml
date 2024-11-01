@@ -1,5 +1,6 @@
 site_name: Fraymakers API Docs
 site_url: https://shifterbit.github.io/fraymakers-api-docs/
+site_description: "Searchable Documentation for the Fraymakers API"
 markdown_extensions:
   - smarty
   - pymdownx.highlight:

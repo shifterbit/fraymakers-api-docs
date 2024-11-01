@@ -1,4 +1,7 @@
-# Overview
+---
+layout: page
+title: Haxescript
+---
 ## Variable Declarations
 Variables are declared with the `var` keyword
 ```haxe
