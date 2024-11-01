@@ -213,7 +213,7 @@ Because blocks are expressions they can be used as values, the value the block r
 var x = {
 	var a = 1;
 	var b = 4;
-	return a + b;
+	a + b;
 }; // a and b are now out of scope since wer are outside the block
 
 Engine.log(x) // x is now 5
