@@ -264,35 +264,4 @@ while (i < 10) {
 
 
 
-## Functions
-
-```haxe
-// Functoins can take multiple arguments
-// Function Arguments can also be optionally typed, this is good for autocompletion
-function foo(arg1: Int, arg2, arg3) {
- return arg1 + arg2 - arg3;
-}
-
-// Functions can be defined at any scope, even in other functions 
-//
-function doThing() {
-	var i = 0;
-	var add = function (num: Int) {
-		i += num;
-	};
-	// Also equivalent to
-	
-	function add(num: Int) {
-		i += num;
-	}
-} // add goes out of scope
-
-// We won't be discussing writing out function types here for now
-// This function takes an array and another function, running that function on each array item
-function forEach(arr: Array<Int>, fn) {
-	for (item in arr) {
-		var result = fn(item);
-		Engine.log(result);
-	}
-}
-```
+# [Functions][./Functions.md]
