@@ -1,6 +1,6 @@
 site_name: Fraymakers API Docs
 site_url: https://shifterbit.github.io/fraymakers-api-docs/
-site_description: "Searchable Documentation for the Fraymakers API"
+site_description: "Unofficial Docs Site for the Fraymakers API"
 use_directory_urls: true
 markdown_extensions:
   - smarty
