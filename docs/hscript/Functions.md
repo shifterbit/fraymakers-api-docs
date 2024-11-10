@@ -24,7 +24,7 @@ function helloFrom(name: String) {
 }
 
 // Call it
-helloFrom("Fraykie");
+helloFrom("Fraynkie");
 
 ```
 Functions can also be declared without, specifying types, but it specifying types is always
@@ -40,13 +40,13 @@ function helloFrom(name) {
 
 ```haxe
 // Declare our new function
-function helloFrom(name: String = "Fraykie") {
+function helloFrom(name: String = "Fraynkie") {
   Engine.log("Hello, I am " + name);
 }
 
 // Call it
 helloFrom("John"); // prints "Hello, I am John"
-helloFrom(); // prints "Hello, I cam Fraykie"
+helloFrom(); // prints "Hello, I cam Fraynkie"
 
 ```
 
@@ -62,7 +62,7 @@ function helloFrom(?name: String) {
 }
 
 // Call it
-helloFrom("John"); // prints "Hello, I am Fraykie"
+helloFrom("John"); // prints "Hello, I am Fraynkie"
 helloFrom(); // prints "Hello"
 
 ```
