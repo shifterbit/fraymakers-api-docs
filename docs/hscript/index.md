@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Haxescript Overview
+title: Hscript Basics
 ---
 ## Variable Declarations
 Variables are declared with the `var` keyword
@@ -261,7 +261,3 @@ var i = 0;
 while (i < 10) {
 };
 ```
-
-
-
-# [Functions][./Functions.md]
