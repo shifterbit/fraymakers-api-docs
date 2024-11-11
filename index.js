@@ -65,20 +65,14 @@ function toHeaders(row, sections) {
         children: row[i],
       });
     } else {
-      if (i == 1) {
-        data.push({
-          type: "list",
-          ordered: false,
-          depth: 4,
-          children: [],
-        });
-      }
-      data[1].children.push({
-        type: "listItem",
-        spread: true,
-        children: [{ type: "strong", children: sections[i] }]
-          .concat({ type: "strong", children: [{ type: "text", value: ": " }] })
-          .concat(row[i]),
+      data.push({
+        type: "heading",
+        depth: 5,
+        children: sections[i],
+      });
+      data.push({
+        type: "paragraph",
+        children: row[i],
       });
     }
   }
