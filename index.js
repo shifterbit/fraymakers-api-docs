@@ -8,7 +8,6 @@ import { toMarkdown } from "mdast-util-to-markdown";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "path";
-import { strong } from "mdast-util-to-markdown/lib/handle/strong";
 
 async function main() {
   const isFile = (fileName) => {
