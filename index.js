@@ -74,8 +74,8 @@ function toHeaders(row, sections) {
         });
       }
       data[1].children.push({
-        type: "list",
-        depth: 4,
+        type: "listItem",
+        spread: true,
         children: [{ type: "strong", children: sections[i] }]
           .concat({ type: "strong", children: [{ type: "text", value: ": " }] })
           .concat(row[i]),
