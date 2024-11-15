@@ -3,6 +3,7 @@ site_url: https://shifterbit.github.io/fraymakers-api-docs/
 repo_url: https://github.com/shifterbit/fraymakers-api-docs/
 repo_name: shifterbit/fraymakers-api-docs
 site_description: "An Unofficial Searchable Documentation for the Fraymakers API"
+dev_addr: "0.0.0.0:8000"
 use_directory_urls: true
 markdown_extensions:
   - smarty
@@ -23,6 +24,7 @@ plugins:
   - offline
   - social:
       cache: false
+  - awesome-pages
   - privacy
   - search:
       min_search_length: 3

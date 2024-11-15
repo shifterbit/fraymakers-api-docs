@@ -1,0 +1,11 @@
+---
+services:
+  fraymakers-api-docs:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - appdata:/app
+
+volumes:
+  appdata:
