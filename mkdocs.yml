@@ -1,3 +1,4 @@
+---
 site_name: Fraymakers API Docs
 site_url: https://shifterbit.github.io/fraymakers-api-docs/
 repo_url: https://github.com/shifterbit/fraymakers-api-docs/
@@ -29,6 +30,7 @@ plugins:
   - search:
       min_search_length: 3
       indexing: "full"
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
 theme:
   name: material
   features:
