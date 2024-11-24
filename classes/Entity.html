@@ -1,0 +1,6602 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Unofficial Searchable Documentation for the Fraymakers API">
+      
+      
+      
+        <link rel="canonical" href="https://shifterbit.github.io/fraymakers-api-docs/classes/Entity.html">
+      
+      
+        <link rel="prev" href="Engine.html">
+      
+      
+        <link rel="next" href="EntityEvent.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Entity - Fraymakers API Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Entity - Fraymakers API Docs" >
+      
+        <meta  property="og:description"  content="Unofficial Searchable Documentation for the Fraymakers API" >
+      
+        <meta  property="og:image"  content="https://shifterbit.github.io/fraymakers-api-docs/assets/images/social/classes/Entity.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://shifterbit.github.io/fraymakers-api-docs/classes/Entity.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Entity - Fraymakers API Docs" >
+      
+        <meta  name="twitter:description"  content="Unofficial Searchable Documentation for the Fraymakers API" >
+      
+        <meta  name="twitter:image"  content="https://shifterbit.github.io/fraymakers-api-docs/assets/images/social/classes/Entity.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instance-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Fraymakers API Docs" class="md-header__button md-logo" aria-label="Fraymakers API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fraymakers API Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Entity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shifterbit/fraymakers-api-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shifterbit/fraymakers-api-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Main Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  Classes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hscript/index.html" class="md-tabs__link">
+          
+  
+  Hscript
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Fraymakers API Docs" class="md-nav__button md-logo" aria-label="Fraymakers API Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Fraymakers API Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shifterbit/fraymakers-api-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shifterbit/fraymakers-api-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ADisposable.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADisposable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Accessibility.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiBehavior.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiBehavior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiCrashOption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiCrashOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiDirectionalInfluenceOption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiDirectionalInfluenceOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiGraphNode.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiGraphNode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiHitstopNudgeOption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiHitstopNudgeOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiLedgeOption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiLedgeOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiShieldHitOption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiShieldHitOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AiTechOption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AiTechOption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AnimationEndType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnimationEndType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AnimationStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnimationStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiVarArray.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiVarArray
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiVarBool.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiVarBool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiVarFloat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiVarFloat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiVarInt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiVarInt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiVarObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiVarObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ApiVarString.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ApiVarString
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Assist.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AssistAnimationStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AssistAnimationStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AssistController.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AssistController
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AssistEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AssistEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AssistStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AssistStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AttackElement.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AttackElement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AttackLimb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AttackLimb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AttackStrength.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AttackStrength
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AudioClip.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AudioClip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BodyStatus.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BodyStatus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BodyStatusColor.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BodyStatusColor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BodyStatusTimer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BodyStatusTimer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BuryType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BuryType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Buttons.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buttons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CState.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CStateGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CStateGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Camera.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraShakeType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraShakeType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Character.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CharacterActions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterActions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CharacterAiScript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterAiScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CharacterAnimationStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterAnimationStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CharacterEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CharacterStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CollisionArea.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CollisionArea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CollisionAreaStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CollisionAreaStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CollisionBox.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CollisionBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CollisionBoxType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CollisionBoxType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CollisionResult.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CollisionResult
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Container.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ControlsObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ControlsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CustomApiObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomApiObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CustomEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CustomGameObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomGameObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CustomLineSegmentStructure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomLineSegmentStructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplacementFilter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DisplacementFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplayMode.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DisplayMode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplayObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DisplayObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplaySettings.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DisplaySettings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Drawable.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drawable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="EaseTimer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EaseTimer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Engine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Entity
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Entity.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Entity
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instance-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addeventlistenertypeint-funclistener-optionseventlisteneroptionsvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      addEventListener(type:Int, func:Listener, options?:EventListenerOptions):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="addEventListener(type:Int, func:Listener, options?:EventListenerOptions):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addfilterfilterfiltervoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      addFilter(filter:Filter):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="addFilter(filter:Filter):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addshadershadershadervoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      addShader(shader:Shader):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="addShader(shader:Shader):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addtimerintervalint-repeatsint-func-optionsintervaltimeroptionsint" class="md-nav__link">
+    <span class="md-ellipsis">
+      addTimer(interval:Int, repeats:Int, func, options?:IntervalTimerOptions):Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="addTimer(interval:Int, repeats:Int, func, options?:IntervalTimerOptions):Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachtofloorstructurestructurebool" class="md-nav__link">
+    <span class="md-ellipsis">
+      attachToFloor(structure:Structure):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="attachToFloor(structure:Structure):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bringinfrontgameobjectgameobjectvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      bringInFront(gameObject:GameObject):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bringInFront(gameObject:GameObject):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collisiontestotherentityentity-myboxtypeint-theirboxtypeint-bailearlyboolarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      collisionTest(otherEntity:Entity, myBoxType:Int, theirBoxType:Int, bailEarly:Bool):Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="collisionTest(otherEntity:Entity, myBoxType:Int, theirBoxType:Int, bailEarly:Bool):Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collisiontestgroupsourceentitiesarray-sourceboxtypeint-otherentityentity-targetboxtypeint-bailearlyboolarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      collisionTestGroup(sourceEntities:Array, sourceBoxType:Int, otherEntity:Entity, targetBoxType:Int, bailEarly:Bool):Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="collisionTestGroup(sourceEntities:Array, sourceBoxType:Int, otherEntity:Entity, targetBoxType:Int, bailEarly:Bool):Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faceleftvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      faceLeft():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="faceLeft():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facerightvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      faceRight():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="faceRight():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalframeplayedbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      finalFramePlayed():Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="finalFramePlayed():Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flipvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      flip():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="flip():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flipxvaluefloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      flipX(value:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="flipX(value:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getalphafloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getAlpha():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAlpha():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getanimationstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      getAnimation():String
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getAnimation():String">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbottomlayercontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      getBottomLayer():Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getBottomLayer():Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcollisionboxesboxtypeintarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCollisionBoxes(boxType:Int):Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getCollisionBoxes(boxType:Int):Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentfloorstructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCurrentFloor():Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getCurrentFloor():Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentframeint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCurrentFrame():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getCurrentFrame():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbcollisionboxcollisionbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbCollisionBox():CollisionBox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbCollisionBox():CollisionBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbfootxfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbFootX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbFootX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbfootyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbFootY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbFootY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbheadxfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbHeadX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbHeadX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbheadyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbHeadY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbHeadY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecblefthipxfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbLeftHipX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbLeftHipX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecblefthipyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbLeftHipY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbLeftHipY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbrighthipxfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbRightHipX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbRightHipX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getecbrighthipyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getEcbRightHipY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getEcbRightHipY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getknockbackfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getKnockback():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getKnockback():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnetspeedfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getNetSpeed():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getNetSpeed():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnetxvelocityfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getNetXVelocity():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getNetXVelocity():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnetyvelocityfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getNetYVelocity():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getNetYVelocity():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpivotxfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPivotX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPivotX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpivotxscaledfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPivotXScaled():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPivotXScaled():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpivotyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPivotY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPivotY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpivotyscaledfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPivotYScaled():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPivotYScaled():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpreviousstateint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPreviousState():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPreviousState():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpreviousstategroupint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPreviousStateGroup():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getPreviousStateGroup():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getresourceresource" class="md-nav__link">
+    <span class="md-ellipsis">
+      getResource():Resource
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getResource():Resource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrotationfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getRotation():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getRotation():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscalexfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getScaleX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getScaleX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscaleyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getScaleY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getScaleY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstateint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getState():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getState():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstaticbottomlayercontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      getStaticBottomLayer():Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getStaticBottomLayer():Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstatictoplayercontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      getStaticTopLayer():Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getStaticTopLayer():Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettoplayercontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTopLayer():Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getTopLayer():Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettotalframesint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTotalFrames():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getTotalFrames():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettypeint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getType():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getType():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getuidint" class="md-nav__link">
+    <span class="md-ellipsis">
+      getUid():Int
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getUid():Int">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getviewrootcontainercontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      getViewRootContainer():Container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getViewRootContainer():Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvisiblebool" class="md-nav__link">
+    <span class="md-ellipsis">
+      getVisible():Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getVisible():Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getxfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getX():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getX():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getxknockbackfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getXKnockback():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getXKnockback():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getxspeedfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getXSpeed():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getXSpeed():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getxvelocityfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getXVelocity():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getXVelocity():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getyfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getY():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getY():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getyknockbackfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getYKnockback():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getYKnockback():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getyspeedfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getYSpeed():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getYSpeed():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getyvelocityfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      getYVelocity():Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="getYVelocity():Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasanimationanimationstringbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasAnimation(animation:String):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hasAnimation(animation:String):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haseventlistenertypeint-funclistenerbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasEventListener(type:Int, func?:Listener):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hasEventListener(type:Int, func?:Listener):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hittestentityotherentityentity-selfcollisionboxtypeint-othercollisionboxtypeint-optionshittestentityoptionsarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      hitTestEntity(otherEntity:Entity, selfCollisionBoxType:Int, otherCollisionBoxType:Int, options?:HitTestEntityOptions):Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hitTestEntity(otherEntity:Entity, selfCollisionBoxType:Int, otherCollisionBoxType:Int, options?:HitTestEntityOptions):Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hitteststructureswithlinesegmentpoint1point-point2point-intersectionoutpoint-optionsstructurecollidersearchoptionsarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      hitTestStructuresWithLineSegment(point1:Point, point2:Point, intersectionOut?:Point, options:StructureColliderSearchOptions):Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hitTestStructuresWithLineSegment(point1:Point, point2:Point, intersectionOut?:Point, options:StructureColliderSearchOptions):Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instatestateintbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      inState(state:Int):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="inState(state:Int):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instategroupstategroupintbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      inStateGroup(stateGroup:Int):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="inStateGroup(stateGroup:Int):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdisposedbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      isDisposed():Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="isDisposed():Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isfacingleftbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      isFacingLeft():Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="isFacingLeft():Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isfacingrightbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      isFacingRight():Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="isFacingRight():Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isonfloorbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      isOnFloor():Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="isOnFloor():Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#killvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="kill():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movexfloat-yfloatvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      move(x:Float, y:Float):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="move(x:Float, y:Float):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moveabsolutexfloat-yfloatvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      moveAbsolute(x:Float, y:Float):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moveAbsolute(x:Float, y:Float):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pausevoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      pause():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pause():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playanimationnamestringvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      playAnimation(name:String):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="playAnimation(name:String):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playframeframeintvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      playFrame(frame:Int):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="playFrame(frame:Int):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playframelabellabelstringvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      playFrameLabel(label:String):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="playFrameLabel(label:String):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refreshecbvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      refreshEcb():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="refreshEcb():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeeventlistenertypeint-funclistenervoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeEventListener(type:Int, func:Listener):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="removeEventListener(type:Int, func:Listener):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removefilterfilterfiltervoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeFilter(filter:Filter):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="removeFilter(filter:Filter):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeshadershadershadervoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeShader(shader:Shader):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="removeShader(shader:Shader):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetimeruidintbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeTimer(uid:Int):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="removeTimer(uid:Int):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetmomentumvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      resetMomentum():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="resetMomentum():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetrotationvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      resetRotation():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="resetRotation():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumevoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      resume():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="resume():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendbehindgameobjectgameobjectvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      sendBehind(gameObject:GameObject):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sendBehind(gameObject:GameObject):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setalphavaluefloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setAlpha(value:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setAlpha(value:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setknockbackspeedfloat-anglefloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setKnockback(speed:Float, angle:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setKnockback(speed:Float, angle:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setrotationvaluefloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setRotation(value:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setRotation(value:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setscalexscalexfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setScaleX(scaleX:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setScaleX(scaleX:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setscaleyscaleyfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setScaleY(scaleY:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setScaleY(scaleY:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setstatestateintvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      setState(state:Int):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setState(state:Int):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvisiblevalueboolbool" class="md-nav__link">
+    <span class="md-ellipsis">
+      setVisible(value:Bool):Bool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setVisible(value:Bool):Bool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setxposfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setX(pos:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setX(pos:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setxknockbackspeedfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setXKnockback(speed:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setXKnockback(speed:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setxspeedspeedfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setXSpeed(speed:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setXSpeed(speed:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setxvelocityspeedfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setXVelocity(speed:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setXVelocity(speed:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_95" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setyposfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setY(pos:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setY(pos:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_96" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setyknockbackspeedfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setYKnockback(speed:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setYKnockback(speed:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_97" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setyspeedspeedfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setYSpeed(speed:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setYSpeed(speed:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_98" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setyvelocityspeedfloatfloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setYVelocity(speed:Float):Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="setYVelocity(speed:Float):Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swapdepthsgameobjectgameobjectvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      swapDepths(gameObject:GameObject):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="swapDepths(gameObject:GameObject):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tostatestateint-animationoverridestringvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      toState(state:Int, animationOverride?:String):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="toState(state:Int, animationOverride?:String):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#togglegravitystatusboolvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      toggleGravity(status:Bool):Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="toggleGravity(status:Bool):Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_102" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unattachfromfloorvoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      unattachFromFloor():Void
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unattachFromFloor():Void">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_103" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="EntityEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EntityEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="EntityType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EntityType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Filter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Flags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FrameTimer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FrameTimer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GameObject.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GameObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GameObjectEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GameObjectEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GameObjectStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GameObjectStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GameTimerEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GameTimerEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GlobalSfx.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GlobalSfx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GlobalVfx.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GlobalVfx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GlowFilter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GlowFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GrabAirType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GrabAirType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GraphicsSettings.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphicsSettings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HitboxStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HitboxStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HsbcColorFilter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HsbcColorFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IState.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IntMap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IntMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Item.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="JSONClass.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSONClass
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="JabResetType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JabResetType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LandType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LandType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LeaveGroundType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LeaveGroundType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LightboxType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightboxType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LineSegmentStructure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LineSegmentStructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LobbyEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LobbyEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Mask.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MaskFilter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Match.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Match
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MatchEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MatchEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MatchSettingsConfig.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MatchSettingsConfig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Math.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Matrix.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NineSlice.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NineSlice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OffscreenIndicator.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OffscreenIndicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PState.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaletteSwapShader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PaletteSwapShader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ParallaxMode.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParallaxMode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PlayerConfig.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlayerConfig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Point.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Projectile.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projectile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ProjectileAnimationStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProjectileAnimationStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ProjectileStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProjectileStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Random.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RectCollisionArea.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RectCollisionArea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RectStructure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RectStructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Rectangle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rectangle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Resource.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RgbaColorShader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RgbaColorShader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RibbonTrail.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RibbonTrail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Score.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Score
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ScoreEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScoreEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Shader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ShakeDecayType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShakeDecayType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ShakeWaveType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShakeWaveType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SpecialAngle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpecialAngle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sprite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Stage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StageShadowLayerStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StageShadowLayerStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StageStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StageStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StatsFile.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StatsFile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StatusEffect.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StatusEffect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StatusEffectType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StatusEffectType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StringMap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StringMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StrokeFilter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StrokeFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StrongInputType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StrongInputType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Structure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StructureEvent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StructureEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StructureStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StructureStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StructureType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StructureType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TFrameTimer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TFrameTimer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Tile.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TumbleType.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TumbleType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Vfx.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vfx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VfxLayer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VfxLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VfxStats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VfxStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hscript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hscript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hscript Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Syntax
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Syntax
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/Variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/Operators.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/If.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    If Expressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/Switch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switch Expressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/While.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    While Loops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/For.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    For Loops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/Functions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/Blocks.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Structures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/Array.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hscript/String.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    String
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Entity</h1>
+
+<h2 id="instance-functions">Instance Functions<a class="headerlink" href="#instance-functions" title="Permanent link">&para;</a></h2>
+<h3 id="addeventlistenertypeint-funclistener-optionseventlisteneroptionsvoid">addEventListener(type:Int, func:Listener, options?:EventListenerOptions):Void<a class="headerlink" href="#addeventlistenertypeint-funclistener-optionseventlisteneroptionsvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h5>
+<h3 id="addfilterfilterfiltervoid">addFilter(filter:Filter):Void<a class="headerlink" href="#addfilterfilterfiltervoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h5>
+<h3 id="addshadershadershadervoid">addShader(shader:Shader):Void<a class="headerlink" href="#addshadershadershadervoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h5>
+<h3 id="addtimerintervalint-repeatsint-func-optionsintervaltimeroptionsint">addTimer(interval:Int, repeats:Int, func, options?:IntervalTimerOptions):Int<a class="headerlink" href="#addtimerintervalint-repeatsint-func-optionsintervaltimeroptionsint" title="Permanent link">&para;</a></h3>
+<h5 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h5>
+<h3 id="attachtofloorstructurestructurebool">attachToFloor(structure:Structure):Bool<a class="headerlink" href="#attachtofloorstructurestructurebool" title="Permanent link">&para;</a></h3>
+<h5 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h5>
+<h3 id="bringinfrontgameobjectgameobjectvoid">bringInFront(gameObject:GameObject):Void<a class="headerlink" href="#bringinfrontgameobjectgameobjectvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h5>
+<h3 id="collisiontestotherentityentity-myboxtypeint-theirboxtypeint-bailearlyboolarray">collisionTest(otherEntity:Entity, myBoxType:Int, theirBoxType:Int, bailEarly:Bool):Array<Rectangle><a class="headerlink" href="#collisiontestotherentityentity-myboxtypeint-theirboxtypeint-bailearlyboolarray" title="Permanent link">&para;</a></h3>
+<h5 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h5>
+<h3 id="collisiontestgroupsourceentitiesarray-sourceboxtypeint-otherentityentity-targetboxtypeint-bailearlyboolarray">collisionTestGroup(sourceEntities:Array<Entity>, sourceBoxType:Int, otherEntity:Entity, targetBoxType:Int, bailEarly:Bool):Array<EntityCollisionResult><a class="headerlink" href="#collisiontestgroupsourceentitiesarray-sourceboxtypeint-otherentityentity-targetboxtypeint-bailearlyboolarray" title="Permanent link">&para;</a></h3>
+<h5 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h5>
+<p>Takes in a group of entities, extracts their collision data, and then tests that collision data against another entity as if the collision data belonged to this<br>        entity:EntityApi        The source entity whose collision data was responsible for the collision<br>        result:Rectangle        A rectangle representing the overlapping space</p>
+<h3 id="faceleftvoid">faceLeft():Void<a class="headerlink" href="#faceleftvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h5>
+<h3 id="facerightvoid">faceRight():Void<a class="headerlink" href="#facerightvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h5>
+<h3 id="finalframeplayedbool">finalFramePlayed():Bool<a class="headerlink" href="#finalframeplayedbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h5>
+<h3 id="flipvoid">flip():Void<a class="headerlink" href="#flipvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h5>
+<h3 id="flipxvaluefloatfloat">flipX(value:Float):Float<a class="headerlink" href="#flipxvaluefloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h5>
+<h3 id="getalphafloat">getAlpha():Float<a class="headerlink" href="#getalphafloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h5>
+<h3 id="getanimationstring">getAnimation():String<a class="headerlink" href="#getanimationstring" title="Permanent link">&para;</a></h3>
+<h5 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h5>
+<h3 id="getbottomlayercontainer">getBottomLayer():Container<a class="headerlink" href="#getbottomlayercontainer" title="Permanent link">&para;</a></h3>
+<h5 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h5>
+<h3 id="getcollisionboxesboxtypeintarray">getCollisionBoxes(boxType:Int):Array<CollisionBox><a class="headerlink" href="#getcollisionboxesboxtypeintarray" title="Permanent link">&para;</a></h3>
+<h5 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h5>
+<h3 id="getcurrentfloorstructure">getCurrentFloor():Structure<a class="headerlink" href="#getcurrentfloorstructure" title="Permanent link">&para;</a></h3>
+<h5 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h5>
+<h3 id="getcurrentframeint">getCurrentFrame():Int<a class="headerlink" href="#getcurrentframeint" title="Permanent link">&para;</a></h3>
+<h5 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h5>
+<h3 id="getecbcollisionboxcollisionbox">getEcbCollisionBox():CollisionBox<a class="headerlink" href="#getecbcollisionboxcollisionbox" title="Permanent link">&para;</a></h3>
+<h5 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h5>
+<h3 id="getecbfootxfloat">getEcbFootX():Float<a class="headerlink" href="#getecbfootxfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h5>
+<h3 id="getecbfootyfloat">getEcbFootY():Float<a class="headerlink" href="#getecbfootyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h5>
+<h3 id="getecbheadxfloat">getEcbHeadX():Float<a class="headerlink" href="#getecbheadxfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h5>
+<h3 id="getecbheadyfloat">getEcbHeadY():Float<a class="headerlink" href="#getecbheadyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h5>
+<h3 id="getecblefthipxfloat">getEcbLeftHipX():Float<a class="headerlink" href="#getecblefthipxfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h5>
+<h3 id="getecblefthipyfloat">getEcbLeftHipY():Float<a class="headerlink" href="#getecblefthipyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h5>
+<h3 id="getecbrighthipxfloat">getEcbRightHipX():Float<a class="headerlink" href="#getecbrighthipxfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h5>
+<h3 id="getecbrighthipyfloat">getEcbRightHipY():Float<a class="headerlink" href="#getecbrighthipyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h5>
+<h3 id="getknockbackfloat">getKnockback():Float<a class="headerlink" href="#getknockbackfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h5>
+<h3 id="getnetspeedfloat">getNetSpeed():Float<a class="headerlink" href="#getnetspeedfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h5>
+<h3 id="getnetxvelocityfloat">getNetXVelocity():Float<a class="headerlink" href="#getnetxvelocityfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h5>
+<h3 id="getnetyvelocityfloat">getNetYVelocity():Float<a class="headerlink" href="#getnetyvelocityfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h5>
+<h3 id="getpivotxfloat">getPivotX():Float<a class="headerlink" href="#getpivotxfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h5>
+<p>Returns the unscaled x-position of the entity&rsquo;s pivot point</p>
+<h3 id="getpivotxscaledfloat">getPivotXScaled():Float<a class="headerlink" href="#getpivotxscaledfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h5>
+<p>Returns the scaled x-position of the entity&rsquo;s pivot point</p>
+<h3 id="getpivotyfloat">getPivotY():Float<a class="headerlink" href="#getpivotyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h5>
+<p>Returns the unscaled y-position of the entity&rsquo;s pivot point</p>
+<h3 id="getpivotyscaledfloat">getPivotYScaled():Float<a class="headerlink" href="#getpivotyscaledfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h5>
+<p>Returns the scaled y-position of the entity&rsquo;s pivot point</p>
+<h3 id="getpreviousstateint">getPreviousState():Int<a class="headerlink" href="#getpreviousstateint" title="Permanent link">&para;</a></h3>
+<h5 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h5>
+<h3 id="getpreviousstategroupint">getPreviousStateGroup():Int<a class="headerlink" href="#getpreviousstategroupint" title="Permanent link">&para;</a></h3>
+<h5 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h5>
+<h3 id="getresourceresource">getResource():Resource<a class="headerlink" href="#getresourceresource" title="Permanent link">&para;</a></h3>
+<h5 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h5>
+<h3 id="getrotationfloat">getRotation():Float<a class="headerlink" href="#getrotationfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h5>
+<h3 id="getscalexfloat">getScaleX():Float<a class="headerlink" href="#getscalexfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h5>
+<h3 id="getscaleyfloat">getScaleY():Float<a class="headerlink" href="#getscaleyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h5>
+<h3 id="getstateint">getState():Int<a class="headerlink" href="#getstateint" title="Permanent link">&para;</a></h3>
+<h5 id="description_42">Description<a class="headerlink" href="#description_42" title="Permanent link">&para;</a></h5>
+<h3 id="getstaticbottomlayercontainer">getStaticBottomLayer():Container<a class="headerlink" href="#getstaticbottomlayercontainer" title="Permanent link">&para;</a></h3>
+<h5 id="description_43">Description<a class="headerlink" href="#description_43" title="Permanent link">&para;</a></h5>
+<h3 id="getstatictoplayercontainer">getStaticTopLayer():Container<a class="headerlink" href="#getstatictoplayercontainer" title="Permanent link">&para;</a></h3>
+<h5 id="description_44">Description<a class="headerlink" href="#description_44" title="Permanent link">&para;</a></h5>
+<h3 id="gettoplayercontainer">getTopLayer():Container<a class="headerlink" href="#gettoplayercontainer" title="Permanent link">&para;</a></h3>
+<h5 id="description_45">Description<a class="headerlink" href="#description_45" title="Permanent link">&para;</a></h5>
+<h3 id="gettotalframesint">getTotalFrames():Int<a class="headerlink" href="#gettotalframesint" title="Permanent link">&para;</a></h3>
+<h5 id="description_46">Description<a class="headerlink" href="#description_46" title="Permanent link">&para;</a></h5>
+<h3 id="gettypeint">getType():Int<a class="headerlink" href="#gettypeint" title="Permanent link">&para;</a></h3>
+<h5 id="description_47">Description<a class="headerlink" href="#description_47" title="Permanent link">&para;</a></h5>
+<h3 id="getuidint">getUid():Int<a class="headerlink" href="#getuidint" title="Permanent link">&para;</a></h3>
+<h5 id="description_48">Description<a class="headerlink" href="#description_48" title="Permanent link">&para;</a></h5>
+<h3 id="getviewrootcontainercontainer">getViewRootContainer():Container<a class="headerlink" href="#getviewrootcontainercontainer" title="Permanent link">&para;</a></h3>
+<h5 id="description_49">Description<a class="headerlink" href="#description_49" title="Permanent link">&para;</a></h5>
+<h3 id="getvisiblebool">getVisible():Bool<a class="headerlink" href="#getvisiblebool" title="Permanent link">&para;</a></h3>
+<h5 id="description_50">Description<a class="headerlink" href="#description_50" title="Permanent link">&para;</a></h5>
+<h3 id="getxfloat">getX():Float<a class="headerlink" href="#getxfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_51">Description<a class="headerlink" href="#description_51" title="Permanent link">&para;</a></h5>
+<h3 id="getxknockbackfloat">getXKnockback():Float<a class="headerlink" href="#getxknockbackfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_52">Description<a class="headerlink" href="#description_52" title="Permanent link">&para;</a></h5>
+<h3 id="getxspeedfloat">getXSpeed():Float<a class="headerlink" href="#getxspeedfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_53">Description<a class="headerlink" href="#description_53" title="Permanent link">&para;</a></h5>
+<h3 id="getxvelocityfloat">getXVelocity():Float<a class="headerlink" href="#getxvelocityfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_54">Description<a class="headerlink" href="#description_54" title="Permanent link">&para;</a></h5>
+<h3 id="getyfloat">getY():Float<a class="headerlink" href="#getyfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_55">Description<a class="headerlink" href="#description_55" title="Permanent link">&para;</a></h5>
+<h3 id="getyknockbackfloat">getYKnockback():Float<a class="headerlink" href="#getyknockbackfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_56">Description<a class="headerlink" href="#description_56" title="Permanent link">&para;</a></h5>
+<h3 id="getyspeedfloat">getYSpeed():Float<a class="headerlink" href="#getyspeedfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_57">Description<a class="headerlink" href="#description_57" title="Permanent link">&para;</a></h5>
+<h3 id="getyvelocityfloat">getYVelocity():Float<a class="headerlink" href="#getyvelocityfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_58">Description<a class="headerlink" href="#description_58" title="Permanent link">&para;</a></h5>
+<h3 id="hasanimationanimationstringbool">hasAnimation(animation:String):Bool<a class="headerlink" href="#hasanimationanimationstringbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_59">Description<a class="headerlink" href="#description_59" title="Permanent link">&para;</a></h5>
+<h3 id="haseventlistenertypeint-funclistenerbool">hasEventListener(type:Int, func?:Listener):Bool<a class="headerlink" href="#haseventlistenertypeint-funclistenerbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_60">Description<a class="headerlink" href="#description_60" title="Permanent link">&para;</a></h5>
+<h3 id="hittestentityotherentityentity-selfcollisionboxtypeint-othercollisionboxtypeint-optionshittestentityoptionsarray">hitTestEntity(otherEntity:Entity, selfCollisionBoxType:Int, otherCollisionBoxType:Int, options?:HitTestEntityOptions):Array<CollisionResult><a class="headerlink" href="#hittestentityotherentityentity-selfcollisionboxtypeint-othercollisionboxtypeint-optionshittestentityoptionsarray" title="Permanent link">&para;</a></h3>
+<h5 id="description_61">Description<a class="headerlink" href="#description_61" title="Permanent link">&para;</a></h5>
+<h3 id="hitteststructureswithlinesegmentpoint1point-point2point-intersectionoutpoint-optionsstructurecollidersearchoptionsarray">hitTestStructuresWithLineSegment(point1:Point, point2:Point, intersectionOut?:Point, options:StructureColliderSearchOptions):Array<Structure><a class="headerlink" href="#hitteststructureswithlinesegmentpoint1point-point2point-intersectionoutpoint-optionsstructurecollidersearchoptionsarray" title="Permanent link">&para;</a></h3>
+<h5 id="description_62">Description<a class="headerlink" href="#description_62" title="Permanent link">&para;</a></h5>
+<h3 id="instatestateintbool">inState(state:Int):Bool<a class="headerlink" href="#instatestateintbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_63">Description<a class="headerlink" href="#description_63" title="Permanent link">&para;</a></h5>
+<p>Checks if the entity is in the specified state.<br>Parameters:<br>- <strong>state</strong> - The state to check for.</p>
+<h3 id="instategroupstategroupintbool">inStateGroup(stateGroup:Int):Bool<a class="headerlink" href="#instategroupstategroupintbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_64">Description<a class="headerlink" href="#description_64" title="Permanent link">&para;</a></h5>
+<p>Checks if the entity is in the specified state group.<br>Parameters:<br>- <strong>stateGroup</strong> - The state group to check for.</p>
+<h3 id="isdisposedbool">isDisposed():Bool<a class="headerlink" href="#isdisposedbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_65">Description<a class="headerlink" href="#description_65" title="Permanent link">&para;</a></h5>
+<h3 id="isfacingleftbool">isFacingLeft():Bool<a class="headerlink" href="#isfacingleftbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_66">Description<a class="headerlink" href="#description_66" title="Permanent link">&para;</a></h5>
+<h3 id="isfacingrightbool">isFacingRight():Bool<a class="headerlink" href="#isfacingrightbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_67">Description<a class="headerlink" href="#description_67" title="Permanent link">&para;</a></h5>
+<h3 id="isonfloorbool">isOnFloor():Bool<a class="headerlink" href="#isonfloorbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_68">Description<a class="headerlink" href="#description_68" title="Permanent link">&para;</a></h5>
+<h3 id="killvoid">kill():Void<a class="headerlink" href="#killvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_69">Description<a class="headerlink" href="#description_69" title="Permanent link">&para;</a></h5>
+<h3 id="movexfloat-yfloatvoid">move(x:Float, y:Float):Void<a class="headerlink" href="#movexfloat-yfloatvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_70">Description<a class="headerlink" href="#description_70" title="Permanent link">&para;</a></h5>
+<h3 id="moveabsolutexfloat-yfloatvoid">moveAbsolute(x:Float, y:Float):Void<a class="headerlink" href="#moveabsolutexfloat-yfloatvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_71">Description<a class="headerlink" href="#description_71" title="Permanent link">&para;</a></h5>
+<h3 id="pausevoid">pause():Void<a class="headerlink" href="#pausevoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_72">Description<a class="headerlink" href="#description_72" title="Permanent link">&para;</a></h5>
+<h3 id="playanimationnamestringvoid">playAnimation(name:String):Void<a class="headerlink" href="#playanimationnamestringvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_73">Description<a class="headerlink" href="#description_73" title="Permanent link">&para;</a></h5>
+<h3 id="playframeframeintvoid">playFrame(frame:Int):Void<a class="headerlink" href="#playframeframeintvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_74">Description<a class="headerlink" href="#description_74" title="Permanent link">&para;</a></h5>
+<h3 id="playframelabellabelstringvoid">playFrameLabel(label:String):Void<a class="headerlink" href="#playframelabellabelstringvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_75">Description<a class="headerlink" href="#description_75" title="Permanent link">&para;</a></h5>
+<h3 id="refreshecbvoid">refreshEcb():Void<a class="headerlink" href="#refreshecbvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_76">Description<a class="headerlink" href="#description_76" title="Permanent link">&para;</a></h5>
+<h3 id="removeeventlistenertypeint-funclistenervoid">removeEventListener(type:Int, func:Listener):Void<a class="headerlink" href="#removeeventlistenertypeint-funclistenervoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_77">Description<a class="headerlink" href="#description_77" title="Permanent link">&para;</a></h5>
+<h3 id="removefilterfilterfiltervoid">removeFilter(filter:Filter):Void<a class="headerlink" href="#removefilterfilterfiltervoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_78">Description<a class="headerlink" href="#description_78" title="Permanent link">&para;</a></h5>
+<h3 id="removeshadershadershadervoid">removeShader(shader:Shader):Void<a class="headerlink" href="#removeshadershadershadervoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_79">Description<a class="headerlink" href="#description_79" title="Permanent link">&para;</a></h5>
+<h3 id="removetimeruidintbool">removeTimer(uid:Int):Bool<a class="headerlink" href="#removetimeruidintbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_80">Description<a class="headerlink" href="#description_80" title="Permanent link">&para;</a></h5>
+<h3 id="resetmomentumvoid">resetMomentum():Void<a class="headerlink" href="#resetmomentumvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_81">Description<a class="headerlink" href="#description_81" title="Permanent link">&para;</a></h5>
+<h3 id="resetrotationvoid">resetRotation():Void<a class="headerlink" href="#resetrotationvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_82">Description<a class="headerlink" href="#description_82" title="Permanent link">&para;</a></h5>
+<h3 id="resumevoid">resume():Void<a class="headerlink" href="#resumevoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_83">Description<a class="headerlink" href="#description_83" title="Permanent link">&para;</a></h5>
+<h3 id="sendbehindgameobjectgameobjectvoid">sendBehind(gameObject:GameObject):Void<a class="headerlink" href="#sendbehindgameobjectgameobjectvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_84">Description<a class="headerlink" href="#description_84" title="Permanent link">&para;</a></h5>
+<h3 id="setalphavaluefloatfloat">setAlpha(value:Float):Float<a class="headerlink" href="#setalphavaluefloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_85">Description<a class="headerlink" href="#description_85" title="Permanent link">&para;</a></h5>
+<h3 id="setknockbackspeedfloat-anglefloatfloat">setKnockback(speed:Float, angle:Float):Float<a class="headerlink" href="#setknockbackspeedfloat-anglefloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_86">Description<a class="headerlink" href="#description_86" title="Permanent link">&para;</a></h5>
+<h3 id="setrotationvaluefloatfloat">setRotation(value:Float):Float<a class="headerlink" href="#setrotationvaluefloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_87">Description<a class="headerlink" href="#description_87" title="Permanent link">&para;</a></h5>
+<h3 id="setscalexscalexfloatfloat">setScaleX(scaleX:Float):Float<a class="headerlink" href="#setscalexscalexfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_88">Description<a class="headerlink" href="#description_88" title="Permanent link">&para;</a></h5>
+<p>Sets the horizontal scale of the entity.<br></p>
+<h3 id="setscaleyscaleyfloatfloat">setScaleY(scaleY:Float):Float<a class="headerlink" href="#setscaleyscaleyfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_89">Description<a class="headerlink" href="#description_89" title="Permanent link">&para;</a></h5>
+<p>Sets the vertical scale of the entity.<br></p>
+<h3 id="setstatestateintvoid">setState(state:Int):Void<a class="headerlink" href="#setstatestateintvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_90">Description<a class="headerlink" href="#description_90" title="Permanent link">&para;</a></h5>
+<p>Sets the state of the entity without changing the animation or inducing any other side effects.<br>Parameters:<br>- <strong>state</strong> - The state to set the entity to.</p>
+<h3 id="setvisiblevalueboolbool">setVisible(value:Bool):Bool<a class="headerlink" href="#setvisiblevalueboolbool" title="Permanent link">&para;</a></h3>
+<h5 id="description_91">Description<a class="headerlink" href="#description_91" title="Permanent link">&para;</a></h5>
+<h3 id="setxposfloatfloat">setX(pos:Float):Float<a class="headerlink" href="#setxposfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_92">Description<a class="headerlink" href="#description_92" title="Permanent link">&para;</a></h5>
+<h3 id="setxknockbackspeedfloatfloat">setXKnockback(speed:Float):Float<a class="headerlink" href="#setxknockbackspeedfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_93">Description<a class="headerlink" href="#description_93" title="Permanent link">&para;</a></h5>
+<h3 id="setxspeedspeedfloatfloat">setXSpeed(speed:Float):Float<a class="headerlink" href="#setxspeedspeedfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_94">Description<a class="headerlink" href="#description_94" title="Permanent link">&para;</a></h5>
+<h3 id="setxvelocityspeedfloatfloat">setXVelocity(speed:Float):Float<a class="headerlink" href="#setxvelocityspeedfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_95">Description<a class="headerlink" href="#description_95" title="Permanent link">&para;</a></h5>
+<h3 id="setyposfloatfloat">setY(pos:Float):Float<a class="headerlink" href="#setyposfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_96">Description<a class="headerlink" href="#description_96" title="Permanent link">&para;</a></h5>
+<h3 id="setyknockbackspeedfloatfloat">setYKnockback(speed:Float):Float<a class="headerlink" href="#setyknockbackspeedfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_97">Description<a class="headerlink" href="#description_97" title="Permanent link">&para;</a></h5>
+<h3 id="setyspeedspeedfloatfloat">setYSpeed(speed:Float):Float<a class="headerlink" href="#setyspeedspeedfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_98">Description<a class="headerlink" href="#description_98" title="Permanent link">&para;</a></h5>
+<h3 id="setyvelocityspeedfloatfloat">setYVelocity(speed:Float):Float<a class="headerlink" href="#setyvelocityspeedfloatfloat" title="Permanent link">&para;</a></h3>
+<h5 id="description_99">Description<a class="headerlink" href="#description_99" title="Permanent link">&para;</a></h5>
+<h3 id="swapdepthsgameobjectgameobjectvoid">swapDepths(gameObject:GameObject):Void<a class="headerlink" href="#swapdepthsgameobjectgameobjectvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_100">Description<a class="headerlink" href="#description_100" title="Permanent link">&para;</a></h5>
+<h3 id="tostatestateint-animationoverridestringvoid">toState(state:Int, animationOverride?:String):Void<a class="headerlink" href="#tostatestateint-animationoverridestringvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_101">Description<a class="headerlink" href="#description_101" title="Permanent link">&para;</a></h5>
+<p>Transitions the entity to a new state, taking into account the object&rsquo;s state transition map and animation rules. Note that the the target state is not guaranteed to be the current state after this function is called, so it&rsquo;s important to check the state after calling this function if you need to know the result.<br>Parameters:<br>- <strong>state</strong> - The state to transition to.<br>- <strong>animationOverride</strong> - Overrides the animation to use for the state transition.</p>
+<h3 id="togglegravitystatusboolvoid">toggleGravity(status:Bool):Void<a class="headerlink" href="#togglegravitystatusboolvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_102">Description<a class="headerlink" href="#description_102" title="Permanent link">&para;</a></h5>
+<h3 id="unattachfromfloorvoid">unattachFromFloor():Void<a class="headerlink" href="#unattachfromfloorvoid" title="Permanent link">&para;</a></h3>
+<h5 id="description_103">Description<a class="headerlink" href="#description_103" title="Permanent link">&para;</a></h5>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "toc.follow", "toc.integrate", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.pruning", "navigation.expand", "search.highlight", "search.suggest", "navigation.instant", "navigation.instant.preview", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.instant"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
