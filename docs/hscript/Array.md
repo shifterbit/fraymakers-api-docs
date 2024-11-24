@@ -20,32 +20,7 @@ var arr2: Array<Int> = [4,9,0];
 var arr3 = arr.concat(arr2); // arr3 is now [1,6,3,4,9,0]
 // arr and arr2 remain unchanged from their original values
 ```
-### every(predicate: (value: any, index: Int, array: Array<Any>) -> Any, thisArg? Any): Bool
-#### Description
-Determines whether all the members of an array satisfy the specified test.
 
-`predicate` — A function that accepts up to three arguments. The every method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value false, or until the end of the array.
-
-`thisArg` — An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-#### Usage
-```haxe
-// Our predicate function in this case
-function isEven(number: Int, index: Int, arr: Array<Int>) {
-	if (number % 2 == 0) { // check if the remainder when divided by 2 is 0
-		return true;
-	} else {
-		return false;
-	}
-}
-
-var myNumbers: Array<Int>= [1,2,3,4,5,6,7,8,9,10];
-var myOtherNumbers: Array<Int> [2,4,6,8,10,12,14,16,18,20];
-
-myNumbers.every(isEven); // returns false as there are odd numbers
-myOtherNumbers.every(isEven); // returns true as all the numbers are even
-
-
-```
 ### filter(predicate: (value: any, index: Int, array: Array<Any>) -> Any, thisArg? Any): Array<Any>
 #### Description
 Returns the elements of an array that meet the condition specified in a callback function.
@@ -65,22 +40,6 @@ function isEven(number: Int, index: Int, arr: Array<Int>) {
 
 var myNumbers: Array<Int>= [1,2,3,4,5,6,7,8,9,10];
 var evenNumbers = myOtherNumbers.filter(isEven); // returns [2,4,6,8,10]
-```
-### forEach(callbackFn: (value: any, index: Int, array: Array<Any>) -> Any, thisArg? Any): Void
-#### Description
-Performs the specified action for each element in an array.
-
-`callbackfn` — A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
-
-`thisArg` — An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
-#### Usage
-```haxe
-function printer(number: Int, index: Int, arr: Array<Int>) {
-	Engine.log(number);
-}
-
-var myNumbers: Array<Int>= [1,2,3,4,5,6,7,8,9,10];
-myNumbers.forEach(printer); // prints each of the numbers
 ```
 ### indexOf(searchElement: Any, fromIndex?: Int): Int
 #### Description
@@ -152,30 +111,16 @@ var arr: Array<Int> = [1,2,3,4];
 arr.push(5) 
 // arr is now [1,2,3,4,5]
 ```
-### reduce(callbackfn: (previousValue: Any, currentValue: Any, currentIndex: Int, array: Array<Any>) => Any): Any
-#### Description
-Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-`callbackfn` — A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
-
-`initialValue` — If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-#### Usage
-### reduceRight(callbackfn: (previousValue: Any, currentValue: Any, currentIndex: Int, array: Array<Any>) => Any): Any
-#### Description
-Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function. Unlike regular `reduce`, this begins from the end of the array
-
-`callbackfn` — A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
-
-`initialValue` — If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-#### Usage
-### reverse
+### reverse(): Array<Any>
 #### Description
 Reverses the elements in the array.
 #### Usage
 ```haxe
 var arr: Array<Int> = [1,2,3,4];
-arr.reverse();
-// arr is now [4,3,2,1]
+var reversed = arr.reverse();
+// reversed is  [4,3,2,1]
+// arr remains unchanged
 ```
 
 ### shift(): Any
@@ -203,33 +148,6 @@ arr.slice(2,6); // [2,3,4,5]
 
 ```
 
-### some(predicate: (value: any, index: Int, array: Array<Any>) -> Any, thisArg? Any): Bool
-#### Description
-Determines whether the specified callback function returns true for any element of an array.
-
-`predicate` — A function that accepts up to three arguments. The some method calls the predicate function for each element in the array until the predicate returns a value which is coercible to the Boolean value true, or until the end of the array.
-
-`thisArg` — An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-#### Usage
-```haxe
-// Our predicate function in this case
-function isEven(number: Int, index: Int, arr: Array<Int>) {
-	if (number % 2 == 0) { // check if the remainder when divided by 2 is 0
-		return true;
-	} else {
-		return false;
-	}
-}
-
-var myNumbers: Array<Int> = [1,2,3,4,5,6,7,8,9,10];
-var myOtherNumbers: Array<Int> =  [2,4,6,8,10,12,14,16,18,20];
-var odds: Array<Int> = [1,3,6,9,11,13,15,17,19,21];
-
-myNumbers.some(isEven); // returns true as there's at least one even number
-myOtherNumbers.some(isEven); // returns true as all the numbers are even
-odds.some(isEven); // returns false as none of the numbers are even
-```
-
 ### sort(compareFn?: (a: any, b: any) => number): any[]
 #### Description
 Sorts an array.
@@ -253,11 +171,6 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 var arr = [0,1,2,3,4,5,6,7,8];
 var spliced = arr.splice(2,4); // [0,1,6,7,8]
 ```
-### toLocaleString(): String
-#### Description
-Returns a string representation of an array. The elements are converted to string using their toLocalString methods.
-
-
 ### toString(): String
 #### Description
 Returns the string representation of the array, each of the items are converted using their respective `toString` methods
