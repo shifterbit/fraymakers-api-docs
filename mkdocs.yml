@@ -30,7 +30,7 @@ plugins:
   - search:
       min_search_length: 3
       indexing: "full"
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      separator: '[\s\-, :!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
 theme:
   name: material
   features:

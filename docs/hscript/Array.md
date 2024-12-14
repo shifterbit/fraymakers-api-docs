@@ -7,7 +7,7 @@ title: Array
 The length of the array, of type `Int`
 
 ## Instance Functions
-### concat(items: Array<Any>): Array<Any>
+### concat(items: Array<Any\>): Array<Any\>
 #### Description
 Combines two or more arrays.
 
@@ -21,7 +21,7 @@ var arr3 = arr.concat(arr2); // arr3 is now [1,6,3,4,9,0]
 // arr and arr2 remain unchanged from their original values
 ```
 
-### filter(predicate: (value: any, index: Int, array: Array<Any>) -> Any, thisArg? Any): Array<Any>
+### filter(predicate: (value: any, index: Int, array: Array<Any\>) -> Any, thisArg? Any): Array<Any\>
 #### Description
 Returns the elements of an array that meet the condition specified in a callback function.
 
@@ -38,7 +38,7 @@ function isEven(number: Int, index: Int, arr: Array<Int>) {
 	}
 }
 
-var myNumbers: Array<Int>= [1,2,3,4,5,6,7,8,9,10];
+var myNumbers: Array<Int> = [1,2,3,4,5,6,7,8,9,10];
 var evenNumbers = myOtherNumbers.filter(isEven); // returns [2,4,6,8,10]
 ```
 ### indexOf(searchElement: Any, fromIndex?: Int): Int
@@ -50,7 +50,7 @@ Returns the index of the first occurrence of a value in an array.
 `fromIndex` — The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
 #### Usage
 ```haxe
-var myNumbers: Array<Int>= [1,2,3,4,5,6,7,8,9,10];
+var myNumbers: Array<Int> = [1,2,3,4,5,6,7,8,9,10];
 myNumbers.indexOf(5); // returns 4
 ```
 ### join(separator?: String): String
@@ -72,10 +72,10 @@ Returns the index of the last occurrence of a specified value in an array.
 `fromIndex` — The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
 #### Usage
 ```haxe
-var myNumbers: Array<Int>= [1,2,3,4,5,1,2,3,4,5];
+var myNumbers: Array<Int> = [1,2,3,4,5,1,2,3,4,5];
 myNumbers.indexOf(5); // returns 9
 ```
-### map(callbackFn: (value: any, index: Int, array: Array<Any>) -> Any, thisArg? Any): Array<Any>
+### map(callbackFn: (value: any, index: Int, array: Array<Any\>) -> Any, thisArg? Any): Array<Any\>
 #### Description
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
@@ -88,7 +88,7 @@ function doubleNum(number: Int, index: Int, arr: Array<Int>) {
 	return number * 2;
 }
 
-var myNumbers: Array<Int>= [1,2,3,4,5,6,7,8,9,10];
+var myNumbers: Array<Int> = [1,2,3,4,5,6,7,8,9,10];
 var doubledNubers = myOtherNumbers.map(doubleNum); // [2,4,6,8,10,12,14,16,18,20]
 ```
 ### pop(): Any
@@ -100,7 +100,7 @@ var arr: Array<Int> = [1,2,3,4];
 var lastItem = arr.pop() // 4
 // arr is now [1,2,3]
 ```
-### push(...items: Array<Any>): Int
+### push(...items: Array<Any\>): Int
 #### Description
 Appends new elements to an array, and returns the new length of the array.
 
@@ -112,7 +112,7 @@ arr.push(5)
 // arr is now [1,2,3,4,5]
 ```
 
-### reverse(): Array<Any>
+### reverse(): Array<Any\>
 #### Description
 Reverses the elements in the array.
 #### Usage
@@ -134,7 +134,7 @@ var arr: Array<Int> = [1,2,3,4];
 var lastItem = arr.shift() // 1
 // arr is now [2,3,4];
 ```
-### slice(start?: Int, end?: Int): Array<Int>
+### slice(start?: Int, end?: Int): Array<Int\>
 #### Description
 Returns a section of an array.
 
@@ -148,7 +148,7 @@ arr.slice(2,6); // [2,3,4,5]
 
 ```
 
-### sort(compareFn?: (a: any, b: any) => number): any[]
+### sort(compareFn?: (a: Any, b: Any) => Int): Array<Any\>
 #### Description
 Sorts an array.
 
@@ -159,7 +159,7 @@ Sorts an array.
 var arr: Array<Int> = [1,5,2,4,2];
 var sorted = arr.sort(); // [1,2,2,4,5]
 ```
-### splice(start: Int, deleteCount?: Int): Array<Any>
+### splice(start: Int, deleteCount?: Int): Array<Any\>
 #### Description
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 

@@ -19,7 +19,7 @@ async function main() {
   };
   const folderPath = "./docs/classes";
   let files = fsSync
-    .readdirSync("./docs/classes")
+    .readdirSync(folderPath)
     .map((fileName) => {
       return path.join(folderPath, fileName);
     })
@@ -74,6 +74,7 @@ function toHeaders(row, sections) {
         type: "paragraph",
         children: row[i],
       });
+      console.log(row);
     }
   }
   return data;

@@ -6,7 +6,19 @@ title: String
 The length of the string, of type `Int`
 
 ## Instance Functions
-### concat(items: Array<String>): Array<Any>
+### charAt(pos: Int): String
+#### Description
+Returns the character at the specified index.
+
+`pos` — The zero-based index of the desired character.
+#### Usage
+```haxe
+var name: String = "Fraynkie";
+
+var initial: String = name.charAt(0) // "F"
+
+```
+### concat(items: Array\<String\>): Array\<Any\>
 #### Description
 Combines Two or more strings together.
 Returns a string that contains the concatenation of two or more strings.
@@ -48,7 +60,7 @@ var FraynkieStart: Int = greeting.indexOf("Fraynkie"); // returns 20, being the 
 var sandbagStart: Int = greeting.lastIndexOf("sandbag"); // returns -1, as the substring "sandbag" is not present
 ```
 
-### split(separator: String | RegExp, limit?: Int): Array<String>
+### split(separator: String | RegExp, limit?: Int): Array\<String\>
 #### Description
 Split a string into substrings using the specified separator and return them as an array.
 

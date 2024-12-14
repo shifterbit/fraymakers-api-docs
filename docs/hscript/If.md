@@ -1,7 +1,7 @@
 ---
 title: If Expressions
 ---
-# Basic If
+# Lone If
 ```haxe
 // if (condition) expression;
 if (1 > 0) {
