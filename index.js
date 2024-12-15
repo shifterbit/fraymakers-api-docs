@@ -83,7 +83,6 @@ function toHeaders(row, sections) {
         type: "paragraph",
         children: row[i],
       });
-      console.log(row);
     }
   }
   return data;
