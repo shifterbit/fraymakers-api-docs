@@ -5,6 +5,7 @@ import { getSidebar } from 'vitepress-plugin-auto-sidebar'
 export default defineConfig({
   title: "Fraymakers API Docs",
   description: "Unofficial Searchable Documentation for the Fraymakers API",
+  base: '/fraymakers-api-docs/',
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
