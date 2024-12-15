@@ -1,5 +1,17 @@
 import { defineConfig } from 'vitepress'
 import { getSidebar } from 'vitepress-plugin-auto-sidebar'
+let sidebarP = getSidebar({
+  contentRoot: '/',
+  contentDirs: ['./docs/classes/'],
+  collapsible: true,
+  collapsed: false
+})
+for (let i = 0; i < sidebarP[0].items.length; i++) {
+  sidebarP[0].items[i].link = sidebarP[0].items[i].link.replace("docs/", "");
+}
+
+console.dir(sidebarP, { depth: null });
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -28,14 +40,9 @@ export default defineConfig({
 
       {
         text: 'Classes',
-        link: '/classes/',
+        link: '/classes',
         collapsed: false,
-        items: getSidebar({
-          contentRoot: '/',
-          contentDirs: ['docs/classes/'],
-          collapsible: true,
-          collapsed: false
-        })
+        items: sidebarP,
       },
       {
         text: 'Hscript',
