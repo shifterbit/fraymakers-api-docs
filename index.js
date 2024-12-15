@@ -19,7 +19,7 @@ async function main() {
   };
   const folderPath = "./docs/classes";
   let files = fsSync
-    .readdirSync("./docs/classes")
+    .readdirSync(folderPath)
     .map((fileName) => {
       return path.join(folderPath, fileName);
     })
@@ -48,9 +48,18 @@ async function main() {
     }
     tree.children = newChildren;
 
-    const out = toMarkdown(tree, {
+    let out = toMarkdown(tree, {
       extensions: [frontmatterToMarkdown(["yaml", "toml"])],
     });
+    let lines = out.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      lines[i] = lines[i].replaceAll("<","&lt;");
+      lines[i] = lines[i].replaceAll(">","&gt;");
+      lines[i] = lines[i].replaceAll("<br>","\n");
+      lines[i] = lines[i].replaceAll("layout: page","layout: doc");
+    }
+    out = lines.join('\n');
+
     await fs.writeFile(files[h], out);
   }
 }
@@ -74,6 +83,7 @@ function toHeaders(row, sections) {
         type: "paragraph",
         children: row[i],
       });
+      console.log(row);
     }
   }
   return data;
