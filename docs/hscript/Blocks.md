@@ -1,6 +1,7 @@
 ---
 title: Blocks
 ---
+# Blocks
 Blocks create scopes.
 ```haxe
 var a = 1;

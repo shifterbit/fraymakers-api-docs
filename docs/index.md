@@ -1,6 +1,5 @@
 ---
 title: Main Page
 ---
-
-- [API Documentation](./classes/index.md)
-- [Haxe Script Overview](./hscript/index.md)
+## [API Documentation](./classes/index.md)
+## [Haxe Script Overview](./hscript/index.md)

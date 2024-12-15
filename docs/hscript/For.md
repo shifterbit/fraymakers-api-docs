@@ -1,6 +1,7 @@
 ---
 title: For Loops
 ---
+# For Loops
 Haxe does not use traditional C-Style for loops, instead, for loops follow the following
 structure:
 ```

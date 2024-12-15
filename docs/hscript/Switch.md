@@ -1,6 +1,7 @@
 ---
 title: Switch Expressions
 ---
+# Switch Expression
 ```haxe
 // switch expression {
 //  	case value1: body1;

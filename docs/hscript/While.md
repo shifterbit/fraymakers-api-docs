@@ -1,6 +1,7 @@
 ---
 title: While Loops
 ---
+# While Loops
 
 ```haxe
 // while (condition) {expression}
