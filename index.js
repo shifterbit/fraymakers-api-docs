@@ -48,9 +48,17 @@ async function main() {
     }
     tree.children = newChildren;
 
-    const out = toMarkdown(tree, {
+    let out = toMarkdown(tree, {
       extensions: [frontmatterToMarkdown(["yaml", "toml"])],
     });
+    let lines = out.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      lines[i] = lines[i].replaceAll("<","&lt;");
+      lines[i] = lines[i].replaceAll(">","&gt;");
+      lines[i] = lines[i].replaceAll("<br>","\n");
+    }
+    out = lines.join('\n');
+
     await fs.writeFile(files[h], out);
   }
 }
