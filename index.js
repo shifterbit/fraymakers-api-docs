@@ -56,6 +56,7 @@ async function main() {
       lines[i] = lines[i].replaceAll("<","&lt;");
       lines[i] = lines[i].replaceAll(">","&gt;");
       lines[i] = lines[i].replaceAll("<br>","\n");
+      lines[i] = lines[i].replaceAll("layout: page","layout: doc");
     }
     out = lines.join('\n');
 
