@@ -49,13 +49,13 @@ export default defineConfig({
         link: '/hscript/',
         collapsed: false,
         items: [
-          { text: 'Variables', link: '/Variables/' },
-          { text: 'Operators', link: '/Operators/' },
-          { text: 'Blocks', link: '/Blocks/' },
-          { text: 'If-Else', link: '/If/' },
-          { text: 'Switch', link: '/Switch/' },
-          { text: 'While', link: '/For/' },
-          { text: 'Functions', link: '/Functions/' },
+          { text: 'Variables', link: '/hscript/Variables/' },
+          { text: 'Operators', link: '/hscript/Operators/' },
+          { text: 'Blocks', link: '/hscript/Blocks/' },
+          { text: 'If-Else', link: '/hscript/If/' },
+          { text: 'Switch', link: '/hscript/Switch/' },
+          { text: 'While', link: '/hscript/For/' },
+          { text: 'Functions', link: '/hscript/Functions/' },
         ]
       }
     ],
