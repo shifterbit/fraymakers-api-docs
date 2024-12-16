@@ -53,10 +53,10 @@ async function main() {
     });
     let lines = out.split('\n');
     for (let i = 0; i < lines.length; i++) {
+      lines[i] = lines[i].replaceAll("layout: page","layout: doc");
+      lines[i] = lines[i].replaceAll("<br>",'\n');
       lines[i] = lines[i].replaceAll("<","&lt;");
       lines[i] = lines[i].replaceAll(">","&gt;");
-      lines[i] = lines[i].replaceAll("<br>","\n");
-      lines[i] = lines[i].replaceAll("layout: page","layout: doc");
     }
     out = lines.join('\n');
 
