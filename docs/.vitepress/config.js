@@ -30,7 +30,16 @@ export default defineConfig({
       { text: 'Hscript', link: '/hscript/' }
     ],
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+        _render(src, env, md) {
+          const html = md.render(src, env)
+          if (env.frontmatter?.title)
+            return md.render(`# ${env.frontmatter.title}`) + html
+          return html
+        }
+      }
+
     },
     outline: {
       level: 'deep',
@@ -47,7 +56,8 @@ export default defineConfig({
           { text: 'Blocks', link: '/hscript/Blocks/' },
           { text: 'If-Else', link: '/hscript/If/' },
           { text: 'Switch', link: '/hscript/Switch/' },
-          { text: 'While', link: '/hscript/For/' },
+          { text: 'While', link: '/hscript/While/' },
+          { text: 'For', link: '/hscript/For/' },
           { text: 'Functions', link: '/hscript/Functions/' },
         ]
       },
