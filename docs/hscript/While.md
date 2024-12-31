@@ -1,7 +1,7 @@
 ---
 title: While Loops
 ---
-# While Loops
+# Basic Usage
 
 ```haxe
 // while (condition) {expression}

@@ -1,7 +1,7 @@
 ---
 title: For Loops
 ---
-# For Loops
+# Basic Usage
 Haxe does not use traditional C-Style for loops, instead, for loops follow the following
 structure:
 ```
@@ -11,7 +11,7 @@ for (item in iterable) {
 ```
 The iterable value which comes in one of three forms:
 
-## Iterating Through Arrays
+# Iterating Through Arrays
 Arrays are likely to be the most common iterator
 ```haxe
 var list = ["apple", "pear", "banana"];
@@ -22,7 +22,7 @@ for (item in list) {
 // pear
 // banana
 ```
-## Iterating Through Number Ranges
+# Iterating Through Number Ranges
 In some cases you might just need to run through a range of numbers but the data you're operating on isn't an iterable or maybe you just want to generate a numbered sequence:
 
 This is a basic for loop using iterators:
