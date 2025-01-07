@@ -35,7 +35,7 @@ var foo:ApiVarBool = self.makeBool(false);
 
 // Setting the value
 foo.set(true);
-// Retreiving the value
+// Retrieving the value
 foo.get() 
 ```
 
@@ -54,7 +54,7 @@ bar.set(14);
 foo.inc();
 bar.dev()
 
-// Retreiving the values inside
+// Retrieving the values inside
 foo.get();
 bar.get();
 ```
@@ -65,7 +65,7 @@ var foo:ApiVarArr = self.makeArray([1,2,3,5]);
 
 // Setting the value
 foo.set([2,4,6,8]); // replaces the array
-// Retreiving the value
+// Retrieving the value
 foo.get()  // returns the array inside
 ```
 
@@ -78,7 +78,7 @@ var foo:ApiVarObject = self.makeObject(null);
 
 // Setting the value
 foo.set(self.getOwner()); // stores the owner
-// Retreiving the value
-foo.get()  // returns thee owner
+// Retrieving the value
+foo.get()  // returns the owner
 ```
 
