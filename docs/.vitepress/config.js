@@ -58,7 +58,13 @@ export default defineConfig({
           { text: 'Switch', link: '/hscript/Switch/' },
           { text: 'While', link: '/hscript/While/' },
           { text: 'For', link: '/hscript/For/' },
-          { text: 'Functions', link: '/hscript/Functions/' },
+          { text: 'Array', link: '/hscript/Array/' },
+          { text: 'String', link: '/hscript/String/' },
+          { text: 'EventListeners', link: '/hscript/EventListeners/' },
+          { text: 'StatusEffects', link: '/hscript/StatusEffects/' },
+          { text: 'Timers', link: '/hscript/Timers/' },
+          { text: 'Psuedo Classes', link: '/hscript/PsuedoClasses/' },
+          { text: 'Making Use of Ports and Arrays', link: '/hscript/MakingUseofPorts/' },
         ]
       },
       {
