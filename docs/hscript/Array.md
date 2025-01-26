@@ -21,6 +21,11 @@ var arr3 = arr.concat(arr2); // arr3 is now [1,6,3,4,9,0]
 // arr and arr2 remain unchanged from their original values
 ```
 
+### contains(item: Any): Bool
+Returns whether this Array contains `item`.
+
+If `item` is found by checking standard equality, the function returns true, otherwise the function returns false.
+
 ### filter(predicate: (value: any, index: Int, array: Array<Any\>) -> Any, thisArg? Any): Array<Any\>
 #### Description
 Returns the elements of an array that meet the condition specified in a callback function.
@@ -110,6 +115,24 @@ Appends new elements to an array, and returns the new length of the array.
 var arr: Array<Int> = [1,2,3,4];
 arr.push(5) 
 // arr is now [1,2,3,4,5]
+```
+
+### remove(item: Any): Bool
+#### Description
+Removes the first occurrence of `item` in this Array.
+
+NOTE: This operation modifies this Array in place.
+
+If `item` is found by checking standard equality, it is removed from this Array and all following elements are reindexed accordingly. The function then returns true.
+
+If x is not found, this Array is not changed and the function returns false.
+Reverses the elements in the array.
+
+#### Usage
+```haxe
+var arr: Array<Int> = [1,2,3,4];
+arr.remove(3);
+// arr is  [1,2,4]
 ```
 
 ### reverse(): Array<Any\>
