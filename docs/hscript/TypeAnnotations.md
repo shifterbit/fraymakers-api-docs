@@ -172,5 +172,5 @@ self.addEventListener(GameObjectEvent.HIT_DEALT, function (event:GameObjectEvent
     Engine.log(event.data.foe);
 });
 ```
-It will
+It will autocomplete for all the fields under event.data.
 
