@@ -23,7 +23,7 @@ var foo = true;
 
 ### Rollback Compatibility
 By default, most types aren't rollback compatible. This isn't a concern for local variables within
-functions but it can pose some issues for top level variables even in the event that one isn't playing in rollback(which is currently the case with custom content).
+functions, but it can pose some issues for top level variables even in the event that one isn't playing in rollback(which is currently the case with custom content).
 
 Besides future proofing your code, there's also another reason to use rollback safe code, and that's 
 to ensure that they're still properly accessible from your `onTeardown` method

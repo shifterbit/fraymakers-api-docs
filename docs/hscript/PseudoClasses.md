@@ -1,13 +1,13 @@
 ---
-title: Psuedo Classes
+title: Pseudo Classes
 ---
 
 # NOTE: THIS PROBABLY ISN'T ROLLBACK SAFE
 # Walkthrough
 
-Haxescript does not officially support the definition of classes, however, this doesnt mean you can't implement them yourself, which is what you'll be learning how to do here.
+Haxescript does not officially support the definition of classes, however, this doesn't mean you can't implement them yourself, which is what you'll be learning how to do here.
 
-Here's a documented example on how to make a Psuedo Class
+Here's a documented example on how to make a Pseudo Class
 
 ## Minimal Example
 ```haxe
@@ -97,7 +97,7 @@ function createTrippingClass(player: Character) {
 
 
     // First we create a function we're gonna use for the timer,
-    //  creating it seperately makes it easier to pause and resume it
+    //  creating it separately makes it easier to pause and resume it
     function onInterval() {
         if (player.isOnFloor()) && (player.inStateGroup(CStateGroup.DASH) 
                                     || player.inStateGroup(CStateGroup.RUN)
@@ -173,7 +173,7 @@ var HitCounter = {
 ```
 
 ### "Attaching" the class to players
-From the perspective of the player being `self` ( you are building a character)
+From the perspective of the player being `self`.
 
 For the simple example:
 ```haxe

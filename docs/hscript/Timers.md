@@ -156,7 +156,9 @@ self.addTimer(30, -1, function () {
     self.addDamage(1);
 }, {persistent: true, inverseCondition: isFalling});
 ```
+
 #### Pause Conditions
+
 Pause conditions work a bit differently from the two above. Rather than determining whether the function should be called, 
 it determines whether the timer should continue counting, or in other words while the condition is true, the timer is halted.
 

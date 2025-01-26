@@ -7,7 +7,7 @@ Lets imagine for a second we wanted to keep track of the player scores over the 
 
 Putting the pieces together we have something like this:
 
-First we setup our variables for each of our players
+First we set up our variables for each of our players
 ```haxe
 var player1: Character = null;
 var player1Glow:GlowFilter = null; 
@@ -81,9 +81,9 @@ function updateGlows() {
 ```
 
 Now, this code probably works fine for but consider the following:
-- What if we had to  less than 4 players.
+- What if we had to less than 4 players.
 
-well, the code would break, because we'd get a null access error for player3 or player4 because those would be `null`, and calling getScore() on `null` would cause an error.
+Well, the code would break, because we'd get a null access error for player3 or player4 because those would be `null`, and calling getScore() on `null` would cause an error.
 One approach would be to have 1 version of the function for each number of players, or a massive switch statement based on the player count, but now we'd effectively be writing 
 the same code about 3 different times, if we want to make changes?, gotta do them 3 different times as well. Roughly Speaking it would look like this:
 
@@ -169,7 +169,7 @@ var port:Int = player.getPlayerConfig().port;
 
 Ports are **zero-indexed**, meaning that player 1 would have a port value of 0, player 2 a value of 1, player 3 a value of 2 and player 4 a value of 3. Now, how can this be useful?
 
-As it turns out, arrays are also zero-indexed! with the first item having an index of 0, the second having 1, the third having 2 and so on, 
+As it turns out, arrays are also zero-indexed! With the first item having an index of 0, the second having 1, the third having 2 and so on, 
 so with this knowledge we can have a more efficient way to deal with storing data that a bunch of players have in common.
 
 ## New Approach using ports and arrays
@@ -177,7 +177,7 @@ Instead of having a variable for each player and filter, we simply have an array
 ```haxe 
 var glowFilters:Array<GlowFilter> = [null,null,null,null];
 ```
-we create a new glow filters array, and initialize it with 4 null values, now with this structure, lets approach our setupVariables function a bit differently:
+we create a new glow filters array, and initialize it with 4 null values, now with this structure, let's approach our `setupVariables` function a bit differently:
 ```haxe
 
 function setupVariables() {
@@ -192,7 +192,7 @@ function setupVariables() {
 
 ```
 As you can see, using numbers in combination with arrays can result in having to use a lot less code, whilst in a small 
-example like this, it isnt necessary a problem, it becomes very helpful when you have several Vfx's, filters, status effects
+example like this, it isn't necessary a problem, it becomes very helpful when you have several Vfx's, filters, status effects
 or shaders associated with each player and once you have more complex logic you end up writing far more code than you need to.
 
 

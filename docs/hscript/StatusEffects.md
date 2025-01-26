@@ -6,7 +6,7 @@ Status Effects server two purposes:
 - Impose Certain effects on GameObjects such as Characters, Projectiles or Assists
 - Store Metadata on GameObjects.
 
-First of you probably wanna take a look at [the Status Effect Types](../classes/StatusEffectType.md) to see what you can do.
+First of you probably want to take a look at [the Status Effect Types](../classes/StatusEffectType.md) to see what you can do.
 
 # Breakdown of addStatusEffect
 ```haxe
@@ -33,15 +33,15 @@ addStatusEffect(type: Int, value?: Int, options?: StatusEffectObject): StatusEff
  ```
 - `id`: The status id, usually used for removal
 - `options`:
-   - `fields.frameTimer`: FrameTimer used for the status effect, see [TFrameTimer](../classes/TFrameTimer.md)
+   - `fields.frameTimer`: TFrameTimer used for the status effect, see [TFrameTimer](../classes/TFrameTimer.md)
    - `metadata`: Metadata you can add to a status effect, useful for storing data on characters
-   - `params.interval`: The interval, usually used for Damage over time(e.g how often to add/reduce damage)
+   - `params.interval`: The interval, usually used for Damage over time(e.g. how often to add/reduce damage)
    - `tag`: The status tag, used for grouping organizing several status effects as we'll explore later
 - `value`: Value of the status effect, its behavior is entirely dependent on the status effect in question
 
 
 
-We'll be using the `SIZE_MULTIPLIER` and `DISABLE_ACTION` as an examples here for status effects
+We'll be using the `SIZE_MULTIPLIER` and `DISABLE_ACTION` as examples here for status effects
 # Adding Status Effects
 ```haxe
 self.addStatusEffect(StatusEffectType.SIZE_MULTIPLIER, 2);
@@ -49,7 +49,7 @@ self.addStatusEffect(StatusEffectType.DISABLE_ACTION, CharacterActions.DASH_ATTA
 ```
 # Managing Status Effects
 ## Using ids to remove Status Effects
-First when creating status effects make sure to assign them to variables(feel free to use global variables if that fits your usecase more)
+First when creating status effects make sure to assign them to variables(feel free to use global variables if that fits your use case more)
 ```haxe
 var sizeStatus = self.addStatusEffect(StatusEffectType.SIZE_MULTIPLIER, 2);
 var noDashAttackStatus = self.addStatusEffect(StatusEffectType.DISABLE_ACTION, CharacterActions.DASH_ATTACK);
@@ -101,7 +101,7 @@ self.removeStatusEffect(StatusEffectType.DISABLE_ACTION, statusDTilt.id);
 self.removeStatusEffect(StatusEffectType.DISABLE_ACTION, statusUTilt.id);
 ```
 
-If you used global variables you might also need to create one for each of these, or have an array of status effects globally, for `DISABLE_ACTION`. one way to work around this is to use a common **tag** to keep track of them so you don't have to worry about individual id's.
+If you used global variables you might also need to create one for each of these, or have an array of status effects globally, for `DISABLE_ACTION`. One way to work around this is to use a common **tag** to keep track of them so you don't have to worry about individual id's.
 
 So you can create a bunch of them like this now:
 ```haxe
@@ -145,7 +145,7 @@ We also have the status effect known as `CUSTOM`, which appears not to have any 
 as a tool to store metadata on individual characters.
 
 So let's say we want a move that adds extra hitstop on a foe if it hits a foe for the 3rd time, so in 
-frame 1 of the the move's framescript we have:
+frame 1 of the move's framescript we have:
 
 ```haxe
 self.addEventListener(GameObjectEvent.HIT_DEALT, function (e:GameObjectEvent) {

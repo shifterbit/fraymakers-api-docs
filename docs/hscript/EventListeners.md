@@ -36,17 +36,16 @@ Event listeners allow you to run some code in response to a particular event hap
 
 
 # Primer on Event Listeners
-So here's thee types for adding and removing event listener:
+So here's the types for adding and removing event listener:
 ## Breakdown on function type
 ```haxe
 addEventListener(type:Int, func:Listener, options?: {persistent: Bool})
 removeEventListener(type:Int, func:Listener)
 ```
 
-Let's breakdown what they mean, starting with adding:
+Let us breakdown what they mean, starting with adding:
 - `type`: The type of event listener, one of the constants from the event classes listed above
-- `func`: A function that takes an event class as an argument, this should correspond to the type, so if you have say,
-  a `GameObjectEvent.HIT_DEALT`, then your function should look like:
+- `func`: A function that takes an event class as an argument, this should correspond to the type, so if you have a `GameObjectEvent.HIT_DEALT`, then your function should look like:
   ```haxe
   function foo(event:GameObjectEvent) {
     Engine.log("Hey guys");
@@ -59,8 +58,7 @@ Let's breakdown what they mean, starting with adding:
 
 Removing event listeners is pretty similar, just without the persistent part:
 - `type`: The type of event listener, one of the constants from the event classes listed above
-- `func`: A function that takes an event class as an argument, this should correspond to the type, so if you have say,
-  a `GameObjectEvent.HIT_DEALT`, then your function should look like:
+- `func`: A function that takes an event class as an argument, this should correspond to the type, so if you have a `GameObjectEvent.HIT_DEALT`, then your function should look like:
   ```haxe
   function foo(event:GameObjectEvent) {
     Engine.log("Hey guys");
@@ -107,7 +105,7 @@ self.removeEventListener(GameObjectEvent.HIT_RECEIVED,healDamage);
 
 ## Caveats when using inline functions for event listeners
 One thing to keep in mind when adding and removing event listeners is about how inlining affects things.
-When you pass a function to an event listener, no matter how you do it it the event listener sees a **reference** to
+When you pass a function to an event listener, no matter how you do it, the event listener sees a **reference** to
 that function.
 
 When you inline a function, you're actually creating a new one each time, all with a different **reference**, so what does

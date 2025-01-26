@@ -27,7 +27,7 @@ function helloFrom(name: String) {
 helloFrom("Fraynkie");
 
 ```
-Functions can also be declared without, specifying types, but it specifying types is always
+Functions can also be declared without, specifying types, but specifying types is always
 recommended as it helps auto-completion provide you with more accurate suggestions.
 ```
 // Function without specifying types

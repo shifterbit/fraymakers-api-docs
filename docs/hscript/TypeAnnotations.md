@@ -11,7 +11,7 @@ var owner = self.getOwner();
 ```
 
 there's a few things you might noticed, for example, if the owner is a player, assist or projectile, you aren't 
-getting any specific api functions for it when completing on `owner`, this is because fraytools can't tell what **type** it is.
+getting any specific api functions for it when completing on `owner`, this is because FrayTools can't tell what **type** it is.
 so to get around that, you will have:
 
 For a Character:

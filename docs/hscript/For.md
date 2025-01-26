@@ -24,7 +24,7 @@ for (item in list) {
 // banana
 ```
 ## Iterating Through Number Ranges
-In some cases you might just need to run through a range of numbers but the data you're operating on isn't an iterable or maybe you just want to generate a numbered sequence:
+In some cases you might just need to run through a range of numbers but the data you're operating on isn't an iterable, or maybe you just want to generate a numbered sequence:
 
 This is a basic for loop using iterators:
 ```haxe
@@ -50,7 +50,7 @@ for (charIndex in 0...(greeting.length)) {
 # Using Engine.forEach and Engine.forCount
 When developing in fraytools you may notice that you don't get proper completion when using regular for loops as of the time of writing.
 
-So for iterating through items with decent completion you can use Engine.forEach and Engine.forCount
+So for iterating through items with decent completion you can use `Engine.forEach` and `Engine.forCount`
 
 I'd also recommend taking a look at [Functions](./Functions.md) since that's very relevant here.
 
