@@ -1,10 +1,7 @@
 ---
 title: Event Listeners
 ---
-
-Ever wanted to run some code in response to something occuring? This is where event listeners come in, 
-they allow you to run a function when "Something" happens, where "something" is a event, for instance 
-running a function upon getting hit or upon getting KO'd or when the match starts, and much more.
+Event listeners allow you to run some code in response to a particular event happening.
 
 # Event Listener Types
 - [MatchEvent](../classes/MatchEvent.md) usable by [Match](../classes/Match.md)
@@ -164,12 +161,4 @@ self.addEventListener(GameObjectEvent.HIT_DEALT, grow, {persistent: true});
 self.addEventListener(GameObjectEvent.GRAB_DEALT, grow, {persistent: true});
 self.addEventListener(GameObjectEvent.SHIELD_HIT_DEALT, grow, {persistent: true});
 ```
-
-
-though for like a general idea of how to use them and what they are:
-Quick Overview of what they are
-Many Events Occur within the game when certain things occur, this includes stuff like: when you get hit, when a player dies, when scores update etc, literally too many to name
-
-Event listeners basically let you run a particular function when a certain event occurs, for example
-if you wanted to heal 10 damage whenever you get hit  during an animation for example:
-it also doesn't just have to be `self`, you can add event listeners to other players, or projectiles as well
+It also doesn't just have to be `self`, you can add event listeners to other players, or projectiles as well

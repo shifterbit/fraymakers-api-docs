@@ -24,6 +24,6 @@ title: Hscript Index
 - [Timers](./Timers.md)
 - [StatusEffects](./StatusEffects.md)
 - [Making Use of Player Ports](./MakingUseOfPorts.md)
-- [Psuedo Classes](./PsuedoClass.md)
+- [Psuedo Classes](./PsuedoClasses.md)
 
 

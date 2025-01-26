@@ -33,7 +33,7 @@ yourself, or do some simple math to trigger at certain intervals.
 
 
 # A Primer on Timers
-## What supports addTimer?
+## What can timers be added to?
 Currently timers can be added to the following classes:
 - [Stage](../classes/Stage.md)
 - [Match](../classes/Match.md)
@@ -72,11 +72,13 @@ self.addTimer(1, 100, function () {
 ```
 Lets breakdown what happens here:
 
-First we pass 1 for the `interval`, so this timer runs every frame, because we passed 100 for the repeats, it will will trigger 100 times.
-Now for the function adds 1 damage, because the timer is set to run every frame for 100 frames, you will gain 1 damage per frame for 
-100 frames.
+- First we pass 1 for the `interval`, so this timer runs every frame
+- We passed 100 for the repeats, so it will trigger 100 times
+- The function simply adds 1 damage to `self` 
 
-But let's say the animation ends before the timer does? Well, because we haven't set the timer to persistent, the timer will end early, so let's try making it persistent:
+With all that put together, it causes you to gain 1 damage per frame, for 100 frames.
+
+But if the current animation lasts for less than 100 frames, then the timer will end prematurely, so to prevent that you make it persistent:
 
 ### Persistent Timers
 ```haxe
@@ -142,7 +144,7 @@ self.addTimer(30, -1, function () {
 }, {persistent: true});
 ```
 ##### Inverse Conditions
-Inverse conditions work very similarly so I'll keep it brief. To put it simply, it determines when the function **shouldn't** be called so, 
+Inverse conditions work very similarly so I'll keep it brief.It determines when the function **shouldn't** be called so
 if you wanted the function to be called only when NOT in falling state:
 
 ```haxe
@@ -155,10 +157,10 @@ self.addTimer(30, -1, function () {
 }, {persistent: true, inverseCondition: isFalling});
 ```
 #### Pause Conditions
-Pause conditions work a bit differently from the two above, rather than determining whether the function should be called, 
-it determines whether the timer should continue counting, or in other words if the condition is true, the timer stops.
+Pause conditions work a bit differently from the two above. Rather than determining whether the function should be called, 
+it determines whether the timer should continue counting, or in other words while the condition is true, the timer is halted.
 
-So lets say we wanna pause the timer when we're in a hurt or ko state group
+So if we wanted to pause the timer whilst in a HURT or KO state group:
 
 ```haxe
 function shouldPause() {
