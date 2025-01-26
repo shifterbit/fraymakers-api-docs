@@ -63,7 +63,7 @@ export default defineConfig({
           { text: 'EventListeners', link: '/hscript/EventListeners/' },
           { text: 'StatusEffects', link: '/hscript/StatusEffects/' },
           { text: 'Timers', link: '/hscript/Timers/' },
-          { text: 'Psuedo Classes', link: '/hscript/PsuedoClasses/' },
+          { text: 'Pseudo Classes', link: '/hscript/PseudoClasses/' },
           { text: 'Making Use of Ports and Arrays', link: '/hscript/MakingUseofPorts/' },
         ]
       },

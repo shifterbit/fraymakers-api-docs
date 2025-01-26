@@ -20,10 +20,10 @@ title: Hscript Index
 - [String](./String.md)
 
 # Fray Specific Guides
-- [Event Listeners](./EventListeners.md)
-- [Timers](./Timers.md)
-- [StatusEffects](./StatusEffects.md)
-- [Making Use of Player Ports](./MakingUseOfPorts.md)
-- [Psuedo Classes](./PsuedoClasses.md)
+- [Using Event Listeners](./EventListeners.md)
+- [Using Timers](./Timers.md)
+- [Using Status Effects](./StatusEffects.md)
+- [Making Use of Player Ports and Arrays](./MakingUseOfPorts.md)
+- [Creating Pseudo Classes](./PsuedoClasses.md)
 
 
