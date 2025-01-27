@@ -7,10 +7,10 @@ Event listeners allow you to run some code in response to a particular event hap
 
 ## Events and Their Users
 - [MatchEvent](../../classes/MatchEvent.md) usable by [Match](../../classes/Match.md)
-- [GameTimerEvent](../../classes/GameObjectEvent.md) usable by [Match](../../classes/Match.md)
+- [GameTimerEvent](../../classes/GameTimerEvent.md) usable by [Match](../../classes/Match.md)
 - [ScoreEvent](../../classes/ScoreEvent.md) usable by [Match](../../classes/Match.md)
 - [AssistEvent](../../classes/AssistEvent.md) usable by [Match](../../classes/Match.md)
-- [StructureEvent](../../classes/StructureEvent.md) usable by [Match](../../classes/Match.md)
+- [StructureEvent](../../classes/StructureEvent.md) usable by [Structure](../../classes/Structure.md)
 - [CharacterEvent](../../classes/CharacterEvent.md) usable by [Character](../../classes/Character.md)
 
 - [GameObjectEvent](../../classes/GameObjectEvent.md) usable by:
