@@ -15,11 +15,11 @@ title: Hscript Index
 - [Functions](./syntax/Functions.md)
 - [Type Annotations](./syntax/TypeAnnotations.md)
 
-# Builtins
+# [Builtins](./builtins)
 - [Array](./builtins/Array.md)
 - [String](./builtins/String.md)
 
-# Fray Specific Guides
+# [Fraymakers Specific Guides](./fray)
 - [Using Event Listeners](./fray/EventListeners.md)
 - [Using Timers](./fray/Timers.md)
 - [Using Status Effects](./fray/StatusEffects.md)
