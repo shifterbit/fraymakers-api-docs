@@ -51,6 +51,7 @@ export default defineConfig({
           {
             text: "Syntax",
             link: "/hscript/syntax",
+			collapsed: false,
             items: [
               { text: 'Variables', link: '/hscript/syntax/Variables/' },
               { text: 'Operators', link: '/hscript/syntax/Operators/' },
@@ -65,7 +66,8 @@ export default defineConfig({
           },
           {
             text: "Builtins",
-            link: "/hscript/builtins",
+              link: "/hscript/builtins",
+			  collapsed: false,
             items: [
               { text: 'Array', link: '/hscript/builtins/Array/' },
               { text: 'String', link: '/hscript/builtins/String/' },
@@ -74,6 +76,7 @@ export default defineConfig({
           {
             text: "Fraymakers Specific Guides",
             link: "/hscript/fray",
+			collapsed: false,
             items: [
               { text: 'Event Listeners', link: '/hscript/fray/EventListeners/' },
               { text: 'Status Effects', link: '/hscript/fray/StatusEffects/' },
