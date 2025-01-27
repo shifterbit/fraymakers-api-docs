@@ -1,6 +1,8 @@
 ---
 title: Status Effects
 layout: doc
+prev: false
+next: false
 ---
 # Using Status Effects
 

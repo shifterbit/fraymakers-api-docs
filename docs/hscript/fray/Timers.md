@@ -1,6 +1,8 @@
 ---
 title: Timers
 layout: doc
+prev: false
+next: false
 ---
 
 

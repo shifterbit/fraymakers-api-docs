@@ -1,6 +1,8 @@
 ---
 title: Pseudo Classes
 layout: doc
+prev: false
+next: false
 ---
 
 # Using Pseudo Classes

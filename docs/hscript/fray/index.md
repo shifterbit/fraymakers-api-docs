@@ -1,6 +1,8 @@
 ---
 title: Fraymakers Specific Guide
 layout: doc
+prev: false
+next: false
 ---
 ### [Using Event Listeners](./EventListeners.md)
 ### [Using Timers](./Timers.md)

@@ -1,6 +1,8 @@
 ---
 title: Making use of Ports
 layout: doc
+prev: false
+next: false
 ---
 # Making Use of Ports and Arrays
 

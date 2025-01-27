@@ -1,6 +1,8 @@
 ---
 title: Array
 layout: doc
+prev: false 
+next: false
 ---
 
 ## Instance Variables

@@ -1,6 +1,8 @@
 ---
 title: Event Listeners
 layout: doc
+prev: false
+next: false
 ---
 # Using Event Listeners
 Event listeners allow you to run some code in response to a particular event happening.

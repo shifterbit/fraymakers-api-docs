@@ -1,5 +1,8 @@
 ---
 title: String
+layout: doc
+prev: false 
+next: false
 ---
 ## Instance Variables
 ### length
