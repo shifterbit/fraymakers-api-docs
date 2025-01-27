@@ -1,22 +1,24 @@
 ---
 title: Status Effects
+layout: doc
 ---
+# Using Status Effects
 
 Status Effects server two purposes:
 - Impose Certain effects on GameObjects such as Characters, Projectiles or Assists
 - Store Metadata on GameObjects.
 
-First of you probably want to take a look at [the Status Effect Types](../classes/StatusEffectType.md) to see what you can do.
+First of you probably want to take a look at [the Status Effect Types](../../classes/StatusEffectType.md) to see what you can do.
 
-# Breakdown of addStatusEffect
+## Breakdown of addStatusEffect
 ```haxe
 addStatusEffect(type: Int, value?: Int, options?: StatusEffectObject): StatusEffectObject
 ```
 
-- `type`: The type of status effect, see [StatusEffectType](../classes/StatusEffectType.md)
+- `type`: The type of status effect, see [StatusEffectType](../../classes/StatusEffectType.md)
 - `value`: The value of the status effect, will be put into the StatusEffectObject, behavior is entirely dependent on the Status Effect in question.
 
-## Breakdown of StatusEffectObject
+### Breakdown of StatusEffectObject
 
 ```haxe
  {
@@ -33,7 +35,7 @@ addStatusEffect(type: Int, value?: Int, options?: StatusEffectObject): StatusEff
  ```
 - `id`: The status id, usually used for removal
 - `options`:
-   - `fields.frameTimer`: TFrameTimer used for the status effect, see [TFrameTimer](../classes/TFrameTimer.md)
+   - `fields.frameTimer`: TFrameTimer used for the status effect, see [TFrameTimer](../../classes/TFrameTimer.md)
    - `metadata`: Metadata you can add to a status effect, useful for storing data on characters
    - `params.interval`: The interval, usually used for Damage over time(e.g. how often to add/reduce damage)
    - `tag`: The status tag, used for grouping organizing several status effects as we'll explore later
@@ -42,13 +44,13 @@ addStatusEffect(type: Int, value?: Int, options?: StatusEffectObject): StatusEff
 
 
 We'll be using the `SIZE_MULTIPLIER` and `DISABLE_ACTION` as examples here for status effects
-# Adding Status Effects
+## Adding Status Effects
 ```haxe
 self.addStatusEffect(StatusEffectType.SIZE_MULTIPLIER, 2);
 self.addStatusEffect(StatusEffectType.DISABLE_ACTION, CharacterActions.DASH_ATTACK);
 ```
-# Managing Status Effects
-## Using ids to remove Status Effects
+## Managing Status Effects
+### Using ids to remove Status Effects
 First when creating status effects make sure to assign them to variables(feel free to use global variables if that fits your use case more)
 ```haxe
 var sizeStatus = self.addStatusEffect(StatusEffectType.SIZE_MULTIPLIER, 2);
@@ -60,7 +62,7 @@ Then to remove them using those variables:
 self.removeStatus(StatusEffectType.SIZE_MULTIPLIER, sizeStatus.id);
 self.removeStatus(StatusEffectType.DISABLE_ACTION, noDashAttackStatus.id);
 ```
-## Using Tags to remove status effects
+### Using Tags to remove status effects
 Now, let's say you wanted to temporarily disable a bunch of character actions like so:
 ```haxe
 var statusNair = self.addStatusEffect(StatusEffectType.DISABLE_ACTION, CharacterActions.AERIAL_NEUTRAL);
@@ -140,7 +142,7 @@ if (statuses != null) {
 ```
 As you can see it's a lot less verbose, plus we have the plus side of not needing to worry about having to manage so many global variables. You can also use tags to manage a single status effects if you wanted too.
 
-# Using Custom Status Effects For Storing Metadata
+## Using Custom Status Effects For Storing Metadata
 We also have the status effect known as `CUSTOM`, which appears not to have any function, but it can still be useful
 as a tool to store metadata on individual characters.
 

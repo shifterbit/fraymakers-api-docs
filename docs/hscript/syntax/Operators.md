@@ -1,7 +1,16 @@
 ---
 title: Operators
+layout: doc
+next: 
+    link: './Blocks.md'
+    text: "Blocks"
+prev: 
+    link: './Variables.md'
+    text: "Variables"
 ---
-# Unary
+# Operator Types
+
+## Unary
 
 
 | Operator | Operation           | Operand Type | Position           | Result Type |
@@ -22,8 +31,8 @@ var b = a++; // b is 1, a is 2
 var c = ++a; // c is 3, a is 3
 ```
 
-# Binary
-## Arithmetic operators
+## Binary
+### Arithmetic operators
 
 | Operator | Operation      | Operand 1   | Operand 2   | Result type  |
 |----------|----------------|-------------|-------------|--------------|
@@ -43,7 +52,7 @@ var e = 20 % 9 // modulo, gives the reainder after division
 ```
 
 
-## String concatenation operator
+### String concatenation operator
 
 | Operator | Operation     | Operand 1 | Operand 2 | Result type |
 |----------|---------------|-----------|-----------|-------------|
@@ -54,14 +63,14 @@ var e = 20 % 9 // modulo, gives the reainder after division
 When performing any concatenation/addition involving strings, other values would be
 automatically be converted to a string.
 
-## Logical Operators
+### Logical Operators
 
 | Operator | Operation   | Operand 1 | Operand 2 | Result type |
 |----------|-------------|-----------|-----------|-------------|
 | `&&`     | logical and | `Bool`    | `Bool`    | `Bool`      |
 | `||`     | logical or  | `Bool`    | `Bool`    | `Bool`      |
 
-### Short circuting
+#### Short circuting
 Logical Operators are evaluated from left to right, but only as far as necessary.
 For example
 ```haxe
@@ -71,7 +80,7 @@ var a = foo != null && foo.count == 1
 ```
 
 
-## Compound assignment operators
+### Compound assignment operators
 
 | Operator | Operation      | Operand 1   | Operand 2   | Result type |
 |----------|----------------|-------------|-------------|-------------|
@@ -86,7 +95,7 @@ var a = 5;
 a += 4; // same as a = a + 4
 ```
 
-## Numeric comparison operators
+### Numeric comparison operators
 
 | Operator | Operation             | Operand 1   | Operand 2   | Result type |
 |----------|-----------------------|-------------|-------------|-------------|
@@ -97,7 +106,7 @@ a += 4; // same as a = a + 4
 | `>;`     | greater than          | `Float/Int` | `Float/Int` | `Bool`      |
 | `>;=`    | greater than or equal | `Float/Int` | `Float/Int` | `Bool`      |
 
-## String comparison operators
+### String comparison operators
 
 | Operator | Operation                         | Operand 1 | Operand 2 | Result type |
 |----------|-----------------------------------|-----------|-----------|-------------|
@@ -118,7 +127,7 @@ var z = (a == "foo"); // true
 ```
 
 
-# Ternary Operator
+## Ternary Operator
 
 | Operator | Operation | Operand 1 | Operand 2 | Operand 3 | Result type  |
 |----------|-----------|-----------|-----------|-----------|--------------|

@@ -1,10 +1,12 @@
 ---
 title: Timers
+layout: doc
 ---
 
 
+# Using Timers
 
-# Preface
+## Preface
 Timers allow you to run a function at a particular interval, for example, lets say you wanted to run a function every frame, 
 or 3 frames, or maybe run a function 500 frames later, sure you could use a counter variable with the update function like this:
 
@@ -32,18 +34,18 @@ you'd need 1 variable for each one, and if you want it to repeat you'd also have
 yourself, or do some simple math to trigger at certain intervals.
 
 
-# A Primer on Timers
-## What can timers be added to?
+## A Primer on Timers
+### What can timers be added to?
 Currently timers can be added to the following classes:
-- [Stage](../classes/Stage.md)
-- [Match](../classes/Match.md)
-- [Entity](../classes/Entity.md)
-- [GameObject](../classes/GameObject.md)
-- [Character](../classes/Character.md)
-- [Assist](../classes/Assist.md)
-- [AssistController](../classes/AssistController.md)
+- [Stage](../../classes/Stage.md)
+- [Match](../../classes/Match.md)
+- [Entity](../../classes/Entity.md)
+- [GameObject](../../classes/GameObject.md)
+- [Character](../../classes/Character.md)
+- [Assist](../../classes/Assist.md)
+- [AssistController](../../classes/AssistController.md)
 
-## Basic Structure
+### Basic Structure
 For reference this is the structure
 ```haxe
 addTimer(interval:Int, repeats:Int, func, ?options: {?condition: () -> Bool, ?inverseCondition: () => Bool, ?pauseCondition: () => Bool, ?persistent: Bool}) ):Int 
@@ -62,9 +64,9 @@ addTimer(interval:Int, repeats:Int, func, ?options: {?condition: () -> Bool, ?in
 
 That's quite a bit to take in, but the `option` you'll likely be using most is `persistent` so we'll use the simple example of adding damage over time
 
-## Examples
+### Examples
 
-### Basic Non Persistent Timer
+#### Basic Non Persistent Timer
 ```haxe
 self.addTimer(1, 100, function () {
     self.addDamage(1);
@@ -80,7 +82,7 @@ With all that put together, it causes you to gain 1 damage per frame, for 100 fr
 
 But if the current animation lasts for less than 100 frames, then the timer will end prematurely, so to prevent that you make it persistent:
 
-### Persistent Timers
+#### Persistent Timers
 ```haxe
 self.addTimer(1, 100, function () {
     self.addDamage(1);
@@ -89,7 +91,7 @@ self.addTimer(1, 100, function () {
 
 Now with the `persistent: true`, the timer would always run to completion even if the animation changes.
 
-### Endless Timers
+#### Endless Timers
 If you wanted the timer to run forever, pass either 0 or a negative number to repeats like so:
 ```haxe
 self.addTimer(1, -1, function () {
@@ -97,14 +99,14 @@ self.addTimer(1, -1, function () {
 }, {persistent: true});
 ```
 
-### Larger Intervals
+#### Larger Intervals
 If you wanted the interval to be larger, the process is fairly similar
 ```haxe
 self.addTimer(30, -1, function () {
     self.addDamage(1);
 }, {persistent: true});
 ```
-### Manually Removing Timers
+#### Manually Removing Timers
 `addTimer` returns an `Int`, which is the timerId, which you can pass to `removeTimer`
 ```haxe
 var id:Int = self.addTimer(30, -1, function () {
@@ -115,9 +117,9 @@ var id:Int = self.addTimer(30, -1, function () {
 self.removeTimer(id);
 ```
 
-### Timer Conditions
+#### Timer Conditions
 To put it simply conditions determine when the timer will be active and whether the function would be called.
-#### Conditions and Inverse Conditions
+##### Conditions and Inverse Conditions
 This would be a function that checks if the timer function will be able to run at any given time.
 
 Building upon the example above, let's say you wanted to heal only if you were in one of the falling states
@@ -143,7 +145,7 @@ self.addTimer(30, -1, function () {
     }
 }, {persistent: true});
 ```
-##### Inverse Conditions
+###### Inverse Conditions
 Inverse conditions work very similarly so I'll keep it brief.It determines when the function **shouldn't** be called so
 if you wanted the function to be called only when NOT in falling state:
 
@@ -157,7 +159,7 @@ self.addTimer(30, -1, function () {
 }, {persistent: true, inverseCondition: isFalling});
 ```
 
-#### Pause Conditions
+##### Pause Conditions
 
 Pause conditions work a bit differently from the two above. Rather than determining whether the function should be called, 
 it determines whether the timer should continue counting, or in other words while the condition is true, the timer is halted.

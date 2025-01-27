@@ -1,8 +1,16 @@
 ---
 title: For Loops
+layout: doc
+next: 
+    link: './Functions.md'
+    text: "Functions"
+prev: 
+    link: './While.md'
+    text: "While"
 ---
+# Iterating with For Loops
 
-# Basic Usage
+## Basic Usage
 Haxe does not use traditional C-Style for loops, instead, for loops follow the following
 structure:
 ```
@@ -12,7 +20,7 @@ for (item in iterable) {
 ```
 The iterable value which comes in one of three forms:
 
-## Iterating Through Arrays
+### Iterating Through Arrays
 Arrays are likely to be the most common iterator
 ```haxe
 var list = ["apple", "pear", "banana"];
@@ -23,7 +31,7 @@ for (item in list) {
 // pear
 // banana
 ```
-## Iterating Through Number Ranges
+### Iterating Through Number Ranges
 In some cases you might just need to run through a range of numbers but the data you're operating on isn't an iterable, or maybe you just want to generate a numbered sequence:
 
 This is a basic for loop using iterators:
@@ -47,7 +55,7 @@ for (charIndex in 0...(greeting.length)) {
   // s
 ```
 
-# Using Engine.forEach and Engine.forCount
+## Using Engine.forEach and Engine.forCount
 When developing in fraytools you may notice that you don't get proper completion when using regular for loops as of the time of writing.
 
 So for iterating through items with decent completion you can use `Engine.forEach` and `Engine.forCount`
@@ -55,7 +63,7 @@ So for iterating through items with decent completion you can use `Engine.forEac
 I'd also recommend taking a look at [Functions](./Functions.md) since that's very relevant here.
 
 
-## Engine.forEach
+### Engine.forEach
 General Structure is
 ```haxe
 Engine.forEach(numberOfItems, function (item,index) {
@@ -77,7 +85,7 @@ Engine.forEach(list, function (item:String , idx:Int) {
 // banana
 // 2
 ```
-## Engine.forCount
+### Engine.forCount
 
 The general structure is
 ```haxe

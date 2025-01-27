@@ -1,8 +1,16 @@
 ---
 layout: doc
-title: If Expressions
+title: If Else Expressions
+next: 
+    link: './Switch.md'
+    text: "Switch"
+prev: 
+    link: './Blocks.md'
+    text: "Blocks"
 ---
-# Basic If
+
+# If Expressions
+## Basic If
 ```haxe
 // if (condition) expression;
 if (1 > 0) {
@@ -10,7 +18,7 @@ if (1 > 0) {
 }
 
 ```
-# If-Else
+## If-Else
 The condition expression must be of type `Bool`, else is also optional
 ```haxe
 // if (condition) expression else expression2;
@@ -20,8 +28,8 @@ if (a > b) {
 	Engine.log("a is not  larger");
 }
 ```
-# Notes on Types
-Note that both expression1 and expression2 types must be the same
+## Notes on Types
+Note that both expression1 and expression2 types should be the same
 
 ```haxe
 // if (condition1) expression1

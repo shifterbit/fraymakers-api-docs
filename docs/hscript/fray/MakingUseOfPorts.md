@@ -1,6 +1,8 @@
 ---
-title: Making use of Ports to Retrieve player data
+title: Making use of Ports
+layout: doc
 ---
+# Making Use of Ports and Arrays
 
 ## Storing Data For Multiple Players
 Lets imagine for a second we wanted to keep track of the player scores over the course of the match, and give the top scorer a glow filter;

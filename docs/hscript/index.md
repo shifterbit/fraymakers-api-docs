@@ -4,26 +4,26 @@ title: Hscript Index
 ---
 
 
-# Basic Syntax
-- [Variables](./Variables.md)
-- [Operators](./Operators.md)
-- [Blocks](./Blocks.md)
-- [If-Else](./If.md)
-- [Switch](./Switch.md)
-- [While](./While.md)
-- [For](./For.md)
-- [Functions](./Functions.md)
-- [Type Annotations](./TypeAnnotations.md)
+# [Basic Syntax](./syntax)
+- [Variables](./syntax/Variables.md)
+- [Operators](./syntax/Operators.md)
+- [Blocks](./syntax/Blocks.md)
+- [If-Else](./syntax/If.md)
+- [Switch](./syntax/Switch.md)
+- [While](./syntax/While.md)
+- [For](./syntax/For.md)
+- [Functions](./syntax/Functions.md)
+- [Type Annotations](./syntax/TypeAnnotations.md)
 
-# Data Structures
-- [Array](./Array.md)
-- [String](./String.md)
+# Builtins
+- [Array](./builtins/Array.md)
+- [String](./builtins/String.md)
 
 # Fray Specific Guides
-- [Using Event Listeners](./EventListeners.md)
-- [Using Timers](./Timers.md)
-- [Using Status Effects](./StatusEffects.md)
-- [Making Use of Player Ports and Arrays](./MakingUseOfPorts.md)
-- [Creating Pseudo Classes](./PseudoClasses.md)
+- [Using Event Listeners](./fray/EventListeners.md)
+- [Using Timers](./fray/Timers.md)
+- [Using Status Effects](./fray/StatusEffects.md)
+- [Making Use of Player Ports and Arrays](./fray/MakingUseOfPorts.md)
+- [Creating Pseudo Classes](./fray/PseudoClasses.md)
 
 

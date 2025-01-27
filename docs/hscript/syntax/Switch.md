@@ -1,7 +1,14 @@
 ---
 title: Switch Expressions
+layout: doc
+next: 
+    link: './While.md'
+    text: "While"
+prev: 
+    link: './If.md'
+    text: "If-Else"
 ---
-# Switch Expression
+## Using Switch Expressions
 ```haxe
 // switch expression {
 //  	case value1: body1;

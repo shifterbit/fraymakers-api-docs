@@ -1,11 +1,18 @@
 ---
 title: Functions
+layout: doc
+next: 
+    link: './TypeAnnotations.md'
+    text: "Type Annotations"
+prev: 
+    link: './For.md'
+    text: "For"
 ---
 
 
-# Declaring and Using  Funcitons
+## Using Funcitons
 
-## Without Arguments
+### Without Arguments
 ```haxe
 // Declare our new function
 function sayHello() {
@@ -16,7 +23,7 @@ function sayHello() {
 sayHello();
 ```
 
-## With a single Argument
+### With a single Argument
 ```haxe
 // Declare our new function
 function helloFrom(name: String) {
@@ -36,7 +43,7 @@ function helloFrom(name) {
 }
 ```
 
-## Default Arguments
+### Default Arguments
 
 ```haxe
 // Declare our new function
@@ -50,7 +57,7 @@ helloFrom(); // prints "Hello, I cam Fraynkie"
 
 ```
 
-## Optional Arguments
+### Optional Arguments
 ```haxe
 // Declare our new function
 function helloFrom(?name: String) {
@@ -67,7 +74,7 @@ helloFrom(); // prints "Hello"
 
 ```
 
-## Return Values and Types
+### Return Values and Types
 ```haxe
 // Declare our new function
 
@@ -88,7 +95,7 @@ function sum(a: Int, b: Int) {
 }
 ```
 
-## Local Functions
+### Local Functions
 ```haxe
 function sumSquares(numbers: Array<Int>): Int {
 	var sum: Int = 0;
@@ -107,9 +114,9 @@ function sumSquares(numbers: Array<Int>): Int {
 ```
 
 
-## Functions as values
+### Functions as values
 In Haxe, and by extension hscript, almost everything is an expression, this means you can:
-### Pass Functions to variables
+#### Pass Functions to variables
 We've already seen this above
 ```haxe
 var x = function () {
@@ -117,7 +124,7 @@ var x = function () {
 };
 ```
 
-### Pass functions to other functions
+#### Pass functions to other functions
 ```haxe
 function greet(name: String) {
 	Engine.log("Hello " + name);
@@ -133,7 +140,7 @@ var names = ["Welltaro", "The Watcher", "Commander Video", "Orcane", "Ultra Fish
 performGreetings(greet,names );
 ```
 
-### Return Functions from other Functions
+#### Return Functions from other Functions
 We can use a case where we might wanna wrap argument function in an event listener
 ```haxe
 

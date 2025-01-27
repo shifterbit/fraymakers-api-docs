@@ -1,5 +1,6 @@
 ---
 title: Array
+layout: doc
 ---
 
 ## Instance Variables

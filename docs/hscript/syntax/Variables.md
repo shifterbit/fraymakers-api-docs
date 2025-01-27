@@ -1,5 +1,12 @@
 ---
 title: Variables
+layout: doc
+next: 
+    link: './Operators.md'
+    text: "Operators"
+prev: 
+    link: './index.md'
+    text: "Syntax"
 ---
 Variables are declared with the `var` keyword
 ```haxe
@@ -10,7 +17,7 @@ var b: Int; // Variables can optionally have their types explicitly declared(Thi
 var c: Int = 1; // Declared variable c with type Int and the initial value 1
 ```
 
-## Somewhat Long Side Note on Top Level Variables
+## Caveats with Top Level Variables
 ### Top Level Variables Have to be assigned
 This will silently fail
 ```haxe

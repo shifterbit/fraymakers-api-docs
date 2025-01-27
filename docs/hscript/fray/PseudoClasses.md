@@ -1,15 +1,18 @@
 ---
 title: Pseudo Classes
+layout: doc
 ---
 
-# NOTE: THIS PROBABLY ISN'T ROLLBACK SAFE
-# Walkthrough
+# Using Pseudo Classes
+
+## NOTE: THIS PROBABLY ISN'T ROLLBACK SAFE
+## Walkthrough
 
 Haxescript does not officially support the definition of classes, however, this doesn't mean you can't implement them yourself, which is what you'll be learning how to do here.
 
 Here's a documented example on how to make a Pseudo Class
 
-## Minimal Example
+### Minimal Example
 ```haxe
 function playerHitCounter(player: Character) {
 	// Variables to keep track of state
@@ -56,7 +59,7 @@ hitCounter.stop(); // Stops the Counter
 
 ```
 
-## Complex  Example
+### Complex  Example
 
 ```haxe
 function createTrippingClass(player: Character) {
@@ -158,7 +161,7 @@ function createTrippingClass(player: Character) {
 
 
 
-## Actually using this "Class"
+### Actually using this "Class"
 For convenience we can create a our own constructor, think of how you use `Sprite.create`, `Container.create` or `Point.create`
 so as a top level variable we have and we can just embed the function inside, 
 keep in mind that you need to define the function ***BEFORE YOU DEFINE THIS AND NOT AFTER***.
@@ -172,7 +175,7 @@ var HitCounter = {
 };
 ```
 
-### "Attaching" the class to players
+#### "Attaching" the class to players
 From the perspective of the player being `self`.
 
 For the simple example:

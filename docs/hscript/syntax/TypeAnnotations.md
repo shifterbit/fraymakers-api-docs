@@ -1,8 +1,15 @@
 ---
 title: Type Annotations
+layout: doc
+next: 
+    link: './index.md'
+    text: "Haxescript"
+prev: 
+    link: './Function.md'
+    text: "Functions"
 ---
 
-# What are Type Annotations and Why should I use them?
+## Type Annotations Primer
 To put it simply, when you declare a function or variable, a type annotation lets you specify it's type.
 So let's say you have a variable representing the owner:
 
@@ -38,7 +45,7 @@ in the long run as code gets larger or if you take a break from a project.
 For stuff like strings, numbers and booleans we have: `String`, `Int`, `Float` and `Bool`
 
 
-## Array Types
+### Array Types
 
 For Arrays look a bit different, you have an array type being `Array` but you also have to include what the array items are so:
 
@@ -62,7 +69,7 @@ This also works for 2d Arrays like so:
 var arr:Array<Array<Int>> = [[]];
 
 ```
-## Structure Types
+### Structure Types
 In addition to arrays you can also write types for structures.
 
 So lets say you had a function called `magic()` that returned 
@@ -96,7 +103,7 @@ combined.player.addFilter(combined.glow);
 ```
 
 
-## Composing Types
+### Composing Types
 You can also compose types, for example lets say you wanted an array of objects, with each object having one field for a player, another for a filter you can have:
 ```haxe
 var playersWithFilters:Array<{player:Character, glowFilter: GlowFilter}> = [];
@@ -125,7 +132,7 @@ var playersWithFilters:Array<{
 
 The nice thing about these is that you get autocomplete on the types inside the types as well, regardless of whether you hae a 1D array or a 400D array or an array of objects or an object containing arrays, or objects containing objects etc.
 
-## Function Types
+### Function Types
 You can also add type annotations to function arguments as well as the function return types
 
 

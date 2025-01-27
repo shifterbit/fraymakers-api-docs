@@ -1,43 +1,45 @@
 ---
 title: Event Listeners
+layout: doc
 ---
+# Using Event Listeners
 Event listeners allow you to run some code in response to a particular event happening.
 
-# Event Listener Types
-- [MatchEvent](../classes/MatchEvent.md) usable by [Match](../classes/Match.md)
-- [GameTimerEvent](../classes/GameObjectEvent.md) usable by [Match](../classes/Match.md)
-- [ScoreEvent](../classes/ScoreEvent.md) usable by [Match](../classes/Match.md)
-- [AssistEvent](../classes/AssistEvent.md) usable by [Match](../classes/Match.md)
-- [StructureEvent](../classes/StructureEvent.md) usable by [Match](../classes/Match.md)
-- [CharacterEvent](../classes/CharacterEvent.md) usable by [Character](../classes/Character.md)
+## Events and Their Users
+- [MatchEvent](../../classes/MatchEvent.md) usable by [Match](../../classes/Match.md)
+- [GameTimerEvent](../../classes/GameObjectEvent.md) usable by [Match](../../classes/Match.md)
+- [ScoreEvent](../../classes/ScoreEvent.md) usable by [Match](../../classes/Match.md)
+- [AssistEvent](../../classes/AssistEvent.md) usable by [Match](../../classes/Match.md)
+- [StructureEvent](../../classes/StructureEvent.md) usable by [Match](../../classes/Match.md)
+- [CharacterEvent](../../classes/CharacterEvent.md) usable by [Character](../../classes/Character.md)
 
-- [GameObjectEvent](../classes/GameObjectEvent.md) usable by:
-    - [Assist](../classes/Assist.md)
-    - [Character](../classes/Character.md)
-    - [CustomGameObject](../classes/CustomGameObject.md)
-    - [GameObject](../classes/GameObject.md)
-    - [Projectile](../classes/Projectile.md)
+- [GameObjectEvent](../../classes/GameObjectEvent.md) usable by:
+    - [Assist](../../classes/Assist.md)
+    - [Character](../../classes/Character.md)
+    - [CustomGameObject](../../classes/CustomGameObject.md)
+    - [GameObject](../../classes/GameObject.md)
+    - [Projectile](../../classes/Projectile.md)
 
-- [EntityEvent](../classes/EntityEvent.md) usable by:
-    - [AiGraphNode](../classes/AiGraphNode.md)
-    - [Assist](../classes/Assist.md)
-    - [Character](../classes/Character.md)
-    - [CollisionArea](../classes/CollisionArea.md)
-    - [CustomGameObject](../classes/CustomGameObject.md)
-    - [CustomLineSegmentStructure](../classes/CustomLineSegmentStructure.md)
-    - [Entity](../classes/Entity.md)
-    - [GameObject](../classes/GameObject.md)
-    - [Projectile](../classes/Projectile.md)
-    - [RectCollisionArea](../classes/RectCollisionArea.md)
-    - [RectStructure](../classes/RectStructure.md)
-    - [Stage](../classes/Stage.md)
-    - [Structure](../classes/Structure.md)
-    - [Vfx](../classes/Vfx.md)
+- [EntityEvent](../../classes/EntityEvent.md) usable by:
+    - [AiGraphNode](../../classes/AiGraphNode.md)
+    - [Assist](../../classes/Assist.md)
+    - [Character](../../classes/Character.md)
+    - [CollisionArea](../../classes/CollisionArea.md)
+    - [CustomGameObject](../../classes/CustomGameObject.md)
+    - [CustomLineSegmentStructure](../../classes/CustomLineSegmentStructure.md)
+    - [Entity](../../classes/Entity.md)
+    - [GameObject](../../classes/GameObject.md)
+    - [Projectile](../../classes/Projectile.md)
+    - [RectCollisionArea](../../classes/RectCollisionArea.md)
+    - [RectStructure](../../classes/RectStructure.md)
+    - [Stage](../../classes/Stage.md)
+    - [Structure](../../classes/Structure.md)
+    - [Vfx](../../classes/Vfx.md)
 
 
-# Primer on Event Listeners
+## Primer on Event Listeners
 So here's the types for adding and removing event listener:
-## Breakdown on function type
+### Breakdown on function type
 ```haxe
 addEventListener(type:Int, func:Listener, options?: {persistent: Bool})
 removeEventListener(type:Int, func:Listener)
@@ -64,16 +66,16 @@ Removing event listeners is pretty similar, just without the persistent part:
     Engine.log("Hey guys");
   }
   ```
-## Examples
+### Examples
 
-### Basic Non Persistent Event
+#### Basic Non Persistent Event
 ```haxe
 // This would go in that animations framescript and would stop listening once the animation ends
 self.addEventListener(GameObjectEvent.HIT_RECEIVED, function (e:GameObjectEvent) {
   self.addDamage(-10);
 });
 ```
-### Basic Persistent Event
+#### Basic Persistent Event
 If you wanted the event listener to persist through multiple animations:
 ```haxe
 // Lasts forever unless we remove it with self.removeEventListener
@@ -82,7 +84,7 @@ self.addEventListener(GameObjectEvent.HIT_RECEIVED, function (e:GameObjectEvent)
 }, {persistent: true});
 ```
 
-### Single Use Persistent Event
+#### Single Use Persistent Event
 Event Listeners can also remove themselves, useful for cases where you want a persistent listener that only runs once:
 ```haxe
 
@@ -91,7 +93,7 @@ self.addEventListener(GameObjectEvent.HIT_RECEIVED, function healDamage(e:GameOb
   self.addDamage(-10);
 }, {persistent: true});
 ```
-### Event listeners without the use of inline functions
+#### Event listeners without the use of inline functions
 Optionally you can also define the functions outside and just pass them to event listeners without calling them, useful sharing functions across several listeners, this is useful since you need a reference to the function to remove the listener from the outside:
 ```haxe
 function healDamage(e:GameObjectEvent) {
@@ -103,7 +105,7 @@ self.removeEventListener(GameObjectEvent.HIT_RECEIVED,healDamage);
 ```
 
 
-## Caveats when using inline functions for event listeners
+### Caveats when using inline functions for event listeners
 One thing to keep in mind when adding and removing event listeners is about how inlining affects things.
 When you pass a function to an event listener, no matter how you do it, the event listener sees a **reference** to
 that function.

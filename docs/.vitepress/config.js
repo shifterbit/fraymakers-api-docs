@@ -10,9 +10,6 @@ for (let i = 0; i < classSidebar[0].items.length; i++) {
   classSidebar[0].items[i].link = classSidebar[0].items[i].link.replace("docs/", "");
 }
 
-console.dir(classSidebar, { depth: null });
-
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Fraymakers API Docs",
@@ -47,24 +44,44 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Hscript',
+        text: 'Haxescript',
         link: '/hscript/',
         collapsed: false,
         items: [
-          { text: 'Variables', link: '/hscript/Variables/' },
-          { text: 'Operators', link: '/hscript/Operators/' },
-          { text: 'Blocks', link: '/hscript/Blocks/' },
-          { text: 'If-Else', link: '/hscript/If/' },
-          { text: 'Switch', link: '/hscript/Switch/' },
-          { text: 'While', link: '/hscript/While/' },
-          { text: 'For', link: '/hscript/For/' },
-          { text: 'Array', link: '/hscript/Array/' },
-          { text: 'String', link: '/hscript/String/' },
-          { text: 'EventListeners', link: '/hscript/EventListeners/' },
-          { text: 'StatusEffects', link: '/hscript/StatusEffects/' },
-          { text: 'Timers', link: '/hscript/Timers/' },
-          { text: 'Pseudo Classes', link: '/hscript/PseudoClasses/' },
-          { text: 'Making Use of Ports and Arrays', link: '/hscript/MakingUseofPorts/' },
+          {
+            text: "Syntax",
+            link: "/hscript/syntax",
+            items: [
+              { text: 'Variables', link: '/hscript/syntax/Variables/' },
+              { text: 'Operators', link: '/hscript/syntax/Operators/' },
+              { text: 'Blocks', link: '/hscript/syntax/Blocks/' },
+              { text: 'If-Else', link: '/hscript/syntax/If/' },
+              { text: 'Switch', link: '/hscript/syntax/Switch/' },
+              { text: 'While', link: '/hscript/syntax/While/' },
+              { text: 'For', link: '/hscript/syntax/For/' },
+              { text: 'Functions', link: '/hscript/syntax/Functions/' },
+              { text: 'Type Annotations', link: '/hscript/syntax/TypeAnnotations/' }
+            ]
+          },
+          {
+            text: "Builtins",
+            link: "/hscript/builtins",
+            items: [
+              { text: 'Array', link: '/hscript/builtins/Array/' },
+              { text: 'String', link: '/hscript/builtins/String/' },
+            ]
+          },
+          {
+            text: "Fraymakers Specific Guides",
+            link: "/hscript/fray",
+            items: [
+              { text: 'Event Listeners', link: '/hscript/fray/EventListeners/' },
+              { text: 'Status Effects', link: '/hscript/fray/StatusEffects/' },
+              { text: 'Timers', link: '/hscript/fray/Timers/' },
+              { text: 'Pseudo Classes', link: '/hscript/fray/PseudoClasses/' },
+              { text: 'Making Use of Ports and Arrays', link: '/hscript/fray/MakingUseOfPorts/' },
+            ]
+          },
         ]
       },
       {

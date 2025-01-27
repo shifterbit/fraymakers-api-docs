@@ -1,7 +1,15 @@
 ---
 title: Blocks
+layout: doc
+next: 
+    link: './If.md'
+    text: "If-Else"
+prev: 
+    link: './Operators.md'
+    text: "Operators"
 ---
-# Basic Usage
+# Block Expressions
+## Basic Usage
 Blocks create scopes.
 ```haxe
 var a = 1;
