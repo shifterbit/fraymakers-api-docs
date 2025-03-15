@@ -78,6 +78,7 @@ export default defineConfig({
             link: "/hscript/fray",
 			collapsed: false,
             items: [
+              { text: 'Assist Controller', link: '/hscript/fray/AssistController/' },
               { text: 'Event Listeners', link: '/hscript/fray/EventListeners/' },
               { text: 'Status Effects', link: '/hscript/fray/StatusEffects/' },
               { text: 'Timers', link: '/hscript/fray/Timers/' },

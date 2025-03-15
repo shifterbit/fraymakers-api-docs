@@ -20,6 +20,7 @@ title: Hscript Index
 - [String](./builtins/String.md)
 
 # [Fraymakers Specific Guides](./fray)
+- [Assist Controller](./fray/AssistController.md)
 - [Using Event Listeners](./fray/EventListeners.md)
 - [Using Timers](./fray/Timers.md)
 - [Using Status Effects](./fray/StatusEffects.md)
