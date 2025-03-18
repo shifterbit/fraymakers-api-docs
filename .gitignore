@@ -134,3 +134,4 @@ result
 .direnv
 docs/.vitepress/cache/
 docs/.vitepress/dist/
+/.vitepress/cache
