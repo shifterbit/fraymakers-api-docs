@@ -263,15 +263,6 @@ var cancellableStates = [
     CState.TILT_DOWN,
     CState.TILT_UP,
     CState.TILT_FORWARD,
-    CState.JAB,
-    CState.AERIAL_FORWARD,
-    CState.AERIAL_BACK,
-    CState.AERIAL_DOWN,
-    CState.AERIAL_NEUTRAL,
-    CState.DASH_ATTACK,
-    CState.STRONG_FORWARD_ATTACK,
-    CState.STRONG_DOWN_ATTACK,
-    CState.STRONG_UP_ATTACK
 ];
 ```
 
@@ -325,3 +316,25 @@ And now you can use that in your conditions like:
     }
 ```
 
+
+#### On Hit Special Cancelling
+Pretty similar to the above situation but we use an event listener and an additional timer
+```haxe
+self.addEventListener(GameObjectEvent.HIT_DEALT, function (event: GameObjectEvent) {
+    var cancelWindow = event.data.hitboxStats.hitstop + 60;
+    self.addTimer(1, cancelWindow, function () {
+        if (self.getPressedControls().ATTACK) {
+            if (checkValidInput(self, 0, 0, inputBuffer, hadouken)) {
+                self.toState(CState.SPECIAL_NEUTRAL);
+            }
+            if (checkValidInput(player, 0, 0, inputBuffer, shoryuInput)) {
+                self.toState(CState.SPECIAL_UP);
+            }
+        }
+    }, { persistent: true });
+}, { persistent: true });
+```
+Of course, only if you haven't already done so, make sure to have at just one of these and in either update() or an infinite 1 frame timer.
+```haxe
+checkInput(self, inputBuffer);
+```
