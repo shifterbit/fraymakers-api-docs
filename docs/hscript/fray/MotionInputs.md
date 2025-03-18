@@ -180,6 +180,34 @@ function checkInput(player: Character, inputBuffer: Array<Int>) {
     inputBuffer.unshift(currentDirection);
 }
 ```
+These functions are what we use to help us create mappings
+
+```haxe
+function runInputs(player: Character, inputBuffer: Array<Int>, inputMapping: Array<{ state: Int, animation: String, input: Array<{ name: String, inputs: { direction: Int, window: Int, exact: Bool } }> }>) {
+    Engine.forEach(inputMapping, function (item: { state: Int, animation: String, input: Array<{ name: String, inputs: { direction: Int, window: Int, exact: Bool } }> }, _idx) {
+        if (checkValidInput(player, 0, 0, inputBuffer, item.input)) {
+            if (item.animation != null && player.hasAnimation(item.animation)) {
+                player.toState(item.state, item.animation);
+            } else {
+                player.toState(item.state);
+            }
+        return false;
+        }
+        return true;
+    }, []);
+
+}
+
+
+function createInputMapping(input: { name: String, inputs: Array<{ direction: Int, window: Int, exact: Bool }> }, state: Int, ?animation: String = null) {
+    return {
+        input: input,
+        state: state,
+        animation: animation
+    }
+}
+
+```
 
 
 ## Application
@@ -199,6 +227,22 @@ var hadouInput = createMotionInput("Hadouken", [
     createDirection(Input.FORWARD, 12, true),
 ]);
 ```
+We can also create mappings between states and inputs like so, note that the earlier the item is in
+the array, the higher the priority of the motion input
+```haxe
+var specialInputMappings = [
+    createInputMapping(hadouInput, CState.SPECIAL_NEUTRAL),
+    createInputMapping(shoryuInput, CState.SPECIAL_UP)
+];
+var strongInputMappings = [
+    createInputMapping(hadouInput, CState.STRONG_FORWARD_ATTACK),
+    createInputMapping(shoryuInput, CState.STRONG_UP_ATTACK)
+];
+
+which can then be called anywhere with:
+```haxe
+runInputs(self,inputBuffer,inputMappings);
+```
 Here we have hadouken and shoryuken inputs, now to bind them to our attack or special buttons, first in `update()` or in an infinite timer,
 Update:
 ```haxe
@@ -206,48 +250,19 @@ function update() {
     // We add the latest input to the buffer
     checkInput(self, inputBuffer);
     // 
-    if (self.getPressedControls().ATTACK) {
-        if (checkValidInput(self, 0, 0, inputBuffer, hadouInput)) {
-            self.toState(CState.STRONG_FORWARD_ATTACK);
-        }
-        if (checkValidInput(self, 0, 0, inputBuffer, shoryuInput)) {
-            self.toState(CState.STRONG_UP_ATTACK);
-        }
+    if (self.getPressedControls().ATTACK || self.getPressedControls().SPECIAL) {
+        runInputs(self,inputBuffer,specialInputMappings);
     }
-
-    if (self.getPressedControls().SPECIAL) {
-        if (checkValidInput(self, 0, 0, inputBuffer, hadouInput)) {
-            self.toState(CState.SPECIAL_NEUTRAL);
-        }
-        if (checkValidInput(self, 0, 0, inputBuffer, shoryuInput)) {
-            self.toState(CState.SPECIAL_UP);
-        }
-    }
-
 }
 ```
 
 Infinite Timer:
 ```haxe
 self.addTimer(1, -1, function () {
-    // We add the latest input to the buffer
-    checkInput(self, inputBuffer);
-    // 
-    if (self.getPressedControls().ATTACK) {
-        if (checkValidInput(self, 0, 0, inputBuffer, hadouInput)) {
-            self.toState(CState.STRONG_FORWARD_ATTACK);
-        }
-        if (checkValidInput(self, 0, 0, inputBuffer, shoryuInput)) {
-            self.toState(CState.STRONG_UP_ATTACK);
-        }
-    }
-
-    if (self.getPressedControls().SPECIAL) {
-        if (checkValidInput(self, 0, 0, inputBuffer, hadouInput)) {
-            self.toState(CState.SPECIAL_NEUTRAL);
-        }
-        if (checkValidInput(self, 0, 0, inputBuffer, shoryuInput)) {
-            self.toState(CState.SPECIAL_UP);
+        // We add the latest input to the buffer
+        checkInput(self, inputBuffer);
+        if (self.getPressedControls().ATTACK || self.getPressedControls().SPECIAL) {
+            runInputs(self,inputBuffer,specialInputMappings);
         }
     }
 }, { persistent: true });
@@ -307,12 +322,7 @@ function isActionable(player: Character, ?allowList: Array<Int>) {
 And now you can use that in your conditions like:
 ```haxe
     if (self.getPressedControls().ATTACK && isActionable(self, cancellableStates )) {
-        if (checkValidInput(self, 0, 0, inputBuffer, hadouInput)) {
-            self.toState(CState.STRONG_FORWARD_ATTACK);
-        }
-        if (checkValidInput(self, 0, 0, inputBuffer, shoryuInput)) {
-            self.toState(CState.STRONG_UP_ATTACK);
-        }
+        runInputs(self,inputBuffer,strongInputMappings);
     }
 ```
 
@@ -324,12 +334,7 @@ self.addEventListener(GameObjectEvent.HIT_DEALT, function (event: GameObjectEven
     var cancelWindow = event.data.hitboxStats.hitstop + 60;
     self.addTimer(1, cancelWindow, function () {
         if (self.getPressedControls().ATTACK) {
-            if (checkValidInput(self, 0, 0, inputBuffer, hadouken)) {
-                self.toState(CState.SPECIAL_NEUTRAL);
-            }
-            if (checkValidInput(player, 0, 0, inputBuffer, shoryuInput)) {
-                self.toState(CState.SPECIAL_UP);
-            }
+            runInputs(self,inputBuffer,specialInputMappings);
         }
     }, { persistent: true });
 }, { persistent: true });
