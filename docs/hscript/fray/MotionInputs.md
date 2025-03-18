@@ -77,8 +77,9 @@ The rest of these functions make use if the above structures to determine if an 
  */
 function checkValidInput(player: Character, currentInput: Int, bufferPosition: Int, inputBuffer: Array<Int>, motionInput: { name: String, inputs: Array<{ direction: Int, window: Int, exact: Bool }> }): Bool {
     // Start at the
-    var i = bufferPosition;
-    for (i in bufferPosition..(motionInput.inputs[currentInput].window + bufferPosition)) { // We also add the check the input windows
+    // var i = bufferPosition;
+    var windowEnd = motionInput.inputs[currentInput].window + bufferPosition;
+    for (i in bufferPosition...windowEnd) {// We also add the check the input windows
         if (inputBuffer[i] == 5) { continue; } // Skip Neutral Inputs
         if (checkDir(player, inputBuffer[i], motionInput.inputs[currentInput].direction, motionInput.inputs[currentInput].exact)) {
             if (currentInput + 1 >= motionInput.inputs.length) { //if there's no input at this point in the list, we're done, return true
@@ -323,5 +324,4 @@ And now you can use that in your conditions like:
         }
     }
 ```
-
 
