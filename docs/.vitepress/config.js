@@ -81,6 +81,7 @@ export default defineConfig({
               { text: 'Assist Controller', link: '/hscript/fray/AssistController/' },
               { text: 'Event Listeners', link: '/hscript/fray/EventListeners/' },
               { text: 'Status Effects', link: '/hscript/fray/StatusEffects/' },
+              { text: 'Motion Inputs', link: '/hscript/fray/MotionInputs/' },
               { text: 'Timers', link: '/hscript/fray/Timers/' },
               { text: 'Pseudo Classes', link: '/hscript/fray/PseudoClasses/' },
               { text: 'Making Use of Ports and Arrays', link: '/hscript/fray/MakingUseOfPorts/' },
