@@ -324,7 +324,7 @@ can use.
 
 ```haxe
 function isActionable(player: Character, ?allowList: Array<Int>) {
-    if (allowList == null) {allowList = [];}
+    if (allowList == null) { allowList = []; }
     if (allowList.contains(player.getState())) {
         return true;
     }
@@ -355,7 +355,7 @@ function isActionable(player: Character, ?allowList: Array<Int>) {
         return false;
     }
 
-    return true;
+    return player.getAnimationStat("interruptible");
 }
 ```
 
