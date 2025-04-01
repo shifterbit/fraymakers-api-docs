@@ -98,7 +98,7 @@ And now our new Manifest Below with 2 major changes:
     "hitboxStatsId": "assisttemplateHitboxStats",
     "scriptId": "assisttemplateScript",
     "costumesId": "assisttemplateCostumes",
-    "assistControllerId": "assistController",
+    "assistControllerId": "myAssistController",
     "metadata": {
       "ui":{
         "entityId":"menu",
