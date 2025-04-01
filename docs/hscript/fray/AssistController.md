@@ -153,7 +153,7 @@ In your assist controller you could expose 2 functions like so:
 
 ```haxe
 self.exports = {};
-var uses = self.makeInt(0)
+var uses = self.makeInt(0);
 function initialize() {
 
 }
