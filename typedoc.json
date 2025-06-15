@@ -1,0 +1,17 @@
+{
+  "plugin": ["typedoc-plugin-markdown"],
+  "out": "./docs/common",
+  "router": "structure",
+  "flattenOutputFiles": false,
+  "classPropertiesFormat": "table",
+  "interfacePropertiesFormat": "table",
+  "entryPoints": [
+    "./api-types-plugin/src/ts/typedefs/fraymakers-entity-api-globals.d.ts",
+    "./api-types-plugin/src/ts/typedefs/fraymakers-projectile-api-globals.d.ts",
+    "./api-types-plugin/src/ts/typedefs/fraymakers-game-object-api-globals.d.ts",
+    "./api-types-plugin/src/ts/typedefs/fraymakers-character-api-globals.d.ts",
+    "./api-types-plugin/src/ts/typedefs/fraymakers-assist-api-globals.d.ts"
+
+  ]
+
+}
