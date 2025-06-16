@@ -10,6 +10,15 @@ for (let i = 0; i < classSidebar[0].items.length; i++) {
   classSidebar[0].items[i].link = classSidebar[0].items[i].link.replace("docs/", "");
 }
 
+let commonSideBar = getSidebar({
+  contentRoot: '/',
+  contentDirs: ['./docs/common/'],
+  collapsible: true,
+  collapsed: false
+})
+for (let i = 0; i < commonSideBar[0].items.length; i++) {
+  commonSideBar[0].items[i].link = commonSideBar[0].items[i].link.replace("docs/", "");
+}
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Fraymakers API Docs",
@@ -24,7 +33,9 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Classes', link: '/classes/' },
-      { text: 'Hscript', link: '/hscript/' }
+      { text: 'Hscript', link: '/hscript/' },
+      { text: 'Common', link: '/common/' }
+
     ],
     search: {
       provider: 'local',
@@ -51,7 +62,7 @@ export default defineConfig({
           {
             text: "Syntax",
             link: "/hscript/syntax",
-			collapsed: false,
+            collapsed: false,
             items: [
               { text: 'Variables', link: '/hscript/syntax/Variables/' },
               { text: 'Operators', link: '/hscript/syntax/Operators/' },
@@ -66,8 +77,8 @@ export default defineConfig({
           },
           {
             text: "Builtins",
-              link: "/hscript/builtins",
-			  collapsed: false,
+            link: "/hscript/builtins",
+            collapsed: false,
             items: [
               { text: 'Array', link: '/hscript/builtins/Array/' },
               { text: 'String', link: '/hscript/builtins/String/' },
@@ -76,7 +87,7 @@ export default defineConfig({
           {
             text: "Fraymakers Specific Guides",
             link: "/hscript/fray",
-			collapsed: false,
+            collapsed: false,
             items: [
               { text: 'Assist Controller', link: '/hscript/fray/AssistController/' },
               { text: 'Event Listeners', link: '/hscript/fray/EventListeners/' },
@@ -88,6 +99,12 @@ export default defineConfig({
             ]
           },
         ]
+      },
+       {
+        text: 'Common',
+        link: '/common',
+        collapsed: false,
+        items: commonSideBar
       },
       {
         text: 'Classes',
