@@ -17,6 +17,7 @@ for str in ${myArray[@]}; do
   sed --in-place -E 's/declare interface Common/export default class Common/g' $str
 done
 
+mkdir -p ./docs/common
 
 npx jsdoc2md --no-cache ./typedefs/entity.js > ./docs/common/Entity.md
 npx jsdoc2md --no-cache ./typedefs/projectile.js > ./docs/common/Projectile.md
