@@ -30,7 +30,6 @@ myArray=("Character" "Projectile" "Entity" "Assist" "GameObject")
 for str in ${myArray[@]}; do
     sed -i "1i---\ntitle:$str Common Functions\n---\n# $str Common Functions" "./docs/common/$str.md"
     sed --in-place -E "s/## /## Common./g" "./docs/common/$str.md"
-
-
+    sed --in-place -E '/<dl>/,/dl>/d' "./docs/common/$str.md"
+    sed --in-place -E "s/## Common.Functions//" "./docs/common/$str.md"
 done
-
