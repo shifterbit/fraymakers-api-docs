@@ -13,6 +13,7 @@ title: Stage
 | getBackgroundEffectsContainer():Container |  |
 | getBackgroundShadowsContainer():Container |  |
 | getBackgroundStructuresContainer():Container |  |
+| getCameraAnchors():Array<RectCollisionArea> |  |
 | getCameraBounds():RectCollisionArea |  |
 | getCharactersBackContainer():Container |  |
 | getCharactersContainer():Container |  |
@@ -23,6 +24,7 @@ title: Stage
 | getForegroundFrontContainer():Container |  |
 | getForegroundShadowsContainer():Container |  |
 | getForegroundStructuresContainer():Container |  |
+| getMatchGraphicsContainer():Container | Get the container in which match graphics are rendered in.<br> This container is layered above the hud and all stage/camera layers. |
 | getResource():Resource |  |
 | getTotalFrames():Int |  |
 | hasAnimation(animation:String):Bool |  |
