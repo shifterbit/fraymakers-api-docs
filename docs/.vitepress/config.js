@@ -19,6 +19,16 @@ let commonSideBar = getSidebar({
 for (let i = 0; i < commonSideBar[0].items.length; i++) {
   commonSideBar[0].items[i].link = commonSideBar[0].items[i].link.replace("docs/", "");
 }
+
+let utilsSideBar = getSidebar({
+  contentRoot: '/',
+  contentDirs: ['./docs/utils/'],
+  collapsible: true,
+  collapsed: false
+})
+for (let i = 0; i < utilsSideBar[0].items.length; i++) {
+  utilsSideBar[0].items[i].link = utilsSideBar[0].items[i].link.replace("docs/", "");
+}
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Fraymakers API Docs",
@@ -34,7 +44,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Classes', link: '/classes/' },
       { text: 'Hscript', link: '/hscript/' },
-      { text: 'Common', link: '/common/' }
+      { text: 'Common', link: '/common/' },
+      { text: 'Utilities', link: '/utils/' }
 
     ],
     search: {
@@ -105,6 +116,12 @@ export default defineConfig({
         link: '/common',
         collapsed: false,
         items: commonSideBar
+      },
+      {
+        text: 'Utilities',
+        link: '/utils',
+        collapsed: false,
+        items: utilsSideBar
       },
       {
         text: 'Classes',
