@@ -137,7 +137,7 @@ Since we have `"myUniqueTag"` on each status, we don't necessarily need the indi
 ```haxe
 var statuses = self.findStatusEffectObjectsByTag(StatusEffectType.DISABLE_ACTION, "myUniqueTag");
 if (statuses != null) {
-    for (action in disabledActions) {
+    for (action in statuses) {
         self.removeStatusEffect(StatusEffectType.DISABLE_ACTION, action.id);
     }
 }
