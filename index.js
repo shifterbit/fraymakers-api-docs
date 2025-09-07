@@ -44,7 +44,7 @@ async function main() {
     for (let i = 0; i < tree.children.length; i++) {
       var table = tree.children[i];
       if (table.type == "table") {
-        var processed = processTable(table,frontMatterData,prevHeader?.children?.[0]?.value);
+        var processed = processTable(table, frontMatterData, prevHeader?.children?.[0]?.value);
         for (let j = 0; j < processed.length; j++) {
           newChildren.push(processed[j]);
         }
@@ -62,12 +62,21 @@ async function main() {
     });
     let lines = out.split('\n');
     for (let i = 0; i < lines.length; i++) {
-      lines[i] = lines[i].replaceAll("layout: page","layout: doc");
-      lines[i] = lines[i].replaceAll("<br>",'\n');
-      lines[i] = lines[i].replaceAll("<","&lt;");
-      lines[i] = lines[i].replaceAll(">","&gt;");
+      lines[i] = lines[i].replaceAll("layout: page", "layout: doc");
+      lines[i] = lines[i].replaceAll("<br>", '\n');
+      lines[i] = lines[i].replaceAll("<", "&lt;");
+      lines[i] = lines[i].replaceAll(">", "&gt;");
     }
+
+    var title = 
+`---
+title: ${frontMatterData.title}
+layout: doc
+---
+`;
+
     out = lines.join('\n');
+    out = title + out;
 
     await fs.writeFile(files[h], out);
   }
@@ -82,11 +91,11 @@ function toHeaders(row, sections, frontMatterData, headerName) {
         var currRow = row[i][0];
         row[i][0].value = frontMatterData.title + "." + row[i][0].value;
       }
-        data.push({
-          type: "heading",
-          depth: 3,
-          children: row[i]
-        });
+      data.push({
+        type: "heading",
+        depth: 3,
+        children: row[i]
+      });
     } else {
       data.push({
         type: "heading",
@@ -121,7 +130,7 @@ function processTable(table, frontMatterData, headerName) {
   let newHeaders = [];
 
   for (let i = 0; i < newRows.length; i++) {
-    newHeaders = newHeaders.concat(toHeaders(newRows[i], sections,frontMatterData, headerName));
+    newHeaders = newHeaders.concat(toHeaders(newRows[i], sections, frontMatterData, headerName));
   }
 
   return newHeaders;
