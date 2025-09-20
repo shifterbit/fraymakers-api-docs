@@ -1,0 +1,6 @@
+[submodule "api-types-plugin"]
+	path = api-types-plugin
+	url = https://github.com/Fraymakers/api-types-plugin.git
+[submodule "fraymakers-api-docs"]
+	path = fraymakers-api-docs
+	url = https://github.com/Fraymakers/fraymakers-api-docs.git

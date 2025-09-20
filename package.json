@@ -1,0 +1,39 @@
+{
+  "name": "fraymakers-api-docs",
+  "version": "1.0.0",
+  "description": "This repository contains the scripting API documentation for the game [Fraymakers](https://store.steampowered.com/app/1420350/Fraymakers/). The goal of these docs is to provide an extensive list of all available functions and variables available for custom Fraymakers content creation. Everything here is still a work in progress and will be gradually updated over time.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "@microsoft/api-documenter": "^7.26.27",
+    "@microsoft/api-extractor": "^7.52.8",
+    "@wanderqing/dts2md": "^1.0.9",
+    "mdast-util-from-markdown": "^2.0.2",
+    "mdast-util-gfm": "^3.0.0",
+    "mdast-util-to-markdown": "^2.1.2",
+    "rehype-stringify": "^10.0.1",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "unified": "^11.0.5",
+    "vitepress-plugin-auto-sidebar": "^1.2.0",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/mdast": "^4.0.4",
+    "easing-utils": "^1.0.0",
+    "vitepress": "^1.6.3"
+  }
+}
