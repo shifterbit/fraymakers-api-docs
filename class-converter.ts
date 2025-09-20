@@ -66,7 +66,7 @@ class VariableDoc extends DocElement {
       returnString += typeString;
     }
 
-    if (this.initialValue != null && this.initialValue.trim().length > 0) {
+    if (this.initialValue != null && this.initialValue.trim() != "n/a" && this.initialValue.trim().length > 0) {
       returnString += initialValueString;
     }
 
