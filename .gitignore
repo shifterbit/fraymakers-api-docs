@@ -132,6 +132,7 @@ dist
 
 result
 .direnv
+docs/classes
 docs/.vitepress/cache/
 docs/.vitepress/dist/
 /.vitepress/cache
