@@ -9,6 +9,7 @@ import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
 import { parse, stringify } from 'npm:yaml'
+// import { Table } from "mdast";
 // import { Table } from "npm:mdast";
 class DocElement {
   constructor() {
@@ -59,7 +60,7 @@ class VariableDoc extends DocElement {
     var typeString = `##### Type\n\`${this.type}\`\n`;
     var initialValueString = `##### Initial Value\n\`${this.initialValue}\`\n`;
     var descriptionString = `##### description\n${this.description?.trim()}\n`;
-    var customDescriptionString = `"##### community description\n ${this.customDescription?.trim()}\n`;
+    var customDescriptionString = `##### community description\n ${this.customDescription?.trim()}\n`;
     returnString += titleString;
 
     if (this.type != null && this.type.trim().length > 0) {
@@ -198,9 +199,7 @@ async function main() {
     .filter(isFile);
   for (let h = 0; h < files.length; h++) {
     let data = fsSync.readFileSync(files[h]).toString();
-    data = data.replaceAll("<", "\\&lt;")
-    data = data.replaceAll(">", "\\&gt;")
-    // data = data.replaceAll(">", ")")
+    data = data.replaceAll("<", "\\&lt;").replaceAll(">", "\\&gt;");
     const tree = unified()
       .use(remarkParse)
       .use(remarkFrontmatter)
@@ -233,7 +232,7 @@ async function main() {
   }
 }
 
-function processTable(table: any, classDoc: ClassDoc, headerName: String) {
+function processTable(table: Table, classDoc: ClassDoc, headerName: String) {
   let rows = table.children;
   let sections = [];
   let newRows = [];
@@ -246,6 +245,11 @@ function processTable(table: any, classDoc: ClassDoc, headerName: String) {
       variableField.type = currRow.children[1].children[0].value;
       variableField.initialValue = currRow.children[2].children[0].value;
       variableField.description = currRow.children[3].children[0]?.value;
+      if (variableField.description != null) {
+        variableField.description = currRow.children[3].children.map((item) => {
+          return item.value != null ? item.value.replaceAll("&lt;br&gt;", "\n").replaceAll("\- \n","").replaceAll("\-\n","").replaceAll("\n-", "") : null;
+        }).join("\n").replaceAll("\n\n","\n");
+      }
       if (isStatic) {
         classDoc.staticVariables.push(variableField);
       } else {
@@ -263,6 +267,13 @@ function processTable(table: any, classDoc: ClassDoc, headerName: String) {
         functionField.fieldName = functionField.name.split('(')[0];
       }
       functionField.description = currRow.children[1].children[0]?.value;
+      if (functionField.description != null) {
+        functionField.description = currRow.children[1].children.map((item) => {
+
+          return item.value != null ? item.value.replaceAll("&lt;br&gt;", "\n").replaceAll("\- \n","").replaceAll("\-\n","").replaceAll("\n-", "") : null;
+        }
+      ).join("\n").replaceAll("\n\n","\n");
+      }
       if (isStatic) {
         classDoc.staticFunctions.push(functionField);
       } else {
