@@ -179,7 +179,7 @@ class ClassDoc extends DocElement {
 
 async function main() {
   const isFile = (fileName) => {
-    if (fileName != "index.md") {
+    if (fileName != "Readme.md") {
       return fsSync.lstatSync(fileName).isFile();
     } else {
       return false;
@@ -230,6 +230,7 @@ async function main() {
     var mdcurrentClassDoc
     fs.writeFile(path.join(outPath, `${currentClassDoc.name}.md`), currentClassDoc.toMarkdown());
   }
+  fs.writeFile(path.join(outPath, `index.md`), fsSync.readFileSync(path.join(folderPath,"Readme.md")).toString().replace("layout: page", "layout: doc").replace("Docs", "Class Index"));
 }
 
 function processTable(table: Table, classDoc: ClassDoc, headerName: String) {
