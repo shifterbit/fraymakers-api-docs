@@ -15,6 +15,7 @@
     "npm:remark-gfm@4": "4.0.1",
     "npm:remark-parse@11": "11.0.0",
     "npm:remark-rehype@^11.1.1": "11.1.2",
+    "npm:remark@^15.0.1": "15.0.1",
     "npm:unified@^11.0.5": "11.0.5",
     "npm:vitepress-plugin-auto-sidebar@^1.2.0": "1.3.5",
     "npm:vitepress@^1.6.3": "1.6.4_vite@5.4.20_vue@3.5.21_focus-trap@7.6.5",
@@ -1590,6 +1591,15 @@
       "dependencies": [
         "@types/mdast",
         "mdast-util-to-markdown",
+        "unified"
+      ]
+    },
+    "remark@15.0.1": {
+      "integrity": "sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==",
+      "dependencies": [
+        "@types/mdast",
+        "remark-parse",
+        "remark-stringify",
         "unified"
       ]
     },

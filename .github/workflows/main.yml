@@ -39,11 +39,15 @@ jobs:
         with:
           node-version: 20
           cache: npm # or pnpm / yarn
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
-      - run: node index.js
+      - run: deno install
+      - run: eno --allow-read --allow-env --allow-write class-converter.ts
       - run: ./converter.sh
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
