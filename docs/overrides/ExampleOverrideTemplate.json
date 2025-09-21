@@ -1,0 +1,14 @@
+{
+    "staticVariables": {
+        "x": "description for x static variable"
+    },
+    "staticFunctions": {
+        "x": "description for x static variable"
+    },
+    "instanceVariables": {
+        "x": "description for x static variable"
+    },
+    "instanceFunctions": {
+        "x": "description for x static variable"
+    }
+}

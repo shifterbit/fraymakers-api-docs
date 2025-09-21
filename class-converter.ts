@@ -41,6 +41,18 @@ class VariableDoc extends DocElement {
     this.isStatic = isStatic;
     this.parentClass = parent;
   }
+
+  applyOverrides() {
+    try {
+      let parsed = JSON.parse(fsSync.readFileSync(`./docs/overrides/${this.parentClass}.json`).toString());
+      let altDescription = this.isStatic ? (parsed?.staticVariables?.[this.name]) : (parsed?.instanceVariables?.[this.name]);
+      if (altDescription != null) {
+        this.customDescription = altDescription;
+      }
+    } catch (error) { 
+    }
+  }
+
   toJson(): any {
     return {
       name: this.name,
@@ -50,6 +62,7 @@ class VariableDoc extends DocElement {
       customDescription: this.customDescription,
     }
   }
+
   toMarkdown(): string {
     var returnString = "";
     let title = this.isStatic ? `${this.parentClass}.${this.name}` : this.name;
@@ -99,6 +112,18 @@ class FunctionDoc extends DocElement {
     this.isStatic = isStatic;
     this.parentClass = parent;
   }
+
+  applyOverrides() {
+    try {
+      let parsed = JSON.parse(fsSync.readFileSync(`./docs/overrides/${this.parentClass}.json`).toString());
+      let altDescription = this.isStatic ? (parsed?.staticFunctions?.[this.fieldName]) : (parsed?.instanceFunctions?.[this.fieldName]);
+      if (altDescription != null) {
+        this.customDescription = altDescription;
+      }
+    } catch (error) { 
+    }
+  }
+
   toJson(): any {
     return {
       name: this.name,
@@ -107,6 +132,7 @@ class FunctionDoc extends DocElement {
       customDescription: this.customDescription,
     }
   }
+
   toMarkdown(): string {
     var returnString = "";
     let title = this.isStatic ? `${this.parentClass}.${this.name}` : this.name;
@@ -251,6 +277,7 @@ function processTable(table: Table, classDoc: ClassDoc, headerName: String) {
           return item.value != null ? item.value.replaceAll("&lt;br&gt;", "\n").replaceAll("\- \n","").replaceAll("\-\n","").replaceAll("\n-", "") : null;
         }).join("\n").replaceAll("\n\n","\n");
       }
+      variableField.applyOverrides();
       if (isStatic) {
         classDoc.staticVariables.push(variableField);
       } else {
@@ -275,6 +302,8 @@ function processTable(table: Table, classDoc: ClassDoc, headerName: String) {
         }
       ).join("\n").replaceAll("\n\n","\n");
       }
+      
+      functionField.applyOverrides();
       if (isStatic) {
         classDoc.staticFunctions.push(functionField);
       } else {
