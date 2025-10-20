@@ -4,7 +4,7 @@ layout: doc
 next: false
 prev: false
 ---
-
+# Implementing Motion Inputs
 ## Intro
 This is pretty much a fray implementation of a motion input system based of off [This Tutorial By CritPoints](https://critpoints.net/2025/02/05/how-to-code-fighting-game-motion-inputs/)
 

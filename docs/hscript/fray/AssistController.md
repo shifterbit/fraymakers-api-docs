@@ -4,6 +4,7 @@ layout: doc
 prev: false
 next: false
 ---
+# Using Assist Controllers
 ## Why Assist Controller?
 Assist Controllers allow an assist to run code from the start to the end of the match.
 This has quite a few applications such as:
