@@ -1,5 +1,5 @@
 ---
-title: Finding the closest foe
+title: Closest Foe
 layout: doc
 prev: false
 next: false

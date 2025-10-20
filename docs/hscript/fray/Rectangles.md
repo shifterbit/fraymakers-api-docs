@@ -1,5 +1,5 @@
 ---
-title: Working with Rectangles
+title: Using Rectangles
 layout: doc
 prev: false
 next: false
