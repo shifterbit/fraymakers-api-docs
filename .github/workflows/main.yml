@@ -7,7 +7,7 @@ on:
   # Runs on pushes targeting the `main` branch. Change this to `master` if you're
   # using the `master` branch as the default branch.
   push:
-    branches: [main]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
       - run: deno install
-      - run: eno --allow-read --allow-env --allow-write class-converter.ts
+      - run: deno --allow-read --allow-env --allow-write class-converter.ts
       - run: ./converter.sh
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
