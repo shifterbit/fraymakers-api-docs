@@ -7,15 +7,13 @@ next: false
 
 # Reading Error Messages 
 
-First we're gonna go over different error types and explain what they mean
-
 ## Typos/Syntax/Parse Errors
 
-A parse error can simply be seen as a syntax error, maybe you misplaced a semicolon, used a symbol wrong, etc, It's the **programming equivalent of a spelling mistake**.
+A parse error or a syntax error can be viewed as the **programming equivalent of a spelling mistake or grammatical error**.
 
 First tokens!
 #### Tokens
- Not gonna go into technical details but if you were to think of your script as a paragraph, a token would be a word or element of punctuation, 
+ Not gonna go into technical details but if you were to think of your source code as a book, a token would be either a word or punctuation, 
  **Keyword Tokens**:
 	 - `function`
 	 - `var`
@@ -187,7 +185,10 @@ Giving errors like this
 ```haxe
 [Error] Script Interpret Error: objectScript:218::Can't cast (Container ()) to pxf.api.DisplayObjectApi (origin: objectscript)
 ```
-in this case you passed a function hence it has the `()`, for the actual format, its roughly like this
+in this case you passed a function hence it has the `()` inside. 
+
+For the actual format, it is structured like this:
+
 ```haxe
 (<return type> (arg1 type, arg2 type,.....))
 
