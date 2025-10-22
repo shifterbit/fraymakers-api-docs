@@ -23,8 +23,9 @@ First tokens!
 	 - `class`
 	 -  `in`
 **Single/Two Character Tokens**(These represent either operators or statement enders or blocks)
+
 - `|` `||` `&` `&&`
-- `=`  `==
+- `=`  `==`
 -  `>=`  `<=`
 - `>` `>>`  `<<` `<`
 - `!=` `*=` `-=` `+=`  `&=`  `/=`
