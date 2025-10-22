@@ -1,0 +1,12 @@
+{
+    "staticFunctions": {
+        "create": "Creates a new Point Instance"
+    },
+    "instanceVariables": {
+        "x": "The x-position of the `Point` instance",
+        "y": "The y-position of the `Point` instance"
+    },
+    "instanceFunctions": {
+        "dispose": "Please make sure to dispose your points!"
+    }
+}

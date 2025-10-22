@@ -20,11 +20,21 @@ title: Hscript Index
 - [String](./builtins/String.md)
 
 # [Fraymakers Specific Guides](./fray)
-- [Assist Controller](./fray/AssistController.md)
 - [Using Event Listeners](./fray/EventListeners.md)
 - [Using Timers](./fray/Timers.md)
 - [Using Status Effects](./fray/StatusEffects.md)
 - [Making Use of Player Ports and Arrays](./fray/MakingUseOfPorts.md)
 - [Creating Pseudo Classes](./fray/PseudoClasses.md)
+- [Audio](./fray/Audio.md)
+- [VFX](./fray/VFX.md)
+- [Points](./fray/Points.md)
+- [Rectangles](./fray/Rectangles.md)
+- [ClosestFoe](./fray/ClosestFoe.md)
+- [CustomAI](./fray/CustomAI.md)
+- [FrameTimers](./fray/FrameTimers.md)
+- [Reading Error Messages](./fray/ReadingErrors.md)
+- [Implementing Cooldowns](./fray/Cooldowns.md)
+- [Assist Controller](./fray/AssistController.md)
+- [Types](./fray/Types.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Fraymakers Specific Guide
+title: Fraymakers Programming Guides
 layout: doc
 prev: false
 next: false
@@ -18,3 +18,5 @@ next: false
 ### [FrameTimers](./FrameTimers.md)
 ### [Reading Error Messages](./ReadingErrors.md)
 ### [Implementing Cooldowns](./Cooldowns.md)
+### [Assist Controller](./AssistController.md)
+### [Types](./Types.md)

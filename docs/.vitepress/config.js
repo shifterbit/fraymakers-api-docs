@@ -115,6 +115,7 @@ export default defineConfig({
               { text: 'VFX', link: '/hscript/fray/VFX/' },
               { text: 'FrameTimers', link: '/hscript/fray/FrameTimers/' },
               { text: 'Cooldowns', link: '/hscript/fray/Cooldowns/' },
+              { text: 'Types', link: '/hscript/fray/Types/' },
             ]
           },
         ]
