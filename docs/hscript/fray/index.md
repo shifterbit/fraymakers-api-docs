@@ -16,7 +16,7 @@ next: false
 ### [ClosestFoe](./ClosestFoe.md)
 ### [CustomAI](./CustomAI.md)
 ### [FrameTimers](./FrameTimers.md)
-### [Reading Error Messages](./ReadingErrors.md)
+### [Reading Error Messages](./ErrorMessages.md)
 ### [Implementing Cooldowns](./Cooldowns.md)
 ### [Assist Controller](./AssistController.md)
 ### [Types](./Types.md)

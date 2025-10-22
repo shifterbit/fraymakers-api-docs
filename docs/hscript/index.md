@@ -32,7 +32,7 @@ title: Hscript Index
 - [ClosestFoe](./fray/ClosestFoe.md)
 - [CustomAI](./fray/CustomAI.md)
 - [FrameTimers](./fray/FrameTimers.md)
-- [Reading Error Messages](./fray/ReadingErrors.md)
+- [Reading Error Messages](./fray/ErrorMessages.md)
 - [Implementing Cooldowns](./fray/Cooldowns.md)
 - [Assist Controller](./fray/AssistController.md)
 - [Types](./fray/Types.md)

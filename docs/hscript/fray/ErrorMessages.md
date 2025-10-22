@@ -1,5 +1,5 @@
 ---
-title: How to Read Errors
+title: How to Read Error Messages
 layout: doc
 prev: false
 next: false

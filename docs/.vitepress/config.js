@@ -108,7 +108,7 @@ export default defineConfig({
               { text: 'Pseudo Classes', link: '/hscript/fray/PseudoClasses/' },
               { text: 'Making Use of Ports and Arrays', link: '/hscript/fray/MakingUseOfPorts/' },
               { text: 'Custom AI', link: '/hscript/fray/CustomAI/' },
-              { text: 'Reading Errors', link: '/hscript/fray/ReadingErrors/' },
+              { text: 'Error Messages', link: '/hscript/fray/ErrorMessages/' },
               { text: 'Points', link: '/hscript/fray/Points/' },
               { text: 'Rectangles', link: '/hscript/fray/Rectangles/' },
               { text: 'Audio', link: '/hscript/fray/Audio/' },
