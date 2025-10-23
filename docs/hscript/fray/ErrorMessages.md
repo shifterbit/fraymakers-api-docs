@@ -24,6 +24,7 @@ Now for the Error Location, errors typically exist either in a .hx(Script os sta
 
 ### Error Locations
 `<Error Location>` is one of the following
+
 For Script Files:
 ```haxe
 [cc] <Script Id>:<Line Number>
@@ -36,6 +37,7 @@ Example Location: `charactertemplateScript:12`
 If an error message has the above location for example, to locate it you need to:
 1. Go to the **script** with the id `charactertemplateScript`
 2. Go to line 12.
+
 
 For Framescripts:
 ```haxe
