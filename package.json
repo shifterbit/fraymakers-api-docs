@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@types/mdast": "^4.0.4",
+    "@vite-pwa/vitepress": "^1.0.1",
     "easing-utils": "^1.0.0",
     "vitepress": "^1.6.3"
   }

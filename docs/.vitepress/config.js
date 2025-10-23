@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { getSidebar } from 'vitepress-plugin-auto-sidebar'
+import { withPwa } from '@vite-pwa/vitepress'
 let classSidebar = getSidebar({
   contentRoot: '/',
   contentDirs: ['./docs/classes/'],
@@ -30,7 +31,7 @@ for (let i = 0; i < utilsSideBar[0].items.length; i++) {
   utilsSideBar[0].items[i].link = utilsSideBar[0].items[i].link.replace("docs/", "");
 }
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withPwa(defineConfig({
   title: "Fraymakers API Docs",
   description: "Unofficial Searchable Documentation for the Fraymakers API",
   base: '/fraymakers-api-docs/',
@@ -143,6 +144,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/shifterbit/fraymakers-api-docs' }
-    ]
+    ],
+    pwa: {}
   }
-})
+}))
