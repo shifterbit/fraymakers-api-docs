@@ -1870,7 +1870,6 @@
         "npm:@wanderqing/dts2md@^1.0.9",
         "npm:easing-utils@1",
         "npm:jsdoc-to-markdown@^9.1.3",
-        "npm:jsdoc2md@1",
         "npm:mdast-util-from-markdown@^2.0.2",
         "npm:mdast-util-gfm@3",
         "npm:mdast-util-to-markdown@^2.1.2",
