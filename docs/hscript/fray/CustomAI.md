@@ -5,6 +5,13 @@ prev: false
 next: false
 ---
 
+# Better Completion for CustomAI
+Add these top level variables.
+```haxe
+var self:CharacterAiScript = self;
+var character:Character = character;
+```
+
 # Building Custom AI
 
 Writing your own custom AI can be broken down into a few parts:
