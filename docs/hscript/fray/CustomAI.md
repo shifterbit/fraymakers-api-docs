@@ -12,13 +12,57 @@ var self:CharacterAiScript = self;
 var character:Character = character;
 ```
 
+Naturally, `character` refers to the player character the cpu is controlling.
+
 # Building Custom AI
 
 Writing your own custom AI can be broken down into a few parts:
 - Finding your target
 - Passing in inputs
-- Using the API to gather information so you can potentially have the AI make better decisions(or just behave the way you want it to)
-## Getting The Target
+- Using the API to gather information so you can potentially have the AI make smarter decisions(or just behave the way you want it to)
+
+
+
+## Checking your CPU Level
+
+Checking your CPU level is pretty straight forward, simply check
+```haxe
+character.getPlayerConfig().level
+```
+This gives you an integer between 0-9, how you use this is entirely up to you, be it for rng calls, timers etc.
+
+## Ensuring your CPU does not immediately start attacking on training mode
+Basically, do this check
+```haxe
+self.getBehavior() == AiBehavior.ATTACK
+```
+
+Though you'd probably not want to repeat this line of code all the time so, I'd suggest wrapping all your attack logic at the very least in one top level function, and return early if it's false
+```haxe
+function checkAttack() {
+	if (self.getBehavior() != AiBehavior.ATTACK) {
+		return;
+	}
+}
+```
+Of course you can also seperate your logic into smaller functions that get called by this.
+
+## Disabling and Enabling Moves
+You can also prevent certain moves that the built-in AI uses
+First you wanna check out [ChracterAiActions](../../classes/CharacterAiActions.md) for all the stuff you can control, but generally it comes down to:
+
+### Enabling An Action
+```haxe
+self.enableAction(CharacterAiActions.SPECIAL_UP);
+self.enableAction(CharacterAiActions.SPECIAL_UP_AIR);
+```
+### Disabling An Action
+```haxe
+self.disableAction(CharacterAiActions.SPECIAL_UP);
+self.disableAction(CharacterAiActions.SPECIAL_UP_AIR);
+```
+
+## Getting A Target Foe
 ### Using the Built-in Functionality
 ```haxe
 var targetFoe:Entity = self.getTargetFoe();
@@ -64,6 +108,8 @@ if (character.inState(CState.SPECIAL_UP)) {
 
 ##  Performing Inputs as the AI
 
+### Adding Inputs
+
 Inputs are done via `addInputOverrides()`, but how does it work?
 `addInputOverrides` accepts an array with an even number of items, with this structure:
 **NOTE: THIS IS PSEUDO CODE, DO NOT COPY THIS DIRECTLY**
@@ -81,19 +127,19 @@ Alright, now that we have a semblance of the structure, how do we fill it in?
 
 now for inputs...
 
-### Buttons Bitset and Bit-wise Stuff
+#### Buttons Bitset and Bit-wise Stuff
 For passing inputs, we use the `Buttons` class, please take a look at it here 
 https://shifterbit.github.io/fraymakers-api-docs/classes/Buttons
 
 Basically inputs is a combination but `Buttons` constants, but they have to be combined in a particular manner using bit-wise OR, if you've messed with `Common.onButtonsPressed` or `Common.onButtonsHeld` this should feel a bit familiar to you:
 
-##### Single Button
+###### Single Button
 
 ```haxe
 Buttons.SPECIAL
 ```
 
-##### Multiple Buttons at once
+###### Multiple Buttons at once
 ```haxe
 Buttons.SPECIAL | Buttons.UP
 ```
@@ -102,12 +148,12 @@ Buttons.SPECIAL | Buttons.UP
 Buttons.SPECIAL | Buttons.UP | Buttons.LEFT
 ```
 
-#### No Buttons At all
+##### No Buttons At all
 ```haxe
 0
 ```
 
-### Examples of Performing Input
+#### Examples of Performing Inputs
 
 **Performing Up Special**
 ```haxe
@@ -153,8 +199,17 @@ self.addInputOverrides([
 	0, 1 // NEXT FRAME AFTER THAT, LET GO OF ALL BUTTONS
 ]);
 ```
+### Clearing Previous Input Queues
+```haxe
+self.clearInputOverrides();
+```
+Clears out any inputs waiting to be done that have been added by `addInputOverrides`
 
-
+### Checking if there's inputs waiting to be done
+```haxe
+self.hasInputOverrides();
+```
+Just checks if you have any inputs waiting to be performaned.
 
 ## Making Decisions
 For Custom AI, it's enough to make inputs but also **when** to make them, but to know when to make them we need **information**, so I'll outline some methods to get information about opponents which you can use to hopefully help the AI make better decisions.
