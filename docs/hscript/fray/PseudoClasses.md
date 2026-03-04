@@ -66,30 +66,30 @@ hitCounter.stop(); // Stops the Counter
 ```haxe
 function createTrippingClass(player: Character) {
     // Instance variables can be defined using var
-    var total_trips = self.makeInt(0);
-    var active = self.makeBool(true);
-    var timerId = self.makeInt(-1);
+    var total_trips = 0;
+    var active = true;
+    var timerId = -1;
 
     // we can also access variables or perform actions using functions here
    
     // Gets the number of times we tripped over the player
     function get_trips():Int {
-        return total_trips.get();
+        return total_trips;
     }
 
     // Returns true if the event listeners and timers are active
     function isActive():Bool {
-        return active.get();
+        return active;
     }
 
     // Manually increments the trip counter
     function add_trip():Void {
-        total_trips.inc();
+        total_trips++;
     }
 
     // Reset the trip counter
     function reset_trips():Void {
-        total_trips.set(0);
+        total_trips = 0;
     }
 
     // Trip the player, also updates the counter
@@ -126,16 +126,16 @@ function createTrippingClass(player: Character) {
     }
     
     // Now we create the timer here, the timer returns an id we can use to remove it later 
-    timerId.set(player.addTimer(60, -1, onInterval, {persistent: true}));
+    timerId = player.addTimer(60, -1, onInterval, {persistent: true});
     // Here we create the event listener
     player.addEventListener(EntityEvent.STATE_CHANGE, onStateChange);
 
     // A helper function for outsiders to be able to manually enable tripping
     function resumeEvents() {
-        if (!active.get() && timerId.get() < 0>) {
+        if (!active && timerId < 0) {
             player.addEventListener(EntityEvent.STATE_CHANGE, onStateChange);
-            timerId.get(player.addTimer(60,-1,onInterval), {persistent:true});
-            active.set(true);
+            timerId = player.addTimer(60,-1,onInterval), {persistent:true});
+            active = true;
         }
     }
 
@@ -143,8 +143,8 @@ function createTrippingClass(player: Character) {
     function pauseEvents() {
         player.removeTimer(timerId);
         player.removeEventListener(EntityEvent.STATE_CHANGE, onStateChange);
-        active.set(false);
-        timerId.set(-1);
+        active = false;
+        timerId = -1;
     }
 
     // Now we return an object with all the functions
