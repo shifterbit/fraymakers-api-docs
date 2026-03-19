@@ -5,8 +5,6 @@ prev: false
 next: false
 ---
 
-# Custom AI Code Cookbook
-
 ## Better Completion for CustomAI
 Add these top level variables.
 ```haxe
