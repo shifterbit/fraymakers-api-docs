@@ -158,7 +158,7 @@ Inputs are done via `addInputOverrides()`, but how does it work?
 `addInputOverrides` accepts an array with an even number of items, with this structure:
 **NOTE: THIS IS PSEUDO CODE, DO NOT COPY THIS DIRECTLY**
 ```haxe
-self.addInputOverride([
+self.addInputOverrides([
 	inputs, frameDuration,
 	inputs, frameDuration,
 	...
