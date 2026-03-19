@@ -307,5 +307,5 @@ if (yDistance > foeHeight && xDistanceAbs < 70 && !isLeftOfMe) {
 
 We can also look at other information such as speed/state/facing direction etc, but you can refer to [Character](../../classes/Character.md),  [GameObject](../../classes/GameObject.md) and [Entity](../../classes/Entity.md) for any methods you want to use, they all apply here just as well.
 
-With this you can make somewhat basic decisions like "What do I do if the for is at least 300 x units away from me horizontally but below me", etc.
+With this you can make somewhat basic decisions like "What do I do if the foe is at least 300 x units away from me horizontally but below me", etc.
 
