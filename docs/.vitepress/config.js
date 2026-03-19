@@ -38,6 +38,7 @@ export default withPwa(defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
+  mpa: true,
   themeConfig: {
 
     // https://vitepress.dev/reference/default-theme-config

@@ -1,11 +1,13 @@
 ---
-title: Custom AI
+title: Custom AI Cookbook
 layout: doc
 prev: false
 next: false
 ---
 
-# Better Completion for CustomAI
+# Custom AI Code Cookbook
+
+## Better Completion for CustomAI
 Add these top level variables.
 ```haxe
 var self:CharacterAiScript = self;
@@ -14,22 +16,64 @@ var character:Character = character;
 
 Naturally, `character` refers to the player character the cpu is controlling.
 
-# Building Custom AI
+This should allow you to use the api completions that should come with the characte AI
 
-Writing your own custom AI can be broken down into a few parts:
-- Finding your target
-- Passing in inputs
-- Using the API to gather information so you can potentially have the AI make smarter decisions(or just behave the way you want it to)
+Absolutely do not set these variables to anything else.
 
 
-
-## Checking your CPU Level
+## Making use of CPU Level
 
 Checking your CPU level is pretty straight forward, simply check
 ```haxe
 character.getPlayerConfig().level
 ```
-This gives you an integer between 0-9, how you use this is entirely up to you, be it for rng calls, timers etc.
+As for how you can use this, a simple way would be to add a random chance element to every decision which scales with level. Now we're gonna go through several examples of basically using our level + some randomness to create a true/false value we can use to control the rate of something scaling to level.
+
+
+Linear Scaling, upto 100% chance
+```haxe
+var level = character.getPlayerConfig().level:
+var calculatedRate = level/9;
+var isSmartEnough = Random.getValue() < calculatedRate;
+if (isSmartEnough) {
+	// Do thing
+}
+```
+
+Linear Scaling, upto 75% chance
+```haxe
+var level = character.getPlayerConfig().level:
+var calculatedRate = (level/9) * 0.75;
+var isSmartEnough = Random.getValue() < calculatedRate;
+if (isSmartEnough) {
+	// Do thing
+}
+```
+
+Linear Scaling, Only levels 5-9, upto 50%
+```haxe
+var level = character.getPlayerConfig().level:
+var calculatedRate = ((level-4)/(9-4)) * 0.5;
+var isSmartEnough = Random.getValue() < calculatedRate;
+if (isSmartEnough) {
+	// Do thing
+}
+```
+Do notice that the only thing that changes here is `calculatedRate`
+
+
+Now let's say you wanted non linear scaling, you can use `EaseTimer.interpolate`, to generate your own values for `calculatedRate`, this has the benefit of not having to code easing functions yourself.
+
+
+Which ends up getting used like this, note that you can just switch out the ease type with the last argument, to see what feels better
+```haxe
+var level = character.getPlayerConfig().level:
+var calculatedRate = EaseTimer.interpolate(0,1, (level/9), EaseTimer.EASE_OUT_CUBIC);
+var isSmartEnough = Random.getValue() < calculatedRate;
+if (isSmartEnough) {
+	// Do thing
+}
+```
 
 ## Ensuring your CPU does not immediately start attacking on training mode
 Basically, do this check
@@ -37,7 +81,7 @@ Basically, do this check
 self.getBehavior() == AiBehavior.ATTACK
 ```
 
-Though you'd probably not want to repeat this line of code all the time so, I'd suggest wrapping all your attack logic at the very least in one top level function, and return early if it's false
+Though you'd probably not want to repeat this line of code all the time so, I'd suggest wrapping all your attack logic at the very least in one top level function, and return early if it's false.
 ```haxe
 function checkAttack() {
 	if (self.getBehavior() != AiBehavior.ATTACK) {
@@ -47,7 +91,7 @@ function checkAttack() {
 ```
 Of course you can also seperate your logic into smaller functions that get called by this.
 
-## Disabling and Enabling Moves
+## Disabling and Enabling Moves so the Engine doesn't perform them
 You can also prevent certain moves that the built-in AI uses
 First you wanna check out [ChracterAiActions](../../classes/CharacterAiActions.md) for all the stuff you can control, but generally it comes down to:
 
@@ -65,10 +109,9 @@ self.disableAction(CharacterAiActions.SPECIAL_UP_AIR);
 ## Getting A Target Foe
 ### Using the Built-in Functionality
 ```haxe
-var targetFoe:Entity = self.getTargetFoe();
-var targetCharacter:Character = null;
-if (Std.isOfType(targetFoe,Character)) { // Type Checking
-	targetCharacter = targetFoe;
+var foe:Character = null;
+if (Std.isOfType(self.getTargetFoe(),Character)) { // Type Checking
+	foe = self.getTargetFoe(); // We set the actual value here
 }
 ```
 ### Manual Method
@@ -105,6 +148,9 @@ if (character.inState(CState.SPECIAL_UP)) {
 	Engine.log("Do something while in up special state");
 }
 ```
+refer to [Character](../../classes/Character.md),  [GameObject](../../classes/GameObject.md) and [Entity](../../classes/Entity.md) for any methods you want to use, they all apply here just as well.
+
+Of course, you can always access exports, so be sure to provide information in exports that you think can help your ai make better decisions.
 
 ##  Performing Inputs as the AI
 
@@ -125,7 +171,7 @@ self.addInputOverride([
 Alright, now that we have a semblance of the structure, how do we fill it in?
 `frameDuration` if fairly straightforward, it simply tells us how long to hold the inputs this would be a positive number.
 
-now for inputs...
+now for the inputs themselves...
 
 #### Buttons Bitset and Bit-wise Stuff
 For passing inputs, we use the `Buttons` class, please take a look at it here 
@@ -199,67 +245,67 @@ self.addInputOverrides([
 	0, 1 // NEXT FRAME AFTER THAT, LET GO OF ALL BUTTONS
 ]);
 ```
-### Clearing Previous Input Queues
+### Clearing Queued inputs
 ```haxe
 self.clearInputOverrides();
 ```
 Clears out any inputs waiting to be done that have been added by `addInputOverrides`
 
-### Checking if there's inputs waiting to be done
+### Checking if there's inputs being queued up
 ```haxe
 self.hasInputOverrides();
 ```
 Just checks if you have any inputs waiting to be performaned.
 
-## Making Decisions
-For Custom AI, it's enough to make inputs but also **when** to make them, but to know when to make them we need **information**, so I'll outline some methods to get information about opponents which you can use to hopefully help the AI make better decisions.
 
-### Keeping Track of Foe Positioning
-#### Checking X and Y Distances Manually
-This is probably the simplest form of info gathering, which is fairly straightforward
+## Gathering Information on the foe
 
+### Checking X and Y Distances Manually
+
+First thing's first, you probably want completion on the foe itself
 ```haxe
-var xDistanceAbs:Float = Math.abs(character.getX() - self.getTargetFoe().getX());
-var yDistanceAbs:Float = Math.abs(character.getY() - self.getTargetFoe().getY());
-var foeAbove:Bool = character.getY() > self.getTargetFoe().getY();
-var foeIsLeft:Bool = character.getX() > self.getTargetFoe().getX();
-var foeInFront:Bool = (character.isFacingRight() && !foeIsLeft) || (character.isFacingLeft() && foeIsLeft);
-```
-
-With this you can make somewhat basic decisions like "What do I do if the for is at least 300 x units away from me horizontally but below me", etc
-
-#### Keeping Track of a Global Foe Point
-Another thing you can do is maintain 2 points, one for you and one for your foe
-```haxe
-var myPoint = self.makePoint(0,0);
-var foePoint = self.makePoint(Math.POSITIVE_INFINITY,Math.POSITIVE_INFINITY);
-```
-
-Then with a helper function
-```haxe
-function updatePoints() {
-	myPoint.init(character.getX(), character.getY());
-	if (self.getTargetFoe() != null) {
-		foePoint.init(self.getTargetFoe().getX(),self.getTargetFoe().getY());
-	} else {
-		foePoint.init(Math.POSITIVE_INFINITY,Math.POSITIVE_INFINITY);
-	}
+var foe:Character = null;
+if (Std.isOfType(self.getTargetFoe(),Character)) { // Type Checking
+	foe = self.getTargetFoe();
 }
 ```
 
-then in `update`
+Now assuming the `foe` variable isn't null, we can gather information, let's say you wanted to check if the foe is above you, pretty straight forward:
 
 ```haxe
-function update() {
-	updatePoints();
-	if (self.isRecovering()) {
-		checkRecovery();
-	}
+var yDistance = character.getY()-foe.getY();
+var foeHeight = Math.abs(foe.getEcbFootY()-foe.getEcbHeadY()); // We also get the height here
+if (yDistance > foeHeight) { 
+	// Do thing
 }
 ```
-Of course now you can use all the point methods described in [[Points]] to check distances and such.
 
-Of course you could take this a step further, for instance you could always make decisions based on information on the foe, maybe you want to do a certain move when the foe is shielding, or when their on the ledge etc.
+Maybe you also wanna check horizontal distance as well as left/right
+```haxe
+var xDistance = character.getX()-foe.getX();
+var xDistanceAbs = Math.abs(xDistanceAbs);
+var isLeftOfMe = xDistance > 0;
+if (xDistanceAbs < 70 && !isLeftOfMe) { // check if they're within 70 units of us and to the right of us
+	// Do thing
+}
+```
 
-#### Global Foe Rectangle - TODO
-Rectangles, are similar to points, but have a few advantages, most notably, you can actually use them to check if a particular hitbox will land, additionally you can directly use the numbers from your entity to perform those checks!
+Now Let's combine both checks into one, so now we're checking if:
+- The opponent is to the left of us
+- The opponent is within 70 units of us on the **left**
+- We are above the opponent
+```haxe
+var yDistance = character.getY()-foe.getY();
+var foeHeight = Math.abs(foe.getEcbFootY()-foe.getEcbHeadY());//  We also get the height here
+var xDistance = character.getX()-foe.getX();
+var xDistanceAbs = Math.abs(xDistanceAbs);
+var isLeftOfMe = xDistance > 0;
+if (yDistance > foeHeight && xDistanceAbs < 70 && !isLeftOfMe) { 
+	// Do thing
+}
+```
+
+We can also look at other information such as speed/state/facing direction etc, but you can refer to [Character](../../classes/Character.md),  [GameObject](../../classes/GameObject.md) and [Entity](../../classes/Entity.md) for any methods you want to use, they all apply here just as well.
+
+With this you can make somewhat basic decisions like "What do I do if the for is at least 300 x units away from me horizontally but below me", etc.
+

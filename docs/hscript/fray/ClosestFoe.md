@@ -6,7 +6,7 @@ next: false
 ---
 
 # Finding the Closest Foe
- Finding the closest foe character, may want to review the [[Points]] section to understand how this works.
+ Finding the closest foe character, may want to review the [Points](../../classes/Point.md) section to understand how this works.
 
  
  

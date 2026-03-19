@@ -7,8 +7,8 @@ next: false
 
 # Implementing Cooldowns
 Prerequisites:
-- Basic Understanding on how to apply [[StatusEffects]]
-- Basic Understanding on how to use [[Timers]]
+- Basic Understanding on how to apply [StatusEffects](./StatusEffects.md)
+- Basic Understanding on how to use [Timers](./Timers.md)
 
 
 Generally, cool-downs are done by applying the  a`DISABLE_ACTION` status effect and removing it after the cool-down period is over.
