@@ -77,15 +77,15 @@ export default withPwa(defineConfig({
             link: "/hscript/syntax",
             collapsed: false,
             items: [
-              { text: 'Variables', link: '/hscript/syntax/Variables/' },
-              { text: 'Operators', link: '/hscript/syntax/Operators/' },
-              { text: 'Blocks', link: '/hscript/syntax/Blocks/' },
-              { text: 'If-Else', link: '/hscript/syntax/If/' },
-              { text: 'Switch', link: '/hscript/syntax/Switch/' },
-              { text: 'While', link: '/hscript/syntax/While/' },
-              { text: 'For', link: '/hscript/syntax/For/' },
-              { text: 'Functions', link: '/hscript/syntax/Functions/' },
-              { text: 'Type Annotations', link: '/hscript/syntax/TypeAnnotations/' }
+              { text: 'Variables', link: '/hscript/syntax/Variables' },
+              { text: 'Operators', link: '/hscript/syntax/Operators' },
+              { text: 'Blocks', link: '/hscript/syntax/Blocks' },
+              { text: 'If-Else', link: '/hscript/syntax/If' },
+              { text: 'Switch', link: '/hscript/syntax/Switch' },
+              { text: 'While', link: '/hscript/syntax/While' },
+              { text: 'For', link: '/hscript/syntax/For' },
+              { text: 'Functions', link: '/hscript/syntax/Functions' },
+              { text: 'Type Annotations', link: '/hscript/syntax/TypeAnnotations' }
             ]
           },
           {
@@ -93,8 +93,8 @@ export default withPwa(defineConfig({
             link: "/hscript/builtins",
             collapsed: false,
             items: [
-              { text: 'Array', link: '/hscript/builtins/Array/' },
-              { text: 'String', link: '/hscript/builtins/String/' },
+              { text: 'Array', link: '/hscript/builtins/Array' },
+              { text: 'String', link: '/hscript/builtins/String' },
             ]
           },
           {
@@ -102,22 +102,22 @@ export default withPwa(defineConfig({
             link: "/hscript/fray",
             collapsed: false,
             items: [
-              { text: 'Assist Controller', link: '/hscript/fray/AssistController/' },
-              { text: 'Event Listeners', link: '/hscript/fray/EventListeners/' },
-              { text: 'Status Effects', link: '/hscript/fray/StatusEffects/' },
-              { text: 'Motion Inputs', link: '/hscript/fray/MotionInputs/' },
+              { text: 'Assist Controller', link: '/hscript/fray/AssistController' },
+              { text: 'Event Listeners', link: '/hscript/fray/EventListeners' },
+              { text: 'Status Effects', link: '/hscript/fray/StatusEffects' },
+              { text: 'Motion Inputs', link: '/hscript/fray/MotionInputs' },
               { text: 'Timers', link: '/hscript/fray/Timers/' },
-              { text: 'Pseudo Classes', link: '/hscript/fray/PseudoClasses/' },
-              { text: 'Making Use of Ports and Arrays', link: '/hscript/fray/MakingUseOfPorts/' },
-              { text: 'Custom AI', link: '/hscript/fray/CustomAI/' },
-              { text: 'Error Messages', link: '/hscript/fray/ErrorMessages/' },
-              { text: 'Points', link: '/hscript/fray/Points/' },
-              { text: 'Rectangles', link: '/hscript/fray/Rectangles/' },
-              { text: 'Audio', link: '/hscript/fray/Audio/' },
-              { text: 'VFX', link: '/hscript/fray/VFX/' },
-              { text: 'FrameTimers', link: '/hscript/fray/FrameTimers/' },
-              { text: 'Cooldowns', link: '/hscript/fray/Cooldowns/' },
-              { text: 'Types', link: '/hscript/fray/Types/' },
+              { text: 'Pseudo Classes', link: '/hscript/fray/PseudoClasses' },
+              { text: 'Making Use of Ports and Arrays', link: '/hscript/fray/MakingUseOfPorts' },
+              { text: 'Custom AI', link: '/hscript/fray/CustomAI' },
+              { text: 'Error Messages', link: '/hscript/fray/ErrorMessages' },
+              { text: 'Points', link: '/hscript/fray/Points' },
+              { text: 'Rectangles', link: '/hscript/fray/Rectangles' },
+              { text: 'Audio', link: '/hscript/fray/Audio' },
+              { text: 'VFX', link: '/hscript/fray/VFX' },
+              { text: 'FrameTimers', link: '/hscript/fray/FrameTimers' },
+              { text: 'Cooldowns', link: '/hscript/fray/Cooldowns' },
+              { text: 'Types', link: '/hscript/fray/Types' },
             ]
           },
         ]
